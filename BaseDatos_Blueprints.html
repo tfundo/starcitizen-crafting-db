@@ -1,170 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mobiGlas // Crafting & BP Database</title>
+    <title>TFUND0 // BLUEPRINTS DATABASE</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #050914;
-            --panel-bg: rgba(11, 19, 32, 0.85);
-            --accent: #00e676; /* Verde para crafteo */
-            --accent-hover: #1b5e20;
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --border: #1e293b;
+            --bg-dark: #000000;
+            --panel-bg: rgba(0, 20, 0, 0.78);
+            --matrix-green: #39ff14;
+            --sith-red: #ff2a2a;
+            --jedi-blue: #00a2ff;
+            --text-dim: #0f8f0f;
+            --border: #0d4d0d;
         }
+        * { box-sizing: border-box; }
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            background-image: linear-gradient(rgba(5, 9, 20, 0.9), rgba(5, 9, 20, 0.9)), url('https://media.robertsspaceindustries.com/vj49y1371zexz/store_slideshow_large.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            color: var(--text-main);
+            font-family: 'Share Tech Mono', monospace;
+            background: #000;
+            color: var(--matrix-green);
+            text-shadow: 0 0 4px rgba(57,255,20,0.4);
+            background-image: linear-gradient(rgba(0,255,0,0.04) 1px, transparent 1px);
+            background-size: 100% 3px;
         }
         header {
-            background-color: rgba(5, 9, 20, 0.95);
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;
+            padding: 1.2rem 1.5rem; border-bottom: 2px solid var(--matrix-green);
+            background: rgba(0,20,0,0.92);
         }
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--text-main); letter-spacing: 2px; }
-        .logo span { color: var(--accent); font-size: 1rem; }
-        main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
-        
-        .search-bar { margin-bottom: 2rem; }
-        .search-bar input {
-            width: 100%; padding: 1rem; background: var(--panel-bg); border: 1px solid var(--border);
-            color: var(--text-main); border-radius: 4px; font-size: 1.1rem; box-sizing: border-box;
+        .title { font-family:'VT323', monospace; font-size: 2.4rem; letter-spacing:2px; }
+        .title span { color: var(--sith-red); }
+        .back {
+            color: var(--jedi-blue); text-decoration:none; border:1px solid var(--jedi-blue); padding:0.45rem 1rem;
+            font-family:'VT323', monospace; font-size:1.4rem; box-shadow:0 0 10px rgba(0,162,255,0.3);
         }
-        .search-bar input:focus { outline: none; border-color: var(--accent); }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-        
-        .bp-card {
-            background-color: var(--panel-bg); border: 1px solid var(--border); border-top: 3px solid var(--accent);
-            border-radius: 6px; padding: 0; overflow: hidden; backdrop-filter: blur(5px);
-            transition: transform 0.2s, box-shadow 0.2s;
+        .back:hover { background: var(--jedi-blue); color:#000; }
+        main { max-width: 1500px; margin: 0 auto; padding: 1.5rem; }
+        .toolbar {
+            display:grid; grid-template-columns: 2fr 1fr 1fr; gap:1rem; margin-bottom:1.5rem;
         }
-        .bp-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 230, 118, 0.1); border-color: var(--accent); }
-        .card-image { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid var(--border); background: #000; }
-        .card-content { padding: 1.5rem; }
-        .bp-name { font-size: 1.2rem; color: #fff; margin: 0 0 0.4rem 0; }
-        .bp-type { font-size: 0.85rem; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; font-weight: bold;}
-        .bp-detail { margin-bottom: 0.8rem; font-size: 0.9rem; }
-        .label { color: var(--text-muted); display: block; font-size: 0.8rem; margin-bottom: 0.2rem;}
-        .value { color: var(--text-main); font-weight: bold; }
-        .mission-tag { display: inline-block; background: rgba(0, 230, 118, 0.1); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.85rem; margin-top: 0.5rem; border: 1px solid rgba(0, 230, 118, 0.3); }
-        .materials { font-family: monospace; color: #ffb300; background: #000; padding: 0.5rem; border-radius: 4px; margin-top: 0.5rem;}
-    
-        a[href="index.html"]:hover { background: #0088ff !important; color: #000 !important; box-shadow: 0 0 20px #0088ff !important; }
+        input, select {
+            width:100%; background: rgba(0,0,0,0.75); color: var(--matrix-green); border:1px solid var(--border);
+            padding: 0.9rem; font-family:'Share Tech Mono', monospace;
+        }
+        input:focus, select:focus { outline:none; border-color: var(--matrix-green); box-shadow: 0 0 10px rgba(57,255,20,0.2); }
+        .stats { color: var(--text-dim); margin-bottom: 1rem; }
+        .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap:1rem; }
+        .card {
+            background: var(--panel-bg); border:1px solid var(--border); padding:1rem; position:relative;
+            box-shadow: inset 0 0 10px rgba(57,255,20,0.05);
+        }
+        .card:hover { border-color: var(--matrix-green); box-shadow: inset 0 0 20px rgba(57,255,20,0.12), 0 0 12px rgba(57,255,20,0.15); }
+        .bp-name { font-family:'VT323', monospace; font-size: 1.8rem; color:#fff; margin:0 0 .4rem 0; word-break:break-word; }
+        .line { margin:.35rem 0; font-size: .95rem; color: var(--text-dim); }
+        .label { color: var(--jedi-blue); }
+        .tag {
+            display:inline-block; margin-top:.35rem; margin-right:.35rem; padding:.22rem .45rem; border:1px solid currentColor; font-size:.8rem;
+        }
+        .weapon { color: var(--sith-red); }
+        .armor { color: var(--matrix-green); }
+        .ammo { color: #ffb347; }
+        .unknown { color: #999; }
+        .section { margin-top:.8rem; border-top:1px dashed var(--border); padding-top:.7rem; }
+        .mono { color:#d7ffd0; word-break:break-all; }
+        .cost { padding:.2rem 0; border-bottom:1px dotted rgba(57,255,20,0.12); }
+        .small { font-size:.82rem; color:#7fbf7f; }
+        .empty { color: var(--sith-red); font-family:'VT323', monospace; font-size:1.8rem; }
+        @media (max-width: 900px){ .toolbar{grid-template-columns:1fr;} }
     </style>
 </head>
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; background: rgba(0,20,0,0.9); border-bottom: 2px solid #39ff14; box-shadow: 0 0 15px rgba(57,255,20,0.2);">
-        <div style="font-family: 'VT323', monospace; font-size: 2.5rem; color: #39ff14; text-shadow: 0 0 10px #39ff14; margin:0; letter-spacing: 2px;">TFUND<span style="color:#ff0000; text-shadow: 0 0 10px #ff0000;">0</span> // ${title}</div>
-        <a href="index.html" style="font-family: 'VT323', monospace; color: #0088ff; text-decoration: none; font-size: 1.5rem; border: 1px solid #0088ff; background: rgba(0,0,20,0.5); padding: 0.5rem 1.5rem; box-shadow: 0 0 10px rgba(0,136,255,0.3); transition: 0.3s; cursor: pointer;">&lt;&lt; VOLVER AL INICIO</a>
-    </header>
+<header>
+    <div class="title">TFUND<span>0</span> // BLUEPRINTS_DATABASE</div>
+    <a class="back" href="index.html">&lt;&lt; VOLVER</a>
+</header>
+<main>
+    <div class="toolbar">
+        <input id="search" placeholder="Buscar blueprint, contrato, pool, ruta...">
+        <select id="categoryFilter">
+            <option value="">Todas las categorías</option>
+            <option value="weapon">weapon</option>
+            <option value="armor">armor</option>
+            <option value="ammo">ammo</option>
+            <option value="utility">utility</option>
+            <option value="ship">ship</option>
+            <option value="unknown">unknown</option>
+        </select>
+        <select id="sortBy">
+            <option value="contract">Ordenar por contrato</option>
+            <option value="blueprint">Ordenar por blueprint</option>
+            <option value="category">Ordenar por categoría</option>
+        </select>
+    </div>
 
-    <main>
-        <h1>Buscador de Blueprints (Crafteo)</h1>
-        <p style="color: var(--text-muted);">Encuentra dónde conseguir los planos de fabricación y qué materiales requieren.</p>
-        
-        <div class="search-bar">
-            <input type="text" id="bp-search" placeholder="Buscar blueprint por nombre, misión o ubicación..." onkeyup="filterBPs()">
-        </div>
-        <div id="bp-container" class="grid"></div>
-    </main>
+    <div class="stats" id="stats">Cargando blueprints reales del juego...</div>
+    <div class="grid" id="grid"></div>
+</main>
 
-    <script>
-        const bpDatabase = [
-    {
-        "name": "Blueprint: Morozov Aftershock Helmet",
-        "type": "Armor Blueprint",
-        "manufacturer": "RSI",
-        "image": "https://starcitizen.tools/images/thumb/a/a2/Morozov_Helmet_Aftershock.jpg/300px-Morozov_Helmet_Aftershock.jpg",
-        "materials": "30x RMC, 10x Oro, 5x Cobre",
-        "location": "Búnkeres (Security Post)",
-        "mission": "Defend Occupants / Evict Illegal Occupants"
-    },
-    {
-        "name": "Blueprint: FS-9 LMG",
-        "type": "Weapon Blueprint",
-        "manufacturer": "Kastak Arms",
-        "image": "https://starcitizen.tools/images/thumb/c/cd/FS-9_LMG.jpg/300px-FS-9_LMG.jpg",
-        "materials": "45x Hierro, 20x Tungsteno, 5x RMC",
-        "location": "Derelict Settlements / Outposts",
-        "mission": "Bounty Hunter / Mercenary (Crusader)"
-    },
-    {
-        "name": "Blueprint: Artimex Core",
-        "type": "Armor Blueprint",
-        "manufacturer": "Kastak Arms",
-        "image": "https://starcitizen.tools/images/thumb/8/87/Artimex_Core_Hurston_Dynamics.jpg/300px-Artimex_Core_Hurston_Dynamics.jpg",
-        "materials": "50x RMC, 25x Aluminio",
-        "location": "Hurston Dynamics Facilities (Klescher / HD Entrances)",
-        "mission": "Security Contractor Evaluation"
-    },
-    {
-        "name": "Blueprint: P6-LR Sniper Rifle",
-        "type": "Weapon Blueprint",
-        "manufacturer": "Behring",
-        "image": "https://starcitizen.tools/images/thumb/8/86/P6-LR_Sniper_Rifle.jpg/300px-P6-LR_Sniper_Rifle.jpg",
-        "materials": "60x RMC, 15x Titanio, 2x Quantanium",
-        "location": "Distribution Centers (MicroTech / Hurston)",
-        "mission": "Raid / UGF Missions (Nivel Alto)"
+<script>
+const DATA_URL = 'data/blueprints_missions.json';
+let RAW = [];
+
+function shortPath(p){ return (p || '').replaceAll('libs/foundry/records/',''); }
+function norm(s){ return (s || '').toLowerCase(); }
+
+function render(data){
+    const grid = document.getElementById('grid');
+    const stats = document.getElementById('stats');
+    stats.textContent = `Registros visibles: ${data.length} / Total cargados: ${RAW.length}`;
+    if(!data.length){
+        grid.innerHTML = `<div class="empty">SIN RESULTADOS</div>`;
+        return;
     }
-];
+    grid.innerHTML = data.slice(0, 500).map(item => {
+        const costs = (item.resourceCosts || []).map(c => `
+            <div class="cost"><span class="label">resource:</span> <span class="mono">${c.resourceId}</span> · <span class="label">SCU:</span> ${c.amountSCU}</div>
+        `).join('') || '<div class="small">Sin costes parseados</div>';
+        const cls = item.category || 'unknown';
+        return `
+        <div class="card">
+            <h2 class="bp-name">${item.blueprintInternalName || 'BLUEPRINT_NO_RESUELTA'}</h2>
+            <div class="tag ${cls}">${cls}</div>
+            <div class="line"><span class="label">Contrato:</span> ${item.contractName || '-'}</div>
+            <div class="line"><span class="label">Chance:</span> ${item.rewardChance ?? '-'}</div>
+            <div class="line"><span class="label">Pool:</span> ${item.poolName || '-'} <span class="small">(${item.poolGuid || '-'})</span></div>
+            <div class="line"><span class="label">Craft Time:</span> ${item.craftTime || 'N/D'}</div>
+            <div class="section">
+                <div class="line"><span class="label">Blueprint GUID:</span> <span class="mono">${item.blueprintGuid || '-'}</span></div>
+                <div class="line"><span class="label">Blueprint file:</span> <span class="mono">${shortPath(item.blueprintFile || '')}</span></div>
+                <div class="line"><span class="label">Contract file:</span> <span class="mono">${shortPath(item.contractFile || '')}</span></div>
+            </div>
+            <div class="section">
+                <div class="line"><span class="label">Costes:</span></div>
+                ${costs}
+            </div>
+        </div>`;
+    }).join('');
+}
 
-        function renderBPs(data) {
-            const container = document.getElementById('bp-container');
-            container.innerHTML = '';
-            if(!data || data.length === 0) { container.innerHTML = '<p>No se encontraron blueprints.</p>'; return; }
+function applyFilters(){
+    const q = norm(document.getElementById('search').value);
+    const cat = document.getElementById('categoryFilter').value;
+    const sortBy = document.getElementById('sortBy').value;
 
-            data.forEach(item => {
-                container.innerHTML += `
-                    <div class="bp-card">
-                        <img src="${item.image}" alt="${item.name}" class="card-image" onerror="this.src='https://media.robertsspaceindustries.com/n14a84iowf8a4/store_slideshow_large.jpg'">
-                        <div class="card-content">
-                            <h2 class="bp-name">${item.name}</h2>
-                            <div class="bp-type">${item.type} - ${item.manufacturer}</div>
-                            
-                            <div class="bp-detail">
-                                <span class="label">Ubicación de dropeo:</span>
-                                <span class="value">${item.location}</span>
-                            </div>
-                            
-                            <div class="bp-detail">
-                                <span class="label">Misión recomendada:</span>
-                                <span class="mission-tag">🎯 ${item.mission}</span>
-                            </div>
+    let data = RAW.filter(item => {
+        const hay = [
+            item.blueprintInternalName,
+            item.contractName,
+            item.poolName,
+            item.blueprintFile,
+            item.contractFile,
+            item.poolGuid,
+            item.blueprintGuid,
+            item.category
+        ].join(' ').toLowerCase();
+        const okQ = !q || hay.includes(q);
+        const okC = !cat || item.category === cat;
+        return okQ && okC;
+    });
 
-                            <div class="bp-detail">
-                                <span class="label">Materiales de Crafteo:</span>
-                                <div class="materials">⚙️ ${item.materials}</div>
-                            </div>
-                        </div>
-                    </div>`;
-            });
-        }
+    data.sort((a,b) => {
+        const av = (sortBy === 'blueprint' ? a.blueprintInternalName : sortBy === 'category' ? a.category : a.contractName) || '';
+        const bv = (sortBy === 'blueprint' ? b.blueprintInternalName : sortBy === 'category' ? b.category : b.contractName) || '';
+        return av.localeCompare(bv);
+    });
 
-        window.filterBPs = function() {
-            const query = document.getElementById('bp-search').value.toLowerCase();
-            const filtered = bpDatabase.filter(b => 
-                b.name.toLowerCase().includes(query) || 
-                b.mission.toLowerCase().includes(query) ||
-                b.location.toLowerCase().includes(query)
-            );
-            renderBPs(filtered);
-        }
+    render(data);
+}
 
-        // Inicializar
-        renderBPs(bpDatabase);
-    </script>
+fetch(DATA_URL)
+    .then(r => r.json())
+    .then(data => {
+        RAW = data;
+        applyFilters();
+    })
+    .catch(err => {
+        document.getElementById('stats').textContent = 'Error cargando blueprints_missions.json';
+        document.getElementById('grid').innerHTML = `<div class="empty">NO SE HA PODIDO CARGAR EL JSON</div>`;
+        console.error(err);
+    });
+
+document.getElementById('search').addEventListener('input', applyFilters);
+document.getElementById('categoryFilter').addEventListener('change', applyFilters);
+document.getElementById('sortBy').addEventListener('change', applyFilters);
+</script>
 </body>
 </html>
