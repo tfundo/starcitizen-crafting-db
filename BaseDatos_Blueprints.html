@@ -6,32 +6,41 @@
   <title>TFUND0 // BLUEPRINTS</title>
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg:#000; --panel:rgba(0,20,0,.78); --green:#39ff14; --red:#ff2a2a; --blue:#00a2ff; --dim:#0f8f0f; --border:#0d4d0d;
-    }
+    :root { --bg:#000; --panel:rgba(0,20,0,.82); --green:#39ff14; --red:#ff2a2a; --blue:#00a2ff; --dim:#0f8f0f; --border:#0d4d0d; }
     *{box-sizing:border-box}
     body{margin:0;background:#000;color:var(--green);font-family:'Share Tech Mono',monospace;text-shadow:0 0 4px rgba(57,255,20,.35);background-image:linear-gradient(rgba(0,255,0,.04) 1px, transparent 1px);background-size:100% 3px}
     header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1rem 1.4rem;border-bottom:2px solid var(--green);background:rgba(0,20,0,.92)}
     .title{font-family:'VT323',monospace;font-size:2.4rem;letter-spacing:2px}.title span{color:var(--red)}
     .back{color:var(--blue);text-decoration:none;border:1px solid var(--blue);padding:.45rem 1rem;font-family:'VT323',monospace;font-size:1.4rem}.back:hover{background:var(--blue);color:#000}
-    main{max-width:1500px;margin:0 auto;padding:1.4rem}
+    main{max-width:1600px;margin:0 auto;padding:1.2rem}
     .toolbar{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;margin-bottom:1rem}
     input,select{width:100%;background:rgba(0,0,0,.75);color:var(--green);border:1px solid var(--border);padding:.9rem;font-family:'Share Tech Mono',monospace}
     .stats{color:var(--dim);margin-bottom:1rem}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
-    .card{background:var(--panel);border:1px solid var(--border);padding:1rem;box-shadow:inset 0 0 10px rgba(57,255,20,.05)}
-    .card:hover{border-color:var(--green);box-shadow:inset 0 0 18px rgba(57,255,20,.12),0 0 12px rgba(57,255,20,.15)}
-    .imgbox{height:180px;border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);margin-bottom:.8rem;background:rgba(0,0,0,.35);overflow:hidden}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem}
+    .tile{background:var(--panel);border:1px solid var(--border);padding:.7rem;cursor:pointer;transition:.2s}
+    .tile:hover{border-color:var(--green);box-shadow:0 0 14px rgba(57,255,20,.18), inset 0 0 14px rgba(57,255,20,.08);transform:translateY(-2px)}
+    .imgbox{height:180px;border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);background:rgba(0,0,0,.4);overflow:hidden;margin-bottom:.7rem}
     .imgbox img{width:100%;height:100%;object-fit:cover}
-    .name{font-family:'VT323',monospace;font-size:2rem;color:#fff;margin:0 0 .5rem 0;line-height:1}
-    .mission{color:var(--blue);margin:.4rem 0 .7rem 0}
-    .tag{display:inline-block;padding:.22rem .45rem;border:1px solid currentColor;font-size:.8rem;margin-bottom:.7rem}
+    .name{font-family:'VT323',monospace;font-size:1.8rem;color:#fff;line-height:1;margin:0 0 .4rem 0}
+    .mini{font-size:.82rem;color:var(--blue)}
+    .tag{display:inline-block;padding:.18rem .45rem;border:1px solid currentColor;font-size:.75rem;margin-top:.4rem}
     .weapon{color:var(--red)} .armor{color:var(--green)} .ammo{color:#ffb347} .utility{color:#d9ff66} .ship{color:var(--blue)} .unknown{color:#aaa}
-    .section{margin-top:.6rem;border-top:1px dashed var(--border);padding-top:.6rem}
-    .cost{padding:.18rem 0;color:#d8ffd0}
+
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;padding:1rem;z-index:50}
+    .modal.open{display:flex}
+    .panel{width:min(900px,100%);background:rgba(0,15,0,.96);border:1px solid var(--green);box-shadow:0 0 24px rgba(57,255,20,.2);padding:1rem}
+    .panelHead{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-bottom:1px solid var(--border);padding-bottom:.7rem;margin-bottom:1rem}
+    .panelTitle{font-family:'VT323',monospace;font-size:2.3rem;color:#fff;margin:0}
+    .closeBtn{background:transparent;color:var(--red);border:1px solid var(--red);padding:.35rem .8rem;font-family:'VT323',monospace;font-size:1.4rem;cursor:pointer}
+    .closeBtn:hover{background:var(--red);color:#000}
+    .detailGrid{display:grid;grid-template-columns:280px 1fr;gap:1rem}
+    .bigImage{height:280px;border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;background:#000;color:var(--dim);overflow:hidden}
+    .bigImage img{width:100%;height:100%;object-fit:cover}
+    .block{margin-bottom:1rem;border-top:1px dashed var(--border);padding-top:.7rem}
+    .label{color:var(--blue)}
+    .missionLine,.costLine{padding:.22rem 0;color:#d8ffd0}
     .small{font-size:.82rem;color:#7fbf7f}
-    .empty{color:var(--red);font-family:'VT323',monospace;font-size:1.8rem}
-    @media (max-width:900px){.toolbar{grid-template-columns:1fr}}
+    @media (max-width:900px){.toolbar{grid-template-columns:1fr}.detailGrid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -60,59 +69,119 @@
   <div class="stats" id="stats">Cargando...</div>
   <div class="grid" id="grid"></div>
 </main>
+
+<div class="modal" id="modal">
+  <div class="panel">
+    <div class="panelHead">
+      <h2 class="panelTitle" id="mTitle">Objeto</h2>
+      <button class="closeBtn" id="closeBtn">CERRAR</button>
+    </div>
+    <div class="detailGrid">
+      <div class="bigImage" id="mImage">IMAGEN PENDIENTE</div>
+      <div>
+        <div class="block"><div class="label">Categoría</div><div id="mCategory"></div></div>
+        <div class="block"><div class="label">Misiones donde puede salir</div><div id="mMissions"></div></div>
+        <div class="block"><div class="label">Materiales de crafteo</div><div id="mCosts"></div></div>
+        <div class="block"><div class="label">Tiempo de crafteo</div><div id="mTime"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA_URL = 'data/blueprints_missions_clean.json';
 let RAW = [];
+let GROUPED = [];
 const imgMap = {
   'Gemini Shotgun': 'https://starcitizen.tools/images/thumb/8/86/BR-2_Shotgun.jpg/300px-BR-2_Shotgun.jpg',
   'Gemini Shotgun Magazine': 'https://starcitizen.tools/images/thumb/8/86/BR-2_Shotgun.jpg/300px-BR-2_Shotgun.jpg'
 };
 function norm(s){return (s||'').toLowerCase();}
+function uniq(arr){return [...new Set(arr.filter(Boolean))];}
+
+function groupData(data){
+  const map = new Map();
+  for(const item of data){
+    const key = item.displayName || item.rawBlueprintInternalName || 'Sin nombre';
+    if(!map.has(key)){
+      map.set(key, {
+        displayName: key,
+        category: item.category || 'unknown',
+        craftTime: item.craftTime || 'N/D',
+        image: item.image || imgMap[key] || '',
+        missions: [],
+        costs: [],
+      });
+    }
+    const row = map.get(key);
+    row.missions.push(item.missionName);
+    for(const c of (item.costs || [])) row.costs.push(`${c.material}: ${c.amountSCU} SCU`);
+  }
+  return [...map.values()].map(x => ({
+    ...x,
+    missions: uniq(x.missions),
+    costs: uniq(x.costs)
+  }));
+}
+
 function render(data){
   const grid = document.getElementById('grid');
-  document.getElementById('stats').textContent = `Mostrando ${data.length} registros de ${RAW.length}`;
-  if(!data.length){grid.innerHTML='<div class="empty">SIN RESULTADOS</div>';return;}
-  grid.innerHTML = data.slice(0,500).map(item => {
-    const cls = item.category || 'unknown';
-    const img = item.image || imgMap[item.displayName] || '';
-    const costs = (item.costs||[]).slice(0,6).map(c => `<div class="cost">- ${c.material}: ${c.amountSCU} SCU</div>`).join('') || '<div class="small">Sin datos de coste</div>';
-    return `
-      <div class="card">
-        <div class="imgbox">${img ? `<img src="${img}" alt="${item.displayName}" onerror="this.parentNode.innerHTML='IMAGEN PENDIENTE';">` : 'IMAGEN PENDIENTE'}</div>
-        <h2 class="name">${item.displayName}</h2>
-        <div class="tag ${cls}">${cls}</div>
-        <div class="mission">Misión: ${item.missionName}</div>
-        <div class="small">Tiempo de crafteo: ${item.craftTime}</div>
-        <div class="section">
-          <div class="small">Materiales de coste</div>
-          ${costs}
-        </div>
-      </div>`;
-  }).join('');
+  document.getElementById('stats').textContent = `Mostrando ${data.length} objetos únicos`;
+  if(!data.length){ grid.innerHTML = '<div class="name" style="color:var(--red)">SIN RESULTADOS</div>'; return; }
+  grid.innerHTML = data.slice(0,500).map((item, idx) => `
+    <div class="tile" data-idx="${idx}">
+      <div class="imgbox">${item.image ? `<img src="${item.image}" alt="${item.displayName}" onerror="this.parentNode.innerHTML='IMAGEN PENDIENTE';">` : 'IMAGEN PENDIENTE'}</div>
+      <h3 class="name">${item.displayName}</h3>
+      <div class="mini">${item.missions[0] || 'Misión desconocida'}</div>
+      <div class="tag ${item.category || 'unknown'}">${item.category || 'unknown'}</div>
+    </div>
+  `).join('');
+
+  [...document.querySelectorAll('.tile')].forEach(tile => {
+    tile.addEventListener('click', () => openModal(data[Number(tile.dataset.idx)]));
+  });
 }
+
+function openModal(item){
+  document.getElementById('mTitle').textContent = item.displayName;
+  document.getElementById('mCategory').innerHTML = `<span class="tag ${item.category || 'unknown'}">${item.category || 'unknown'}</span>`;
+  document.getElementById('mTime').textContent = item.craftTime || 'N/D';
+  document.getElementById('mMissions').innerHTML = item.missions.length ? item.missions.map(m => `<div class="missionLine">- ${m}</div>`).join('') : '<div class="small">Sin misión resuelta</div>';
+  document.getElementById('mCosts').innerHTML = item.costs.length ? item.costs.map(c => `<div class="costLine">- ${c}</div>`).join('') : '<div class="small">Sin materiales resueltos</div>';
+  document.getElementById('mImage').innerHTML = item.image ? `<img src="${item.image}" alt="${item.displayName}" onerror="this.parentNode.innerHTML='IMAGEN PENDIENTE';">` : 'IMAGEN PENDIENTE';
+  document.getElementById('modal').classList.add('open');
+}
+
 function applyFilters(){
   const q = norm(document.getElementById('search').value);
   const cat = document.getElementById('categoryFilter').value;
   const sortBy = document.getElementById('sortBy').value;
-  let data = RAW.filter(item => {
-    const hay = [item.displayName,item.missionName,item.category].join(' ').toLowerCase();
+  let data = GROUPED.filter(item => {
+    const hay = [item.displayName, item.category, ...item.missions].join(' ').toLowerCase();
     return (!q || hay.includes(q)) && (!cat || item.category === cat);
   });
-  data.sort((a,b) => {
-    const av = sortBy==='mission' ? (a.missionName||'') : sortBy==='category' ? (a.category||'') : (a.displayName||'');
-    const bv = sortBy==='mission' ? (b.missionName||'') : sortBy==='category' ? (b.category||'') : (b.displayName||'');
+  data.sort((a,b)=>{
+    const av = sortBy==='mission' ? (a.missions[0]||'') : sortBy==='category' ? (a.category||'') : (a.displayName||'');
+    const bv = sortBy==='mission' ? (b.missions[0]||'') : sortBy==='category' ? (b.category||'') : (b.displayName||'');
     return av.localeCompare(bv);
   });
   render(data);
 }
-fetch(DATA_URL).then(r=>r.json()).then(data=>{RAW=data;applyFilters();}).catch(err=>{
+
+fetch(DATA_URL).then(r=>r.json()).then(data=>{
+  RAW = data;
+  GROUPED = groupData(RAW);
+  applyFilters();
+}).catch(err=>{
   document.getElementById('stats').textContent='Error cargando blueprints';
-  document.getElementById('grid').innerHTML='<div class="empty">NO SE PUDO CARGAR EL JSON</div>';
   console.error(err);
 });
+
 document.getElementById('search').addEventListener('input', applyFilters);
 document.getElementById('categoryFilter').addEventListener('change', applyFilters);
 document.getElementById('sortBy').addEventListener('change', applyFilters);
+document.getElementById('closeBtn').addEventListener('click', ()=> document.getElementById('modal').classList.remove('open'));
+document.getElementById('modal').addEventListener('click', (e)=> { if(e.target.id==='modal') e.currentTarget.classList.remove('open'); });
 </script>
 </body>
 </html>
