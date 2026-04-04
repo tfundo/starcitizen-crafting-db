@@ -3,49 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mobiGlas // Ship Database</title>
-    <link rel="stylesheet" href="style.css">
+    <title>mobiGlas // Star Citizen Database Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --panel-bg: rgba(15, 23, 42, 0.7);
+            --accent-main: #0ea5e9; /* RSI Blue */
+            --accent-craft: #10b981; /* Green */
+            --accent-mine: #f59e0b; /* Argo Orange */
+            --accent-combat: #ef4444; /* Aegis Red */
+            --text-light: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(51, 65, 85, 0.5);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)),
+                url('https://media.robertsspaceindustries.com/n14a84iowf8a4/store_slideshow_large.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(2,6,23,0.9) 0%, rgba(2,6,23,0) 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+            margin: 0;
+        }
+
+        .logo span { color: var(--accent-main); }
+        .version { font-size: 0.9rem; color: var(--text-dim); letter-spacing: 2px; }
+
+        main {
+            flex: 1;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .welcome-text {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
+
+        .welcome-text h2 { font-weight: 300; margin-bottom: 1rem; }
+        .welcome-text p { color: var(--text-dim); line-height: 1.6; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .module-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
+            text-decoration: none;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .module-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--accent-main);
+            transition: height 0.3s ease;
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+            background: rgba(30, 41, 59, 0.8);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .module-card:hover::before { height: 100%; opacity: 0.1; }
+
+        /* Colores específicos de cada módulo */
+        .module-card.ships::before { background: var(--accent-main); }
+        .module-card.crafting::before { background: var(--accent-craft); }
+        .module-card.mining::before { background: var(--accent-mine); }
+        .module-card.combat::before { background: var(--accent-combat); }
+        .module-card.missions::before { background: #a855f7; }
+
+        .module-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .module-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            letter-spacing: 1px;
+        }
+
+        .module-desc {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 1rem; right: 1rem;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .status-active { background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); }
+        .status-building { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+            background: rgba(2, 6, 23, 0.9);
+        }
+
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="logo">mobiGlas DB <span>v1.0</span></div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Naves</a></li>
-                <li><a href="#">Componentes</a></li>
-                <li><a href="#">Minería</a></li>
-            </ul>
-        </nav>
+        <h1 class="logo">SC_<span>DATACENTER</span></h1>
+        <div class="version">LIVE BUILD // V 1.0.0</div>
     </header>
 
     <main>
-        <div class="tabs">
-            <button class="tab-btn active" onclick="showTab('ships')">Naves</button>
-            <button class="tab-btn" onclick="showTab('armors')">Armaduras & Blueprints (Loot)</button>
+        <div class="welcome-text">
+            <h2>Bienvenido al Sistema Central</h2>
+            <p>Selecciona un módulo de datos para acceder a la red del Verso. Todos los datos son extraídos en tiempo real de los archivos del juego (scunpacked) y actualizados diariamente.</p>
         </div>
 
-        <div id="ships-tab" class="tab-content active">
-            <h1>Directorio de Naves Espaciales</h1>
-            <p class="subtitle">Datos extraídos en tiempo real del último parche</p>
-            <div id="ship-container" class="grid">
-                <div class="loading">Cargando base de datos...</div>
-            </div>
-        </div>
+        <div class="dashboard-grid">
+            
+            <!-- Módulo 1: Naves -->
+            <a href="BaseDatos_Interactiva.html" class="module-card ships">
+                <span class="status-badge status-active">Operativo</span>
+                <div class="module-icon">🚀</div>
+                <h3 class="module-title">Flota Estelar</h3>
+                <p class="module-desc">Especificaciones técnicas, fabricantes, precios in-game, tripulación y roles de todas las naves pilotables y vehículos terrestres.</p>
+            </a>
 
-        <div id="armors-tab" class="tab-content" style="display: none;">
-            <h1>Buscador de Blueprints y Loot</h1>
-            <p class="subtitle">Encuentra en qué misiones o búnkeres caen las armaduras</p>
-            
-            <div class="search-bar">
-                <input type="text" id="armor-search" placeholder="Buscar armadura o blueprint... (Ej. Defiance, Morozov)" onkeyup="filterArmors()">
-            </div>
-            
-            <div id="armor-container" class="grid">
-                <!-- Se llenará con JS -->
-            </div>
+            <!-- Módulo 2: Crafteo y Blueprints -->
+            <a href="BaseDatos_Blueprints.html" class="module-card crafting">
+                <span class="status-badge status-active">Operativo</span>
+                <div class="module-icon">⚙️</div>
+                <h3 class="module-title">Crafting & Blueprints</h3>
+                <p class="module-desc">Ubicaciones exactas de loot, drop-rates y recetas de materiales para la fabricación de armaduras y armas personales.</p>
+            </a>
+
+            <!-- Módulo 3: Minería -->
+            <a href="#" class="module-card mining">
+                <span class="status-badge status-building">En Desarrollo</span>
+                <div class="module-icon">⛏️</div>
+                <h3 class="module-title">Minería y Refinamiento</h3>
+                <p class="module-desc">Calculadora de beneficios de minería, valores de Quantanium/Bexalite, cabezales óptimos y tablas de refinería según la estación.</p>
+            </a>
+
+            <!-- Módulo 4: Armas y Accesorios -->
+            <a href="#" class="module-card combat">
+                <span class="status-badge status-building">En Desarrollo</span>
+                <div class="module-icon">🔫</div>
+                <h3 class="module-title">Arsenal y Accesorios</h3>
+                <p class="module-desc">Comparador de DPS, miras, silenciadores, y ubicaciones de botín para accesorios de armas FPS y componentes de naves.</p>
+            </a>
+
+            <!-- Módulo 5: Misiones -->
+            <a href="#" class="module-card missions">
+                <span class="status-badge status-building">En Desarrollo</span>
+                <div class="module-icon">📋</div>
+                <h3 class="module-title">Contratos & Facciones</h3>
+                <p class="module-desc">Base de datos de misiones, sistema de reputación por gremios (Mercenary, Bounty Hunter, Delivery) y sus respectivas recompensas de aUEC.</p>
+            </a>
+
         </div>
     </main>
 
-    <script src="app.js"></script>
+    <footer>
+        &copy; 2026 SC_DATACENTER. Datos extraídos de scunpacked y Star Citizen Wiki API.<br>
+        No afiliado con Cloud Imperium Games.
+    </footer>
+
 </body>
 </html>
