@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobiGlas // SC Database</title>
+    <style>
+        :root {
+            --bg-color: #050914;
+            --panel-bg: rgba(11, 19, 32, 0.85);
+            --accent: #ffb300;
+            --accent-hover: #ffca28;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            background-image: linear-gradient(rgba(5, 9, 20, 0.9), rgba(5, 9, 20, 0.9)), url('https://media.robertsspaceindustries.com/vj49y1371zexz/store_slideshow_large.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--text-main);
+        }
+        header {
+            background-color: rgba(5, 9, 20, 0.95);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--text-main); letter-spacing: 2px; }
+        .logo span { color: var(--accent); font-size: 1rem; }
+        main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        
+        .tabs { display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+        .tab-btn { 
+            background: transparent; border: 1px solid var(--border); color: var(--text-muted); 
+            padding: 0.8rem 1.5rem; cursor: pointer; border-radius: 4px; font-size: 1rem; transition: all 0.3s;
+        }
+        .tab-btn:hover { border-color: var(--accent); color: var(--text-main); }
+        .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: bold; }
+        .tab-content { display: none; animation: fadeIn 0.3s ease; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .search-bar { margin-bottom: 2rem; }
+        .search-bar input {
+            width: 100%; padding: 1rem; background: var(--panel-bg); border: 1px solid var(--border);
+            color: var(--text-main); border-radius: 4px; font-size: 1.1rem; box-sizing: border-box;
+        }
+        .search-bar input:focus { outline: none; border-color: var(--accent); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+        
+        .ship-card {
+            background-color: var(--panel-bg); border: 1px solid var(--border); border-top: 3px solid var(--accent);
+            border-radius: 6px; padding: 0; overflow: hidden; backdrop-filter: blur(5px);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .ship-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 179, 0, 0.1); border-color: var(--accent); }
+        .card-image { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid var(--border); background: #000; }
+        .card-content { padding: 1.5rem; }
+        .ship-name { font-size: 1.3rem; color: #fff; margin: 0 0 0.4rem 0; }
+        .ship-manufacturer { font-size: 0.85rem; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; font-weight: bold;}
+        .ship-detail { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .label { color: var(--text-muted); }
+        .value { color: var(--text-main); font-weight: bold; text-align: right;}
+        .mission-tag { display: inline-block; background: rgba(255, 179, 0, 0.1); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.85rem; margin-top: 1rem; border: 1px solid rgba(255, 179, 0, 0.3); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SC_DB <span>INTERACTIVE</span></div>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('ships')">Naves y Vehículos</button>
+            <button class="tab-btn" onclick="showTab('armors')">Armaduras & Loot</button>
+        </div>
+
+        <div id="ships-tab" class="tab-content active">
+            <div class="search-bar">
+                <input type="text" id="ship-search" placeholder="Buscar nave o fabricante... (Ej. Origin, Cutlass)" onkeyup="filterShips()">
+            </div>
+            <div id="ship-container" class="grid"></div>
+        </div>
+
+        <div id="armors-tab" class="tab-content">
+            <div class="search-bar">
+                <input type="text" id="armor-search" placeholder="Buscar armadura, arma o pintura..." onkeyup="filterArmors()">
+            </div>
+            <div id="armor-container" class="grid"></div>
+        </div>
+    </main>
+
+    <script>
+        // DATOS INYECTADOS DIRECTAMENTE (Sin fetch, funciona localmente con doble clic)
+        const shipsDatabase = [
+  {
+    "name": "Avenger Stalker",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Interceptor",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Avenger Titan",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Freight",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Avenger Titan Renegade",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Freight",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Avenger Warlock",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Interdiction",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Eclipse",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 210,
+    "price": "No comprable"
+  },
+  {
+    "name": "Eclipse",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 210,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius Dunlevy",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius Pirate",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius Valiant",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Hammerhead",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Gunship",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 160,
+    "price": "No comprable"
+  },
+  {
+    "name": "Hammerhead 2949 Best In Show Edition",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Gunship",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 160,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-M",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-P",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-P",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-P Wikelo War Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Javelin",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Destroyer",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 50,
+    "price": "No comprable"
+  },
+  {
+    "name": "Reclaimer",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Salvage",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Reclaimer 2949 Best In Show Edition",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Salvage",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Reclaimer Teach's Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Salvage",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Redeemer",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Gunship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 203,
+    "price": "No comprable"
+  },
+  {
+    "name": "Retaliator",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Modular",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 205,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 223,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Comet",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 223,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Firebird",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 240,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Firebird Wikelo War Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 240,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Peregrine",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Racing",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 267,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Peregrine Wikelo Speedy Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Racing",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 267,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Raven",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Interdiction",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 240,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Harbinger",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Fighter / Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 212,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Hoplite",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Dropship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 209,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Sentinel",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Fighter / Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 217,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Warden",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Fighter",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 210,
+    "price": "No comprable"
+  },
+  {
+    "name": "Arrow",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 229,
+    "price": "No comprable"
+  },
+  {
+    "name": "Asgard",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Dropship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 203,
+    "price": "No comprable"
+  },
+  {
+    "name": "Asgard Wikelo War Special",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Dropship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 203,
+    "price": "No comprable"
+  },
+  {
+    "name": "Ballista",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "Ballista Dunestalker",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "Ballista Snowblind",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "C8 Pisces",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Pathfinder",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "C8R Pisces Rescue",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medical",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "C8X Pisces Expedition",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Pathfinder",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "Carrack",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Expedition",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 140,
+    "price": "No comprable"
+  },
+  {
+    "name": "Carrack",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Expedition",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 140,
+    "price": "No comprable"
+  },
+  {
+    "name": "Carrack Expedition",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Expedition",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 140,
+    "price": "No comprable"
+  },
+  {
+    "name": "Centurion",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7A Hornet Mk I",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7A Hornet Mk II",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7C Hornet Mk I",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7C Hornet Mk II",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  }
+];
+        const armorDatabase = [
+  {
+    "name": "100i 2954 Auspicious Red Dog Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100i_2954_Auspicious_Red_Dog_Livery.jpg/300px-100i_2954_Auspicious_Red_Dog_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100i 2954 Auspicious Red Dragon Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100i_2954_Auspicious_Red_Dragon_Livery.jpg/300px-100i_2954_Auspicious_Red_Dragon_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Blue Ametrine Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Blue_Ametrine_Livery.jpg/300px-100_Series_Blue_Ametrine_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Deck the Hull Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Deck_the_Hull_Livery.jpg/300px-100_Series_Deck_the_Hull_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Flame Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Flame_Livery.jpg/300px-100_Series_Flame_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Foundation Fest Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Foundation_Fest_Livery.jpg/300px-100_Series_Foundation_Fest_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Frostbite Camo Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Frostbite_Camo_Livery.jpg/300px-100_Series_Frostbite_Camo_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series IceBreak Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_IceBreak_Livery.jpg/300px-100_Series_IceBreak_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Invictus Blue and Gold Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Invictus_Blue_and_Gold_Livery.jpg/300px-100_Series_Invictus_Blue_and_Gold_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Melrose Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Melrose_Livery.jpg/300px-100_Series_Melrose_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Sand Wave Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Sand_Wave_Livery.jpg/300px-100_Series_Sand_Wave_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Slate Camo Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Slate_Camo_Livery.jpg/300px-100_Series_Slate_Camo_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "100 Series Timberline Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/100_Series_Timberline_Livery.jpg/300px-100_Series_Timberline_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300i Ship Armor",
+    "type": "Ship.Armor.Medium",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300i_Ship_Armor.jpg/300px-300i_Ship_Armor.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Amber Wave Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Amber_Wave_Paint.jpg/300px-300_Series_Amber_Wave_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Black Rose Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Black_Rose_Paint.jpg/300px-300_Series_Black_Rose_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Black & Royal Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Black_%26_Royal_Paint.jpg/300px-300_Series_Black_%26_Royal_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Citron Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Citron_Paint.jpg/300px-300_Series_Citron_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Electric Blue Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Electric_Blue_Paint.jpg/300px-300_Series_Electric_Blue_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Evening Onyx Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Evening_Onyx_Paint.jpg/300px-300_Series_Evening_Onyx_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series First Response Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_First_Response_Paint.jpg/300px-300_Series_First_Response_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Gilded Night Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Gilded_Night_Paint.jpg/300px-300_Series_Gilded_Night_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Golden Dawn Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Golden_Dawn_Paint.jpg/300px-300_Series_Golden_Dawn_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Granite Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Granite_Paint.jpg/300px-300_Series_Granite_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Imperial Red Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Imperial_Red_Paint.jpg/300px-300_Series_Imperial_Red_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Monarch Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Monarch_Paint.jpg/300px-300_Series_Monarch_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Moonlight Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Moonlight_Paint.jpg/300px-300_Series_Moonlight_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Nightshade Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Nightshade_Paint.jpg/300px-300_Series_Nightshade_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Obsidian Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Obsidian_Paint.jpg/300px-300_Series_Obsidian_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Sagebrush Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Sagebrush_Paint.jpg/300px-300_Series_Sagebrush_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Scarlet Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Scarlet_Paint.jpg/300px-300_Series_Scarlet_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Scarlet Steel Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Scarlet_Steel_Paint.jpg/300px-300_Series_Scarlet_Steel_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Solar Flare Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Solar_Flare_Paint.jpg/300px-300_Series_Solar_Flare_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Sterling Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Sterling_Paint.jpg/300px-300_Series_Sterling_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Thunderstorm Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Thunderstorm_Paint.jpg/300px-300_Series_Thunderstorm_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Twotone Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Twotone_Paint.jpg/300px-300_Series_Twotone_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series Ultramarine Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_Ultramarine_Paint.jpg/300px-300_Series_Ultramarine_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "300 Series White Lightning Paint",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/300_Series_White_Lightning_Paint.jpg/300px-300_Series_White_Lightning_Paint.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "315p Ship Armor",
+    "type": "Ship.Armor.Medium",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/315p_Ship_Armor.jpg/300px-315p_Ship_Armor.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "350r Ship Armor",
+    "type": "Ship.Armor.Medium",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/350r_Ship_Armor.jpg/300px-350r_Ship_Armor.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "350r Ship Armor",
+    "type": "Ship.Armor.Medium",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/350r_Ship_Armor.jpg/300px-350r_Ship_Armor.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "350r Ship Armor",
+    "type": "Ship.Armor.Medium",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/350r_Ship_Armor.jpg/300px-350r_Ship_Armor.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i 2954 Auspicious Red Dog Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_2954_Auspicious_Red_Dog_Livery.jpg/300px-400i_2954_Auspicious_Red_Dog_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i 2954 Auspicious Red Dragon Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_2954_Auspicious_Red_Dragon_Livery.jpg/300px-400i_2954_Auspicious_Red_Dragon_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Afterglow Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Afterglow_Livery.jpg/300px-400i_Afterglow_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Calacatta Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Calacatta_Livery.jpg/300px-400i_Calacatta_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Deck the Hull Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Argo Astronautics",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Deck_the_Hull_Livery.jpg/300px-400i_Deck_the_Hull_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Fortuna Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Fortuna_Livery.jpg/300px-400i_Fortuna_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i IceBreak Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Argo Astronautics",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_IceBreak_Livery.jpg/300px-400i_IceBreak_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Meridian Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Meridian_Livery.jpg/300px-400i_Meridian_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Penumbra Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Penumbra_Livery.jpg/300px-400i_Penumbra_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Polar Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Polar_Livery.jpg/300px-400i_Polar_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Stormbringer Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Stormbringer_Livery.jpg/300px-400i_Stormbringer_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "400i Stratus Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/400i_Stratus_Livery.jpg/300px-400i_Stratus_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i 2951 Best in Show Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_2951_Best_in_Show_Livery.jpg/300px-600i_2951_Best_in_Show_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i 2953 Best in Show Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_2953_Best_in_Show_Livery.jpg/300px-600i_2953_Best_in_Show_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i 2954 Auspicious Red Dog Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_2954_Auspicious_Red_Dog_Livery.jpg/300px-600i_2954_Auspicious_Red_Dog_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i 2954 Auspicious Red Dragon Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_2954_Auspicious_Red_Dragon_Livery.jpg/300px-600i_2954_Auspicious_Red_Dragon_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i Cold Forge Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_Cold_Forge_Livery.jpg/300px-600i_Cold_Forge_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i Fortuna Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_Fortuna_Livery.jpg/300px-600i_Fortuna_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i Foundation Fest Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_Foundation_Fest_Livery.jpg/300px-600i_Foundation_Fest_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "600i Sterling Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/600i_Sterling_Livery.jpg/300px-600i_Sterling_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "890 Jump Meridian Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/890_Jump_Meridian_Livery.jpg/300px-890_Jump_Meridian_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "890 Jump Penumbra Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/890_Jump_Penumbra_Livery.jpg/300px-890_Jump_Penumbra_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "890 Jump Skyline Livery",
+    "type": "Ship.Paints",
+    "manufacturer": "Origin Jumpworks",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/890_Jump_Skyline_Livery.jpg/300px-890_Jump_Skyline_Livery.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "A03 \"Canuto\" Sniper Rifle",
+    "type": "FPS.Weapon.Medium",
+    "manufacturer": "Gemini",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/A03_%22Canuto%22_Sniper_Rifle.jpg/300px-A03_%22Canuto%22_Sniper_Rifle.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "A03 \"HighSec\" Sniper Rifle",
+    "type": "FPS.Weapon.Medium",
+    "manufacturer": "Gemini",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/A03_%22HighSec%22_Sniper_Rifle.jpg/300px-A03_%22HighSec%22_Sniper_Rifle.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "A03 \"Lodestone\" Sniper Rifle",
+    "type": "FPS.Weapon.Medium",
+    "manufacturer": "Gemini",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/A03_%22Lodestone%22_Sniper_Rifle.jpg/300px-A03_%22Lodestone%22_Sniper_Rifle.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  },
+  {
+    "name": "A03 \"Luckbringer\" Sniper Rifle",
+    "type": "FPS.Weapon.Medium",
+    "manufacturer": "Gemini",
+    "image": "https://starcitizen.tools/images/thumb/a/a2/A03_%22Luckbringer%22_Sniper_Rifle.jpg/300px-A03_%22Luckbringer%22_Sniper_Rifle.jpg",
+    "location": "Cajas de Botín (Búnkeres / Wrecks)"
+  }
+];
+
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        function renderShips(data) {
+            const container = document.getElementById('ship-container');
+            container.innerHTML = '';
+            if(!data || data.length === 0) { container.innerHTML = '<p>No hay naves.</p>'; return; }
+
+            data.forEach(ship => {
+                const priceText = typeof ship.price === 'number' ? new Intl.NumberFormat('es-ES').format(ship.price) + ' aUEC' : ship.price;
+                const imgFallback = `https://starcitizen.tools/images/thumb/a/a2/${encodeURIComponent(ship.name.replace(/ /g, '_'))}.jpg/300px-${encodeURIComponent(ship.name.replace(/ /g, '_'))}.jpg`;
+                
+                container.innerHTML += `
+                    <div class="ship-card">
+                        <img src="${imgFallback}" class="card-image" onerror="this.src='https://media.robertsspaceindustries.com/vj49y1371zexz/store_slideshow_large.jpg'">
+                        <div class="card-content">
+                            <h2 class="ship-name">${ship.name}</h2>
+                            <div class="ship-manufacturer">${ship.manufacturer}</div>
+                            <div class="ship-detail"><span class="label">Rol:</span><span class="value">${ship.role || 'N/A'}</span></div>
+                            <div class="ship-detail"><span class="label">Tripulación:</span><span class="value">${ship.crew || 'N/A'}</span></div>
+                            <div class="ship-detail"><span class="label">Vel. SCM:</span><span class="value">${ship.speed || 'N/A'} m/s</span></div>
+                            <div class="ship-detail"><span class="label">Precio:</span><span class="value" style="color:var(--accent);">${priceText}</span></div>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        function renderArmors(data) {
+            const container = document.getElementById('armor-container');
+            container.innerHTML = '';
+            if(!data || data.length === 0) { container.innerHTML = '<p>No hay items.</p>'; return; }
+
+            data.forEach(item => {
+                container.innerHTML += `
+                    <div class="ship-card">
+                        <img src="${item.image}" alt="${item.name}" class="card-image" onerror="this.src='https://media.robertsspaceindustries.com/n14a84iowf8a4/store_slideshow_large.jpg'">
+                        <div class="card-content">
+                            <h2 class="ship-name" style="font-size: 1.1rem;">${item.name}</h2>
+                            <div class="ship-manufacturer">${item.type} - ${item.manufacturer}</div>
+                            <div class="ship-detail" style="flex-direction: column; align-items: flex-start; gap: 0.3rem;">
+                                <span class="label">Obtención:</span>
+                                <span class="value" style="text-align: left;">${item.location || 'Verso'}</span>
+                            </div>
+                            <span class="mission-tag">📦 Blueprint / Loot</span>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        window.filterShips = function() {
+            const query = document.getElementById('ship-search').value.toLowerCase();
+            const filtered = shipsDatabase.filter(s => s.name.toLowerCase().includes(query) || s.manufacturer.toLowerCase().includes(query));
+            renderShips(filtered);
+        }
+
+        window.filterArmors = function() {
+            const query = document.getElementById('armor-search').value.toLowerCase();
+            const filtered = armorDatabase.filter(a => a.name.toLowerCase().includes(query) || a.type.toLowerCase().includes(query));
+            renderArmors(filtered);
+        }
+
+        // Inicializar
+        renderShips(shipsDatabase);
+        renderArmors(armorDatabase);
+    </script>
+</body>
+</html>
