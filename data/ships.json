@@ -1,0 +1,652 @@
+[
+  {
+    "name": "Avenger Stalker",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Interceptor",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Avenger Titan",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Freight",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Avenger Titan Renegade",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Freight",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Avenger Warlock",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Interdiction",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 262,
+    "price": "No comprable"
+  },
+  {
+    "name": "Eclipse",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 210,
+    "price": "No comprable"
+  },
+  {
+    "name": "Eclipse",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 210,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius Dunlevy",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius Pirate",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Gladius Valiant",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 226,
+    "price": "No comprable"
+  },
+  {
+    "name": "Hammerhead",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Gunship",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 160,
+    "price": "No comprable"
+  },
+  {
+    "name": "Hammerhead 2949 Best In Show Edition",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Gunship",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 160,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-M",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-P",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-P",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Idris-P Wikelo War Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Frigate",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Javelin",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Destroyer",
+    "size": {
+      "en_EN": "capital",
+      "de_DE": "Kapitalklasse",
+      "zh_CN": "capital"
+    },
+    "crew": "undefined - undefined",
+    "speed": 50,
+    "price": "No comprable"
+  },
+  {
+    "name": "Reclaimer",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Salvage",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Reclaimer 2949 Best In Show Edition",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Salvage",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Reclaimer Teach's Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Salvage",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 110,
+    "price": "No comprable"
+  },
+  {
+    "name": "Redeemer",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Gunship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 203,
+    "price": "No comprable"
+  },
+  {
+    "name": "Retaliator",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Modular",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 205,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 223,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Comet",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 223,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Firebird",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 240,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Firebird Wikelo War Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Stealth Fighter",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 240,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Peregrine",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Racing",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 267,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Peregrine Wikelo Speedy Special",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Racing",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 267,
+    "price": "No comprable"
+  },
+  {
+    "name": "Sabre Raven",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Interdiction",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 240,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Harbinger",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Fighter / Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 212,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Hoplite",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Dropship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 209,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Sentinel",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Fighter / Bomber",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 217,
+    "price": "No comprable"
+  },
+  {
+    "name": "Vanguard Warden",
+    "manufacturer": "Aegis Dynamics",
+    "role": "Heavy Fighter",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 210,
+    "price": "No comprable"
+  },
+  {
+    "name": "Arrow",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Light Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 229,
+    "price": "No comprable"
+  },
+  {
+    "name": "Asgard",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Dropship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 203,
+    "price": "No comprable"
+  },
+  {
+    "name": "Asgard Wikelo War Special",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Dropship",
+    "size": {
+      "en_EN": "medium",
+      "de_DE": "Mittel",
+      "zh_CN": "中等"
+    },
+    "crew": "undefined - undefined",
+    "speed": 203,
+    "price": "No comprable"
+  },
+  {
+    "name": "Ballista",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "Ballista Dunestalker",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "Ballista Snowblind",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "C8 Pisces",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Pathfinder",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "C8R Pisces Rescue",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medical",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "C8X Pisces Expedition",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Pathfinder",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "Carrack",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Expedition",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 140,
+    "price": "No comprable"
+  },
+  {
+    "name": "Carrack",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Expedition",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 140,
+    "price": "No comprable"
+  },
+  {
+    "name": "Carrack Expedition",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Expedition",
+    "size": {
+      "en_EN": "large",
+      "de_DE": "Groß",
+      "zh_CN": "大"
+    },
+    "crew": "undefined - undefined",
+    "speed": 140,
+    "price": "No comprable"
+  },
+  {
+    "name": "Centurion",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Anti-Air",
+    "size": {
+      "en_EN": "vehicle",
+      "de_DE": "Fahrzeug",
+      "zh_CN": "汽车"
+    },
+    "crew": "undefined - undefined",
+    "speed": null,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7A Hornet Mk I",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7A Hornet Mk II",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7C Hornet Mk I",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  },
+  {
+    "name": "F7C Hornet Mk II",
+    "manufacturer": "Anvil Aerospace",
+    "role": "Medium Fighter",
+    "size": {
+      "en_EN": "small",
+      "de_DE": "Klein",
+      "zh_CN": "小"
+    },
+    "crew": "undefined - undefined",
+    "speed": 220,
+    "price": "No comprable"
+  }
+]
