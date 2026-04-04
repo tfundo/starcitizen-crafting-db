@@ -1,187 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFUND0 // BLUEPRINTS DATABASE</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #000000;
-            --panel-bg: rgba(0, 20, 0, 0.78);
-            --matrix-green: #39ff14;
-            --sith-red: #ff2a2a;
-            --jedi-blue: #00a2ff;
-            --text-dim: #0f8f0f;
-            --border: #0d4d0d;
-        }
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: 'Share Tech Mono', monospace;
-            background: #000;
-            color: var(--matrix-green);
-            text-shadow: 0 0 4px rgba(57,255,20,0.4);
-            background-image: linear-gradient(rgba(0,255,0,0.04) 1px, transparent 1px);
-            background-size: 100% 3px;
-        }
-        header {
-            display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;
-            padding: 1.2rem 1.5rem; border-bottom: 2px solid var(--matrix-green);
-            background: rgba(0,20,0,0.92);
-        }
-        .title { font-family:'VT323', monospace; font-size: 2.4rem; letter-spacing:2px; }
-        .title span { color: var(--sith-red); }
-        .back {
-            color: var(--jedi-blue); text-decoration:none; border:1px solid var(--jedi-blue); padding:0.45rem 1rem;
-            font-family:'VT323', monospace; font-size:1.4rem; box-shadow:0 0 10px rgba(0,162,255,0.3);
-        }
-        .back:hover { background: var(--jedi-blue); color:#000; }
-        main { max-width: 1500px; margin: 0 auto; padding: 1.5rem; }
-        .toolbar {
-            display:grid; grid-template-columns: 2fr 1fr 1fr; gap:1rem; margin-bottom:1.5rem;
-        }
-        input, select {
-            width:100%; background: rgba(0,0,0,0.75); color: var(--matrix-green); border:1px solid var(--border);
-            padding: 0.9rem; font-family:'Share Tech Mono', monospace;
-        }
-        input:focus, select:focus { outline:none; border-color: var(--matrix-green); box-shadow: 0 0 10px rgba(57,255,20,0.2); }
-        .stats { color: var(--text-dim); margin-bottom: 1rem; }
-        .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap:1rem; }
-        .card {
-            background: var(--panel-bg); border:1px solid var(--border); padding:1rem; position:relative;
-            box-shadow: inset 0 0 10px rgba(57,255,20,0.05);
-        }
-        .card:hover { border-color: var(--matrix-green); box-shadow: inset 0 0 20px rgba(57,255,20,0.12), 0 0 12px rgba(57,255,20,0.15); }
-        .bp-name { font-family:'VT323', monospace; font-size: 1.8rem; color:#fff; margin:0 0 .4rem 0; word-break:break-word; }
-        .line { margin:.35rem 0; font-size: .95rem; color: var(--text-dim); }
-        .label { color: var(--jedi-blue); }
-        .tag {
-            display:inline-block; margin-top:.35rem; margin-right:.35rem; padding:.22rem .45rem; border:1px solid currentColor; font-size:.8rem;
-        }
-        .weapon { color: var(--sith-red); }
-        .armor { color: var(--matrix-green); }
-        .ammo { color: #ffb347; }
-        .unknown { color: #999; }
-        .section { margin-top:.8rem; border-top:1px dashed var(--border); padding-top:.7rem; }
-        .mono { color:#d7ffd0; word-break:break-all; }
-        .cost { padding:.2rem 0; border-bottom:1px dotted rgba(57,255,20,0.12); }
-        .small { font-size:.82rem; color:#7fbf7f; }
-        .empty { color: var(--sith-red); font-family:'VT323', monospace; font-size:1.8rem; }
-        @media (max-width: 900px){ .toolbar{grid-template-columns:1fr;} }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFUND0 // BLUEPRINTS</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#000; --panel:rgba(0,20,0,.78); --green:#39ff14; --red:#ff2a2a; --blue:#00a2ff; --dim:#0f8f0f; --border:#0d4d0d;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#000;color:var(--green);font-family:'Share Tech Mono',monospace;text-shadow:0 0 4px rgba(57,255,20,.35);background-image:linear-gradient(rgba(0,255,0,.04) 1px, transparent 1px);background-size:100% 3px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1rem 1.4rem;border-bottom:2px solid var(--green);background:rgba(0,20,0,.92)}
+    .title{font-family:'VT323',monospace;font-size:2.4rem;letter-spacing:2px}.title span{color:var(--red)}
+    .back{color:var(--blue);text-decoration:none;border:1px solid var(--blue);padding:.45rem 1rem;font-family:'VT323',monospace;font-size:1.4rem}.back:hover{background:var(--blue);color:#000}
+    main{max-width:1500px;margin:0 auto;padding:1.4rem}
+    .toolbar{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;margin-bottom:1rem}
+    input,select{width:100%;background:rgba(0,0,0,.75);color:var(--green);border:1px solid var(--border);padding:.9rem;font-family:'Share Tech Mono',monospace}
+    .stats{color:var(--dim);margin-bottom:1rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
+    .card{background:var(--panel);border:1px solid var(--border);padding:1rem;box-shadow:inset 0 0 10px rgba(57,255,20,.05)}
+    .card:hover{border-color:var(--green);box-shadow:inset 0 0 18px rgba(57,255,20,.12),0 0 12px rgba(57,255,20,.15)}
+    .imgbox{height:180px;border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--dim);margin-bottom:.8rem;background:rgba(0,0,0,.35);overflow:hidden}
+    .imgbox img{width:100%;height:100%;object-fit:cover}
+    .name{font-family:'VT323',monospace;font-size:2rem;color:#fff;margin:0 0 .5rem 0;line-height:1}
+    .mission{color:var(--blue);margin:.4rem 0 .7rem 0}
+    .tag{display:inline-block;padding:.22rem .45rem;border:1px solid currentColor;font-size:.8rem;margin-bottom:.7rem}
+    .weapon{color:var(--red)} .armor{color:var(--green)} .ammo{color:#ffb347} .utility{color:#d9ff66} .ship{color:var(--blue)} .unknown{color:#aaa}
+    .section{margin-top:.6rem;border-top:1px dashed var(--border);padding-top:.6rem}
+    .cost{padding:.18rem 0;color:#d8ffd0}
+    .small{font-size:.82rem;color:#7fbf7f}
+    .empty{color:var(--red);font-family:'VT323',monospace;font-size:1.8rem}
+    @media (max-width:900px){.toolbar{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 <header>
-    <div class="title">TFUND<span>0</span> // BLUEPRINTS_DATABASE</div>
-    <a class="back" href="index.html">&lt;&lt; VOLVER</a>
+  <div class="title">TFUND<span>0</span> // BLUEPRINTS</div>
+  <a class="back" href="index.html">&lt;&lt; VOLVER</a>
 </header>
 <main>
-    <div class="toolbar">
-        <input id="search" placeholder="Buscar blueprint, contrato, pool, ruta...">
-        <select id="categoryFilter">
-            <option value="">Todas las categorías</option>
-            <option value="weapon">weapon</option>
-            <option value="armor">armor</option>
-            <option value="ammo">ammo</option>
-            <option value="utility">utility</option>
-            <option value="ship">ship</option>
-            <option value="unknown">unknown</option>
-        </select>
-        <select id="sortBy">
-            <option value="contract">Ordenar por contrato</option>
-            <option value="blueprint">Ordenar por blueprint</option>
-            <option value="category">Ordenar por categoría</option>
-        </select>
-    </div>
-
-    <div class="stats" id="stats">Cargando blueprints reales del juego...</div>
-    <div class="grid" id="grid"></div>
+  <div class="toolbar">
+    <input id="search" placeholder="Buscar objeto o misión...">
+    <select id="categoryFilter">
+      <option value="">Todas las categorías</option>
+      <option value="weapon">Armas</option>
+      <option value="armor">Armaduras</option>
+      <option value="ammo">Munición</option>
+      <option value="utility">Utilidad</option>
+      <option value="ship">Naves</option>
+      <option value="unknown">Otros</option>
+    </select>
+    <select id="sortBy">
+      <option value="name">Ordenar por nombre</option>
+      <option value="mission">Ordenar por misión</option>
+      <option value="category">Ordenar por categoría</option>
+    </select>
+  </div>
+  <div class="stats" id="stats">Cargando...</div>
+  <div class="grid" id="grid"></div>
 </main>
-
 <script>
-const DATA_URL = 'data/blueprints_missions.json';
+const DATA_URL = 'data/blueprints_missions_clean.json';
 let RAW = [];
-
-function shortPath(p){ return (p || '').replaceAll('libs/foundry/records/',''); }
-function norm(s){ return (s || '').toLowerCase(); }
-
+const imgMap = {
+  'Gemini Shotgun': 'https://starcitizen.tools/images/thumb/8/86/BR-2_Shotgun.jpg/300px-BR-2_Shotgun.jpg',
+  'Gemini Shotgun Magazine': 'https://starcitizen.tools/images/thumb/8/86/BR-2_Shotgun.jpg/300px-BR-2_Shotgun.jpg'
+};
+function norm(s){return (s||'').toLowerCase();}
 function render(data){
-    const grid = document.getElementById('grid');
-    const stats = document.getElementById('stats');
-    stats.textContent = `Registros visibles: ${data.length} / Total cargados: ${RAW.length}`;
-    if(!data.length){
-        grid.innerHTML = `<div class="empty">SIN RESULTADOS</div>`;
-        return;
-    }
-    grid.innerHTML = data.slice(0, 500).map(item => {
-        const costs = (item.resourceCosts || []).map(c => `
-            <div class="cost"><span class="label">resource:</span> <span class="mono">${c.resourceId}</span> · <span class="label">SCU:</span> ${c.amountSCU}</div>
-        `).join('') || '<div class="small">Sin costes parseados</div>';
-        const cls = item.category || 'unknown';
-        return `
-        <div class="card">
-            <h2 class="bp-name">${item.blueprintInternalName || 'BLUEPRINT_NO_RESUELTA'}</h2>
-            <div class="tag ${cls}">${cls}</div>
-            <div class="line"><span class="label">Contrato:</span> ${item.contractName || '-'}</div>
-            <div class="line"><span class="label">Chance:</span> ${item.rewardChance ?? '-'}</div>
-            <div class="line"><span class="label">Pool:</span> ${item.poolName || '-'} <span class="small">(${item.poolGuid || '-'})</span></div>
-            <div class="line"><span class="label">Craft Time:</span> ${item.craftTime || 'N/D'}</div>
-            <div class="section">
-                <div class="line"><span class="label">Blueprint GUID:</span> <span class="mono">${item.blueprintGuid || '-'}</span></div>
-                <div class="line"><span class="label">Blueprint file:</span> <span class="mono">${shortPath(item.blueprintFile || '')}</span></div>
-                <div class="line"><span class="label">Contract file:</span> <span class="mono">${shortPath(item.contractFile || '')}</span></div>
-            </div>
-            <div class="section">
-                <div class="line"><span class="label">Costes:</span></div>
-                ${costs}
-            </div>
-        </div>`;
-    }).join('');
+  const grid = document.getElementById('grid');
+  document.getElementById('stats').textContent = `Mostrando ${data.length} registros de ${RAW.length}`;
+  if(!data.length){grid.innerHTML='<div class="empty">SIN RESULTADOS</div>';return;}
+  grid.innerHTML = data.slice(0,500).map(item => {
+    const cls = item.category || 'unknown';
+    const img = item.image || imgMap[item.displayName] || '';
+    const costs = (item.costs||[]).slice(0,6).map(c => `<div class="cost">- ${c.material}: ${c.amountSCU} SCU</div>`).join('') || '<div class="small">Sin datos de coste</div>';
+    return `
+      <div class="card">
+        <div class="imgbox">${img ? `<img src="${img}" alt="${item.displayName}" onerror="this.parentNode.innerHTML='IMAGEN PENDIENTE';">` : 'IMAGEN PENDIENTE'}</div>
+        <h2 class="name">${item.displayName}</h2>
+        <div class="tag ${cls}">${cls}</div>
+        <div class="mission">Misión: ${item.missionName}</div>
+        <div class="small">Tiempo de crafteo: ${item.craftTime}</div>
+        <div class="section">
+          <div class="small">Materiales de coste</div>
+          ${costs}
+        </div>
+      </div>`;
+  }).join('');
 }
-
 function applyFilters(){
-    const q = norm(document.getElementById('search').value);
-    const cat = document.getElementById('categoryFilter').value;
-    const sortBy = document.getElementById('sortBy').value;
-
-    let data = RAW.filter(item => {
-        const hay = [
-            item.blueprintInternalName,
-            item.contractName,
-            item.poolName,
-            item.blueprintFile,
-            item.contractFile,
-            item.poolGuid,
-            item.blueprintGuid,
-            item.category
-        ].join(' ').toLowerCase();
-        const okQ = !q || hay.includes(q);
-        const okC = !cat || item.category === cat;
-        return okQ && okC;
-    });
-
-    data.sort((a,b) => {
-        const av = (sortBy === 'blueprint' ? a.blueprintInternalName : sortBy === 'category' ? a.category : a.contractName) || '';
-        const bv = (sortBy === 'blueprint' ? b.blueprintInternalName : sortBy === 'category' ? b.category : b.contractName) || '';
-        return av.localeCompare(bv);
-    });
-
-    render(data);
+  const q = norm(document.getElementById('search').value);
+  const cat = document.getElementById('categoryFilter').value;
+  const sortBy = document.getElementById('sortBy').value;
+  let data = RAW.filter(item => {
+    const hay = [item.displayName,item.missionName,item.category].join(' ').toLowerCase();
+    return (!q || hay.includes(q)) && (!cat || item.category === cat);
+  });
+  data.sort((a,b) => {
+    const av = sortBy==='mission' ? (a.missionName||'') : sortBy==='category' ? (a.category||'') : (a.displayName||'');
+    const bv = sortBy==='mission' ? (b.missionName||'') : sortBy==='category' ? (b.category||'') : (b.displayName||'');
+    return av.localeCompare(bv);
+  });
+  render(data);
 }
-
-fetch(DATA_URL)
-    .then(r => r.json())
-    .then(data => {
-        RAW = data;
-        applyFilters();
-    })
-    .catch(err => {
-        document.getElementById('stats').textContent = 'Error cargando blueprints_missions.json';
-        document.getElementById('grid').innerHTML = `<div class="empty">NO SE HA PODIDO CARGAR EL JSON</div>`;
-        console.error(err);
-    });
-
+fetch(DATA_URL).then(r=>r.json()).then(data=>{RAW=data;applyFilters();}).catch(err=>{
+  document.getElementById('stats').textContent='Error cargando blueprints';
+  document.getElementById('grid').innerHTML='<div class="empty">NO SE PUDO CARGAR EL JSON</div>';
+  console.error(err);
+});
 document.getElementById('search').addEventListener('input', applyFilters);
 document.getElementById('categoryFilter').addEventListener('change', applyFilters);
 document.getElementById('sortBy').addEventListener('change', applyFilters);
