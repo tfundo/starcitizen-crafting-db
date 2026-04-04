@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobiGlas // Calculadora de Minería</title>
+    <style>
+        :root {
+            --bg-color: #050914;
+            --panel-bg: rgba(20, 15, 5, 0.85);
+            --accent: #f59e0b; /* Naranja Argo / Minería */
+            --accent-hover: #d97706;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #451a03;
+            --good: #10b981;
+            --bad: #ef4444;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            background-image: linear-gradient(rgba(5, 9, 20, 0.9), rgba(5, 9, 20, 0.95)), url('https://media.robertsspaceindustries.com/n14a84iowf8a4/store_slideshow_large.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--text-main);
+        }
+        header {
+            background-color: rgba(5, 9, 20, 0.95);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent);
+        }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--text-main); letter-spacing: 2px; margin:0; }
+        .logo span { color: var(--accent); font-size: 1rem; }
+        
+        main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--accent);
+            padding: 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 { color: var(--accent); margin-top: 0; font-weight: 400; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;}
+        
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem; }
+        select, input {
+            width: 100%; padding: 0.8rem; background: rgba(0,0,0,0.5); border: 1px solid var(--border);
+            color: var(--text-main); border-radius: 4px; font-size: 1rem;
+        }
+        select:focus, input:focus { outline: none; border-color: var(--accent); }
+
+        .stat-row { display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: var(--text-muted); }
+        .stat-value { font-weight: bold; font-family: monospace; font-size: 1.1rem; }
+        
+        .visual-bar-bg { width: 100%; height: 8px; background: #1e293b; border-radius: 4px; margin-top: 5px; overflow: hidden; }
+        .visual-bar-fill { height: 100%; background: var(--accent); transition: width 0.3s; }
+        
+        .btn-calc {
+            width: 100%; padding: 1rem; background: var(--accent); color: #000; border: none;
+            font-size: 1.1rem; font-weight: bold; cursor: pointer; border-radius: 4px; transition: 0.3s;
+        }
+        .btn-calc:hover { background: var(--accent-hover); }
+
+        .result-green { color: var(--good); }
+        .result-red { color: var(--bad); }
+
+        @media (max-width: 768px) {
+            .calculator-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">SC_DB <span>MINING CALCULATOR</span></h1>
+        <a href="index.html" style="color: var(--accent); text-decoration: none;">Volver al Hub</a>
+    </header>
+
+    <main>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Configura tu cabezal de minería y los módulos instalados para simular si podrás romper la roca sin sobrecargar el sistema.</p>
+
+        <div class="calculator-grid">
+            <!-- Panel Izquierdo: Equipamiento -->
+            <div class="panel">
+                <h2>1. Equipamiento de Nave</h2>
+                
+                <div class="form-group">
+                    <label>Cabezal Láser (Mining Head)</label>
+                    <select id="laser-head" onchange="calculate()">
+                        <option value="hofstede">Hofstede-S1 (Balanceado)</option>
+                        <option value="lancet">Lancet MH1 (Seguro / Soporte)</option>
+                        <option value="helix">Helix I (Potencia Bruta)</option>
+                        <option value="impact">Impact I (Rápido)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Módulo 1 (Activo/Pasivo)</label>
+                    <select id="module-1" onchange="calculate()">
+                        <option value="none">Vacío</option>
+                        <option value="rieger">Rieger-C3 (+30% Potencia)</option>
+                        <option value="brandt">Brandt (-30% Inestabilidad)</option>
+                        <option value="focus">Focus III (+20% Ventana Óptima)</option>
+                        <option value="stampede">Stampede (+100% Vel. Carga / + Ventana)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Módulo 2</label>
+                    <select id="module-2" onchange="calculate()">
+                        <option value="none">Vacío</option>
+                        <option value="rieger">Rieger-C3 (+30% Potencia)</option>
+                        <option value="brandt">Brandt (-30% Inestabilidad)</option>
+                        <option value="focus">Focus III (+20% Ventana Óptima)</option>
+                    </select>
+                </div>
+                
+                <h2 style="margin-top: 2rem;">2. Escaneo de la Roca</h2>
+                <div class="form-group">
+                    <label>Tipo de Mineral Principal</label>
+                    <select id="rock-type" onchange="calculate()">
+                        <option value="quantanium">Quantanium (Extremadamente Volátil)</option>
+                        <option value="bexalite">Bexalite (Muy Denso)</option>
+                        <option value="taranite">Taranite (Equilibrado)</option>
+                        <option value="gold">Oro / Gold (Fácil)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Masa de la Roca (Masa)</label>
+                    <input type="number" id="rock-mass" value="4500" min="1000" max="15000" onkeyup="calculate()" onchange="calculate()">
+                </div>
+            </div>
+
+            <!-- Panel Derecho: Resultados -->
+            <div class="panel">
+                <h2>3. Telemetría y Análisis</h2>
+                
+                <div class="stat-row">
+                    <div class="stat-label">Potencia Bruta Total</div>
+                    <div class="stat-value" id="res-power">2400 kW</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label">Resistencia de la Roca</div>
+                    <div class="stat-value" id="res-resistance">75%</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label">Inestabilidad Resultante</div>
+                    <div class="stat-value" id="res-instability">8.5</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label">Tamaño Ventana Óptima</div>
+                    <div class="stat-value" id="res-window">Normal</div>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.4); border-radius: 4px; border: 1px solid var(--border);">
+                    <h3 style="margin-top:0; color: var(--text-main); font-size: 1.1rem;">Veredicto del Sistema:</h3>
+                    <p id="verdict-text" style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0;">Analizando...</p>
+                    <div class="visual-bar-bg"><div id="verdict-bar" class="visual-bar-fill" style="width: 50%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const lasers = {
+            hofstede: { power: 1800, window: 1.1, instab: 0.9, resis: 1.0 },
+            lancet:   { power: 1200, window: 1.2, instab: 0.25, resis: 0.25 }, // Lancet baja muchisimo inestabilidad y resistencia
+            helix:    { power: 3200, window: 0.9, instab: 1.2, resis: 0.8 },
+            impact:   { power: 2200, window: 0.8, instab: 1.1, resis: 1.0 }
+        };
+
+        const modules = {
+            none:     { power: 1.0, window: 1.0, instab: 1.0 },
+            rieger:   { power: 1.3, window: 1.0, instab: 1.0 },
+            brandt:   { power: 1.0, window: 1.0, instab: 0.7 },
+            focus:    { power: 1.0, window: 1.2, instab: 1.0 },
+            stampede: { power: 1.0, window: 1.1, instab: 1.2 }
+        };
+
+        const rocks = {
+            quantanium: { baseRes: 0.80, baseInstab: 8.5, difficult: true },
+            bexalite:   { baseRes: 0.60, baseInstab: 5.0, difficult: false },
+            taranite:   { baseRes: 0.45, baseInstab: 4.0, difficult: false },
+            gold:       { baseRes: 0.20, baseInstab: 2.0, difficult: false }
+        };
+
+        function calculate() {
+            const headId = document.getElementById('laser-head').value;
+            const mod1Id = document.getElementById('module-1').value;
+            const mod2Id = document.getElementById('module-2').value;
+            const rockId = document.getElementById('rock-type').value;
+            const mass = parseFloat(document.getElementById('rock-mass').value) || 1000;
+
+            const head = lasers[headId];
+            const m1 = modules[mod1Id];
+            const m2 = modules[mod2Id];
+            const rock = rocks[rockId];
+
+            // Math
+            const totalPower = head.power * m1.power * m2.power;
+            const finalResis = rock.baseRes * head.resis;
+            const finalInstab = rock.baseInstab * head.instab * m1.instab * m2.instab;
+            const finalWindow = head.window * m1.window * m2.window;
+
+            // Update UI
+            document.getElementById('res-power').innerText = Math.round(totalPower) + " kW";
+            document.getElementById('res-resistance').innerText = Math.round(finalResis * 100) + "%";
+            document.getElementById('res-instability').innerText = finalInstab.toFixed(2);
+            document.getElementById('res-window').innerText = (finalWindow * 100).toFixed(0) + "%";
+
+            // Veredicto
+            let verdict = "";
+            let color = "var(--good)";
+            let barW = "100%";
+
+            // Formula muy simplificada de si se puede romper:
+            // Potencia requerida depende de masa y resistencia
+            const powerNeeded = mass * (1 + finalResis) * 0.4; 
+
+            if (totalPower < powerNeeded) {
+                verdict = "❌ IMPOSIBLE: Falta potencia para romper la roca.";
+                color = "var(--bad)";
+                barW = "20%";
+            } else if (finalInstab > 7) {
+                verdict = "⚠️ PELIGRO: Altamente inestable. Fácil de explotar.";
+                color = "#f59e0b"; // orange
+                barW = "60%";
+            } else if (finalWindow < 0.8 && totalPower > powerNeeded * 2) {
+                verdict = "⚠️ CUIDADO: Exceso de potencia y ventana pequeña.";
+                color = "#f59e0b";
+                barW = "70%";
+            } else {
+                verdict = "✅ ÓPTIMO: Configuración perfecta para esta roca.";
+                color = "var(--good)";
+                barW = "100%";
+            }
+
+            const vText = document.getElementById('verdict-text');
+            vText.innerText = verdict;
+            vText.style.color = color;
+            
+            const vBar = document.getElementById('verdict-bar');
+            vBar.style.width = barW;
+            vBar.style.background = color;
+        }
+
+        // Init
+        calculate();
+    </script>
+</body>
+</html>
