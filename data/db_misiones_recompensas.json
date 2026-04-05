@@ -1,7 +1,8 @@
 [
   {
     "id": "9d31564a-6d9e-45cf-a512-4f58266be4d3",
-    "name": "@Highpoint_KillAnimals_storm_H_title_001",
+    "name": "Highpoint_KillAnimals_storm_H_title_001",
+    "realName": "Cull Irradiated Kopions",
     "sourceFile": "highpointwildernessspecialists_killanimals.xml",
     "rewards": [
       {
@@ -42,12 +43,12 @@
         ],
         "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3"
       }
-    ],
-    "realName": "Cull Irradiated Kopions"
+    ]
   },
   {
     "id": "b0d4d762-5186-40e1-9869-130ce90109d2",
-    "name": "@bhg_bounty_title_gen_001",
+    "name": "bhg_bounty_title_gen_001",
+    "realName": "Verified Bounty: ~mission(TargetName) | ~mission(Danger)",
     "sourceFile": "bountyhuntersguild_fps.xml",
     "rewards": [
       {
@@ -88,12 +89,12 @@
         ],
         "name": "Grupo de Planos: 0f03e098-Cc68-4a14-Abe8-7b17a8bec97e"
       }
-    ],
-    "realName": "Verified Bounty: ~mission(TargetName) | ~mission(Danger)"
+    ]
   },
   {
     "id": "811dbf1b-f021-4809-96ff-77fe8002b8e5",
-    "name": "@bhg_bounty_title_ASD_Research_001",
+    "name": "bhg_bounty_title_ASD_Research_001",
+    "realName": "Verified Bounty: ~mission(TargetName) at ~mission(Location)",
     "sourceFile": "bountyhuntersguild_fps.xml",
     "rewards": [
       {
@@ -128,12 +129,12 @@
         ],
         "name": "Grupo de Planos: 6d549de3-21d6-4c46-Ba89-2970a4cf7286"
       }
-    ],
-    "realName": "Verified Bounty: ~mission(TargetName) at ~mission(Location)"
+    ]
   },
   {
     "id": "ccdb8a76-4772-4292-ab9f-ac5696d3d483",
-    "name": "@bhg_bounty_title_ASD_Engineering_001",
+    "name": "bhg_bounty_title_ASD_Engineering_001",
+    "realName": "Verified Bounty: ~mission(TargetName) at ~mission(Location)",
     "sourceFile": "bountyhuntersguild_fps.xml",
     "rewards": [
       {
@@ -311,12 +312,12 @@
         ],
         "name": "Grupo de Planos: 61b089a0-880c-41da-A2c2-482a1bffe96f"
       }
-    ],
-    "realName": "Verified Bounty: ~mission(TargetName) at ~mission(Location)"
+    ]
   },
   {
     "id": "8c7b651d-c125-4d7c-bfb6-82b61171f692",
-    "name": "@cfp_eliminateall_intro_title_001",
+    "name": "cfp_eliminateall_intro_title_001",
+    "realName": "Establishing Security",
     "sourceFile": "citizensforprosperity_mercenary_fps.xml",
     "rewards": [
       {
@@ -1037,12 +1038,12 @@
         ],
         "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833"
       }
-    ],
-    "realName": "Establishing Security"
+    ]
   },
   {
     "id": "03aa1c79-aef0-4b03-863a-d56baf1b4bae",
-    "name": "@foxwell_DefendShip_E_title_001",
+    "name": "foxwell_DefendShip_E_title_001",
+    "realName": "Yellow Level Contract: Ship Under Attack",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1077,12 +1078,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Yellow Level Contract: Ship Under Attack"
+    ]
   },
   {
     "id": "dba10330-cde8-4e2b-8d2e-7614bbdc5bc6",
-    "name": "@foxwell_DefendShip_M_title_001",
+    "name": "foxwell_DefendShip_M_title_001",
+    "realName": "Orange Level Contract: ~mission(Ship) Needs Assistance",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1117,12 +1118,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Orange Level Contract: ~mission(Ship) Needs Assistance"
+    ]
   },
   {
     "id": "8d62d6b9-22ee-4b1f-86d1-c65089faa5c5",
-    "name": "@foxwell_DefendShip_H_title_001",
+    "name": "foxwell_DefendShip_H_title_001",
+    "realName": "Red Level Contract: Ship Under Attack",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1157,12 +1158,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Red Level Contract: Ship Under Attack"
+    ]
   },
   {
     "id": "48cacfd7-920a-44bc-977d-8ea52ed6d324",
-    "name": "@foxwell_DefendShip_E_title_001",
+    "name": "foxwell_DefendShip_E_title_001",
+    "realName": "Yellow Level Contract: Ship Under Attack",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1197,12 +1198,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Yellow Level Contract: Ship Under Attack"
+    ]
   },
   {
     "id": "3306bc07-9ead-4323-b590-376a980ef81a",
-    "name": "@foxwell_DefendShip_M_title_001",
+    "name": "foxwell_DefendShip_M_title_001",
+    "realName": "Orange Level Contract: ~mission(Ship) Needs Assistance",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1237,12 +1238,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Orange Level Contract: ~mission(Ship) Needs Assistance"
+    ]
   },
   {
     "id": "d7a03794-21f6-4851-983e-877506189ace",
-    "name": "@foxwell_DefendShip_H_title_001",
+    "name": "foxwell_DefendShip_H_title_001",
+    "realName": "Red Level Contract: Ship Under Attack",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1277,12 +1278,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Red Level Contract: Ship Under Attack"
+    ]
   },
   {
     "id": "7c93c444-7bdf-42af-b4f5-ab8e8c926326",
-    "name": "@Foxwell_Mercenary_Intro_title_001",
+    "name": "Foxwell_Mercenary_Intro_title_001",
+    "realName": "Exciting New Opportunities with Foxwell Enforcement",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1701,12 +1702,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Exciting New Opportunities with Foxwell Enforcement"
+    ]
   },
   {
     "id": "50b65c1a-14ad-4e69-bba6-efac087a3735",
-    "name": "@Foxwell_HaulCargo_MultiToSingle_title_01",
+    "name": "Foxwell_HaulCargo_MultiToSingle_title_01",
+    "realName": "Red Level Contract: Clear PAFs, Recover Cargo, and Deliver to OLP",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1741,12 +1742,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Red Level Contract: Clear PAFs, Recover Cargo, and Deliver to OLP"
+    ]
   },
   {
     "id": "b0d47978-50bb-404a-b529-4084f6e6ac38",
-    "name": "@Foxwell_HaulCargo_AToB_PAF_title_01",
+    "name": "Foxwell_HaulCargo_AToB_PAF_title_01",
+    "realName": "Red Level Contract: Recoup Stolen Cargo Haul",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1781,12 +1782,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Red Level Contract: Recoup Stolen Cargo Haul"
+    ]
   },
   {
     "id": "f0a6adc6-ef64-4d4f-bf35-5368c870d7ad",
-    "name": "@Foxwell_HaulCargo_AToB_OLP_title_01",
+    "name": "Foxwell_HaulCargo_AToB_OLP_title_01",
+    "realName": "Red Level Contract: Retrieve Cargo Haul",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
@@ -1821,12 +1822,12 @@
         ],
         "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
-    ],
-    "realName": "Red Level Contract: Retrieve Cargo Haul"
+    ]
   },
   {
     "id": "8744d536-ee31-493b-a2b1-c819ba2f8955",
-    "name": "@Foxwell_DefendDestructibleEntites_VE_Title_001",
+    "name": "Foxwell_DefendDestructibleEntites_VE_Title_001",
+    "realName": "Foxwell DefendDestructibleEntites VE Title 001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
@@ -1855,12 +1856,12 @@
         ],
         "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
-    ],
-    "realName": "@Foxwell DefendDestructibleEntites VE Title 001"
+    ]
   },
   {
     "id": "f4d690b6-f20e-4ab9-a098-906e308909a4",
-    "name": "@Foxwell_DefendDestructibleEntites_E_Title_001",
+    "name": "Foxwell_DefendDestructibleEntites_E_Title_001",
+    "realName": "Foxwell DefendDestructibleEntites E Title 001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
@@ -1889,12 +1890,12 @@
         ],
         "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
-    ],
-    "realName": "@Foxwell DefendDestructibleEntites E Title 001"
+    ]
   },
   {
     "id": "eda80f06-4a44-471c-8b4f-a195a6a988c9",
-    "name": "@Foxwell_DefendDestructibleEntites_M_Title_001",
+    "name": "Foxwell_DefendDestructibleEntites_M_Title_001",
+    "realName": "Foxwell DefendDestructibleEntites M Title 001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
@@ -1923,12 +1924,12 @@
         ],
         "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
-    ],
-    "realName": "@Foxwell DefendDestructibleEntites M Title 001"
+    ]
   },
   {
     "id": "31d2d60e-aa5f-4c43-b39b-caf3195b67a7",
-    "name": "@Foxwell_DefendDestructibleEntites_H_Title_001",
+    "name": "Foxwell_DefendDestructibleEntites_H_Title_001",
+    "realName": "Foxwell DefendDestructibleEntites H Title 001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
@@ -1957,12 +1958,12 @@
         ],
         "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
-    ],
-    "realName": "@Foxwell DefendDestructibleEntites H Title 001"
+    ]
   },
   {
     "id": "802b6f6f-8b6c-47b7-80e5-06663b7a06c4",
-    "name": "@Foxwell_DefendDestructibleEntites_VH_Title_001",
+    "name": "Foxwell_DefendDestructibleEntites_VH_Title_001",
+    "realName": "Foxwell DefendDestructibleEntites VH Title 001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
@@ -1991,12 +1992,12 @@
         ],
         "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
-    ],
-    "realName": "@Foxwell DefendDestructibleEntites VH Title 001"
+    ]
   },
   {
     "id": "c1c16bc6-a55a-4af0-adbb-7fc63f1dfdb5",
-    "name": "@Foxwell_DefendDestructibleEntites_S_Title_001",
+    "name": "Foxwell_DefendDestructibleEntites_S_Title_001",
+    "realName": "Foxwell DefendDestructibleEntites S Title 001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
@@ -2025,12 +2026,12 @@
         ],
         "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
-    ],
-    "realName": "@Foxwell DefendDestructibleEntites S Title 001"
+    ]
   },
   {
     "id": "bbb52b26-4a27-4afa-aac5-9299fde95dbf",
     "name": "Hockrow_FacilityDelve_P3MM_Repeat",
+    "realName": "Hockrow FacilityDelve P3MM Repeat",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
@@ -2062,12 +2063,12 @@
         ],
         "name": "Grupo de Planos: 903fb48b-Ea72-48c0-B6d1-Ece7c7f1e2f3"
       }
-    ],
-    "realName": "Hockrow FacilityDelve P3MM Repeat"
+    ]
   },
   {
     "id": "3d0693fd-b4e4-4dc8-a42d-7e9acff7fd42",
-    "name": "@Hockrow_FacilityDelve_P2M1_Repeat_title",
+    "name": "Hockrow_FacilityDelve_P2M1_Repeat_title",
+    "realName": "Jorrit Dossier: Updated Energy Anomaly Data",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
@@ -2111,12 +2112,12 @@
         ],
         "name": "Grupo de Planos: 5d78a8d6-6911-4eda-97b6-9e315025147d"
       }
-    ],
-    "realName": "Jorrit Dossier: Updated Energy Anomaly Data"
+    ]
   },
   {
     "id": "fe6ba414-1375-4442-816e-30c4fe36e6f1",
-    "name": "@Hockrow_FacilityDelve_P2M2_Repeat_title",
+    "name": "Hockrow_FacilityDelve_P2M2_Repeat_title",
+    "realName": "Jorrit Dossier: Updated Security Data",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
@@ -2160,12 +2161,12 @@
         ],
         "name": "Grupo de Planos: 3ebf3bfa-Dde3-4782-90f6-B003b5af1877"
       }
-    ],
-    "realName": "Jorrit Dossier: Updated Security Data"
+    ]
   },
   {
     "id": "89376110-728c-40f1-b489-8ef4ff95e4f9",
-    "name": "@Hockrow_FacilityDelve_P2M3_Repeat_title",
+    "name": "Hockrow_FacilityDelve_P2M3_Repeat_title",
+    "realName": "Jorrit Dossier: Updated Seismic Data",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
@@ -2221,12 +2222,12 @@
         ],
         "name": "Grupo de Planos: A79a915d-5186-4f87-8140-69bca9fc335e"
       }
-    ],
-    "realName": "Jorrit Dossier: Updated Seismic Data"
+    ]
   },
   {
     "id": "80dd4f7d-b3f4-46dd-ae44-ce679e0705df",
-    "name": "@Hockrow_FacilityDelve_P2M4_Repeat_title",
+    "name": "Hockrow_FacilityDelve_P2M4_Repeat_title",
+    "realName": "Jorrit Dossier: Updated Power Usage Data",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
@@ -2279,12 +2280,12 @@
         ],
         "name": "Grupo de Planos: E0c72a9a-38be-4850-Bc0d-Dc4f3ee687c2"
       }
-    ],
-    "realName": "Jorrit Dossier: Updated Power Usage Data"
+    ]
   },
   {
     "id": "706aedbf-efdb-44f6-b075-f5d0d775ce37",
-    "name": "@InterSec_ResourceGathering_Cryopods_Title",
+    "name": "InterSec_ResourceGathering_Cryopods_Title",
+    "realName": "Recover Vanduul Corpses",
     "sourceFile": "intersec_resourcegathering.xml",
     "rewards": [
       {
@@ -2313,12 +2314,12 @@
         ],
         "name": "Grupo de Planos: 36e8ac4d-8962-4b03-89e7-Cd7a06fc4adc"
       }
-    ],
-    "realName": "Recover Vanduul Corpses"
+    ]
   },
   {
     "id": "0a3c40b0-f0e7-473f-bf75-fc7f4f0b5ffc",
-    "name": "@InterSec_ResourceGathering_Tech_Title",
+    "name": "InterSec_ResourceGathering_Tech_Title",
+    "realName": "Recover Vanduul Tech",
     "sourceFile": "intersec_resourcegathering.xml",
     "rewards": [
       {
@@ -2347,12 +2348,12 @@
         ],
         "name": "Grupo de Planos: 36e8ac4d-8962-4b03-89e7-Cd7a06fc4adc"
       }
-    ],
-    "realName": "Recover Vanduul Tech"
+    ]
   },
   {
     "id": "eda899b9-c58b-48df-88d9-6b34368af2f2",
-    "name": "@TheCollector_Recipes_Title_SandArmour",
+    "name": "TheCollector_Recipes_Title_SandArmour",
+    "realName": "Armor with horn and string",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2379,12 +2380,12 @@
         "ref": "53741591-226f-4a5f-ab96-f091f1d60d37",
         "name": "Ana Helmet Endro"
       }
-    ],
-    "realName": "Armor with horn and string"
+    ]
   },
   {
     "id": "557fcd28-3ab3-4a5d-84b7-e893b73bd8a4",
-    "name": "@TheCollector_Recipes_Title_KopTooth",
+    "name": "TheCollector_Recipes_Title_KopTooth",
+    "realName": "Fun Kopion Tooth Gun",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2399,12 +2400,12 @@
         "ref": "3efb1be1-8935-4124-8bf0-aec410297785",
         "name": "Parallax Rifle Battery (80 Cap)"
       }
-    ],
-    "realName": "Fun Kopion Tooth Gun"
+    ]
   },
   {
     "id": "4341c2d8-85b4-4623-8271-eff4480ec674",
-    "name": "@TheCollector_Recipes_Title_MiltSkull",
+    "name": "TheCollector_Recipes_Title_MiltSkull",
+    "realName": "Fun Military Skull Gun",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2419,12 +2420,12 @@
         "ref": "3efb1be1-8935-4124-8bf0-aec410297785",
         "name": "Parallax Rifle Battery (80 Cap)"
       }
-    ],
-    "realName": "Fun Military Skull Gun"
+    ]
   },
   {
     "id": "ba114637-1d33-46e5-b9ba-3834566add0f",
-    "name": "@TheCollector_Recipes_Title_MiltTooth",
+    "name": "TheCollector_Recipes_Title_MiltTooth",
+    "realName": "Fun Military Tooth Gun",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2439,12 +2440,12 @@
         "ref": "3efb1be1-8935-4124-8bf0-aec410297785",
         "name": "Parallax Rifle Battery (80 Cap)"
       }
-    ],
-    "realName": "Fun Military Tooth Gun"
+    ]
   },
   {
     "id": "c4c7fa2d-91f5-4171-988b-9003841f4fcd",
-    "name": "@TheCollector_Menu_Title_JungleArm",
+    "name": "TheCollector_Menu_Title_JungleArm",
+    "realName": "Want armor look like tree?",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2471,12 +2472,12 @@
         "ref": "551e9712-2692-403f-a4fe-0a441d8f7be1",
         "name": "DCP Armor Legs Jungle Camo"
       }
-    ],
-    "realName": "Want armor look like tree?"
+    ]
   },
   {
     "id": "dbe950bb-885f-4c12-ad7d-878723bb251c",
-    "name": "@TheCollector_Menu_Title_DesertArm",
+    "name": "TheCollector_Menu_Title_DesertArm",
+    "realName": "Look at desert but don't see you",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2503,12 +2504,12 @@
         "ref": "4ffb6e07-e7c6-4db5-8735-c35179a723d0",
         "name": "DCP Armor Legs Hunter Camo"
       }
-    ],
-    "realName": "Look at desert but don't see you"
+    ]
   },
   {
     "id": "82d178e8-e7c1-4436-981c-c51dbaa87f3b",
-    "name": "@TheCollector_Menu_Title_NavyArm",
+    "name": "TheCollector_Menu_Title_NavyArm",
+    "realName": "Make space navy armor",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2535,12 +2536,12 @@
         "ref": "a86d001d-64e0-4d48-9db3-ed779bd7bfe7",
         "name": "DCP Armor Legs Cobalt Camo"
       }
-    ],
-    "realName": "Make space navy armor"
+    ]
   },
   {
     "id": "e44de29c-a2c3-49ef-864b-03eb7ae466db",
-    "name": "@TheCollector_Menu_Title_NavyVolt",
+    "name": "TheCollector_Menu_Title_NavyVolt",
+    "realName": "Volt gun more Navy-like",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2555,12 +2556,12 @@
         "ref": "83ac5196-05d0-45a1-8982-aa549650f9d9",
         "name": "Quartz Energy SMG Battery (45 cap)"
       }
-    ],
-    "realName": "Volt gun more Navy-like"
+    ]
   },
   {
     "id": "f986a67a-76bb-4f19-9c84-d2d6db0bd755",
-    "name": "@TheCollector_Menu_Title_JungleVolt",
+    "name": "TheCollector_Menu_Title_JungleVolt",
+    "realName": "Zappy gun more woodlike",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2575,12 +2576,12 @@
         "ref": "83ac5196-05d0-45a1-8982-aa549650f9d9",
         "name": "Quartz Energy SMG Battery (45 cap)"
       }
-    ],
-    "realName": "Zappy gun more woodlike"
+    ]
   },
   {
     "id": "6472920a-5588-4378-89a1-b2c5bcbfc75c",
-    "name": "@TheCollector_Menu_Title_DesertVolt",
+    "name": "TheCollector_Menu_Title_DesertVolt",
+    "realName": "Make gun sandy",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2595,12 +2596,12 @@
         "ref": "83ac5196-05d0-45a1-8982-aa549650f9d9",
         "name": "Quartz Energy SMG Battery (45 cap)"
       }
-    ],
-    "realName": "Make gun sandy"
+    ]
   },
   {
     "id": "b4a0ba2d-a5f6-496b-bc04-5f0bce49067a",
-    "name": "@TheCollector_Recipes_Title_IrrArm",
+    "name": "TheCollector_Recipes_Title_IrrArm",
+    "realName": "Make glowy armor",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2627,12 +2628,12 @@
         "ref": "ce095413-724c-492b-8e25-7ec2cb532988",
         "name": "Bokto Helmet"
       }
-    ],
-    "realName": "Make glowy armor"
+    ]
   },
   {
     "id": "e404f6c6-997d-4195-8e48-1a8f859398c9",
-    "name": "@TheCollector_Recipes_Title_VoltThwack",
+    "name": "TheCollector_Recipes_Title_VoltThwack",
+    "realName": "Make VOLT shotgun angrier",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2647,12 +2648,12 @@
         "ref": "14e12fed-37fd-4c75-b61e-1b21d1bbade7",
         "name": "Prism Laser Shotgun Battery (20 cap)"
       }
-    ],
-    "realName": "Make VOLT shotgun angrier"
+    ]
   },
   {
     "id": "3d432269-ee32-4127-abda-60b30a5c3660",
-    "name": "@TheCollector_Trade_GG_ExpolrationSuit_Name",
+    "name": "TheCollector_Trade_GG_ExpolrationSuit_Name",
+    "realName": "Walk in danger. Look good.",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2673,12 +2674,12 @@
         "ref": "5c007fa0-4354-47c6-b1e3-03c9fd9d2be3",
         "name": "Novikov \"Ascension\" Backpack"
       }
-    ],
-    "realName": "Walk in danger. Look good."
+    ]
   },
   {
     "id": "2453dcac-761d-4f95-8783-d31106fcfe1e",
-    "name": "@TheCollector_Trade_GG_XanthuleSuit_Name",
+    "name": "TheCollector_Trade_GG_XanthuleSuit_Name",
+    "realName": "Xi'an Xanthule Suit made better",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2693,12 +2694,12 @@
         "ref": "9e992877-60a5-4bc3-983c-50e185c5ffa2",
         "name": "Xanthule Ascension Helmet"
       }
-    ],
-    "realName": "Xi'an Xanthule Suit made better"
+    ]
   },
   {
     "id": "956685c4-0324-4cf8-8a67-fed823254e61",
-    "name": "@TheCollector_Trade_GG_VentureSuilt_Name",
+    "name": "TheCollector_Trade_GG_VentureSuilt_Name",
+    "realName": "Adventure a A-Venture",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2725,12 +2726,12 @@
         "ref": "d59c2342-2612-4365-9ef3-e4caf4e5cda6",
         "name": "Venture Helmet Ascension"
       }
-    ],
-    "realName": "Adventure a A-Venture"
+    ]
   },
   {
     "id": "698c51c9-2a49-46c4-baf6-2d1abad7661e",
-    "name": "@TheCollector_Trade_GG_Karna_Name",
+    "name": "TheCollector_Trade_GG_Karna_Name",
+    "realName": "Prettify Karna Gun",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2745,12 +2746,12 @@
         "ref": "91cfb7dc-660b-4505-b86a-6028c9a3f54d",
         "name": "Karna Rifle Battery (35 cap)"
       }
-    ],
-    "realName": "Prettify Karna Gun"
+    ]
   },
   {
     "id": "4df999a1-93ba-47a4-b498-cfaad7553da3",
-    "name": "@TheCollector_Trade_GG_S71_Name",
+    "name": "TheCollector_Trade_GG_S71_Name",
+    "realName": "Built on S71 rifle",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2765,12 +2766,12 @@
         "ref": "1fc5d1dc-1fbd-480b-9b1a-a5121963de78",
         "name": "S71 Rifle Magazine (30 cap)"
       }
-    ],
-    "realName": "Built on S71 rifle"
+    ]
   },
   {
     "id": "e186dc92-bac2-4298-b011-a68b4d058dc5",
-    "name": "@TheCollector_Trade_GG_Coda_Name",
+    "name": "TheCollector_Trade_GG_Coda_Name",
+    "realName": "Fix up Coda gun",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2785,12 +2786,12 @@
         "ref": "90b873da-1d15-48ba-86f5-f5633e958c33",
         "name": "Coda Pistol Magazine (6 cap)"
       }
-    ],
-    "realName": "Fix up Coda gun"
+    ]
   },
   {
     "id": "ab52c274-a29e-4730-a311-917a271917a8",
-    "name": "@TheCollector_Recipes_Title_ZipZap",
+    "name": "TheCollector_Recipes_Title_ZipZap",
+    "realName": "Snow Snipe",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2805,12 +2806,12 @@
         "ref": "fa12a7a5-6fdd-4e7b-9237-1f2e131a43c4",
         "name": "Zenith Laser Sniper Rifle Battery (22 Cap)"
       }
-    ],
-    "realName": "Snow Snipe"
+    ]
   },
   {
     "id": "9d32ff6d-6b62-43d4-8b71-85d50e413743",
-    "name": "@TheCollector_Recipes_Title_Hush",
+    "name": "TheCollector_Recipes_Title_Hush",
+    "realName": "Hide Snow Suit",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2843,12 +2844,12 @@
         "ref": "5d4fc095-7a9f-44a6-b9e6-adbd124fcc9c",
         "name": "Geist Backpack Snow Camo"
       }
-    ],
-    "realName": "Hide Snow Suit"
+    ]
   },
   {
     "id": "ab52c274-a29e-4730-a311-917a27191416",
-    "name": "@TheCollector_Recipes_Title_LotsOfZipZap",
+    "name": "TheCollector_Recipes_Title_LotsOfZipZap",
+    "realName": "Heavy VOLT Zapper",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2863,12 +2864,12 @@
         "ref": "923fcb3c-ad02-4a9a-96c2-1fb61fb6c794",
         "name": "Fresnel Energy LMG Battery (165 Cap)"
       }
-    ],
-    "realName": "Heavy VOLT Zapper"
+    ]
   },
   {
     "id": "9d32ff6d-6b62-43d4-8b71-85d50e4154f5",
-    "name": "@TheCollector_Recipes_Title_Molten",
+    "name": "TheCollector_Recipes_Title_Molten",
+    "realName": "Do Lava Suit",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2901,12 +2902,12 @@
         "ref": "7524df82-4578-464b-a917-d3b6c31462f6",
         "name": "Strata Backpack Heatwave"
       }
-    ],
-    "realName": "Do Lava Suit"
+    ]
   },
   {
     "id": "9d32ff6d-6b62-43d4-8b71-85d50e413745",
-    "name": "@TheCollector_Recipes_Title_HeavyUtil",
+    "name": "TheCollector_Recipes_Title_HeavyUtil",
+    "realName": "Shiny Builder Suit",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2939,12 +2940,12 @@
         "ref": "eeaec661-8544-4554-947a-e685fbe6c418",
         "name": "Novikov Backpack Crush"
       }
-    ],
-    "realName": "Shiny Builder Suit"
+    ]
   },
   {
     "id": "318bc17e-1b97-4ba5-a527-0c81076ef811",
-    "name": "@TheCollector_Recipes_Title_Battle",
+    "name": "TheCollector_Recipes_Title_Battle",
+    "realName": "Test Armor",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2977,12 +2978,12 @@
         "ref": "877290d3-a275-414f-9eb1-7d2fce3c4fdb",
         "name": "Palatino Backpack Mark I"
       }
-    ],
-    "realName": "Test Armor"
+    ]
   },
   {
     "id": "372b0eff-0e55-4654-a3ca-542058cb84cf",
-    "name": "@TheCollector_Recipes_Title_SpikeyArmor",
+    "name": "TheCollector_Recipes_Title_SpikeyArmor",
+    "realName": "Armor with Vanduul",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3015,12 +3016,12 @@
         "ref": "a5327582-23fb-43db-a5ec-f3961e1761a3",
         "name": "Testudo Backpack Clanguard"
       }
-    ],
-    "realName": "Armor with Vanduul"
+    ]
   },
   {
     "id": "9c4459ac-2527-4024-b8f1-a08081df252a",
-    "name": "@TheCollector_Recipes_Title_BigBooma",
+    "name": "TheCollector_Recipes_Title_BigBooma",
+    "realName": "Curious Weapon",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3035,12 +3036,12 @@
         "ref": "2f4ed822-21bb-4b47-8d9b-ef75114222f6",
         "name": "Boomtube Rocket"
       }
-    ],
-    "realName": "Curious Weapon"
+    ]
   },
   {
     "id": "ba4e3db4-0f7d-4692-8b9d-8efe3085e84d",
-    "name": "@TheCollector_Recipes_Title_NonePistol",
+    "name": "TheCollector_Recipes_Title_NonePistol",
+    "realName": "Hot Shot",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3055,12 +3056,12 @@
         "ref": "02f5904f-62ef-48e7-b63c-4ea3d4a7385f",
         "name": "Tripledown Pistol Magazine (12 Cap)"
       }
-    ],
-    "realName": "Hot Shot"
+    ]
   },
   {
     "id": "cc80cd24-2ed0-4e9c-aa10-766e6bbdf3d1",
-    "name": "@TheCollector_Recipes_Title_GMNI_Shotgun",
+    "name": "TheCollector_Recipes_Title_GMNI_Shotgun",
+    "realName": "Red Fight Shotgun",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3075,12 +3076,12 @@
         "ref": "b4ef17b2-60b9-4617-a6a4-60dd053a9e73",
         "name": "R97 Shotgun Magazine (18 cap)"
       }
-    ],
-    "realName": "Red Fight Shotgun"
+    ]
   },
   {
     "id": "05bb00fc-bb90-40a5-bcff-214ff876662b",
-    "name": "@TheCollector_Recipes_Title_RedHunterArmor",
+    "name": "TheCollector_Recipes_Title_RedHunterArmor",
+    "realName": "Red Fight Armor",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3113,12 +3114,12 @@
         "ref": "66b4cbc7-3e47-4902-a30d-ad502259bf80",
         "name": "Warden Backpack Crimson Camo"
       }
-    ],
-    "realName": "Red Fight Armor"
+    ]
   },
   {
     "id": "3c839c32-d313-4c13-ade0-eb45b5bdea4b",
-    "name": "@TheCollector_Ships_Wolf_Unique_Title",
+    "name": "TheCollector_Ships_Wolf_Unique_Title",
+    "realName": "Most Special Wolf",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3157,12 +3158,12 @@
         "ref": "123f7dff-f340-48f9-af35-86f986ec86d2",
         "name": "Fresnel \"Deepwater\" Energy LMG"
       }
-    ],
-    "realName": "Most Special Wolf"
+    ]
   },
   {
     "id": "db858e87-56ce-48bf-8eea-b172b253c2ff",
-    "name": "@Headhunters_EliminateBoss_OLP_VH_title_001",
+    "name": "Headhunters_EliminateBoss_OLP_VH_title_001",
+    "realName": "Settle a Grudge",
     "sourceFile": "headhunters_mercenary_fps.xml",
     "rewards": [
       {
@@ -6121,12 +6122,12 @@
         ],
         "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       }
-    ],
-    "realName": "Settle a Grudge"
+    ]
   },
   {
     "id": "b420cb29-8e79-4965-ba20-78047e8fd265",
-    "name": "@shubin_rockcracker_solo_title_01",
+    "name": "shubin_rockcracker_solo_title_01",
+    "realName": "QV Breaker Station Mining Rights (Exclusive)",
     "sourceFile": "shubininterstellar.xml",
     "rewards": [
       {
@@ -6170,12 +6171,12 @@
         ],
         "name": "Grupo de Planos: 1e31d7e8-3033-4c98-A477-C474810d48c1"
       }
-    ],
-    "realName": "QV Breaker Station Mining Rights (Exclusive)"
+    ]
   },
   {
     "id": "8f89a2d4-8994-462a-a711-7eca01a3edeb",
-    "name": "@shubin_rockcracker_pvp_title_01",
+    "name": "shubin_rockcracker_pvp_title_01",
+    "realName": "QV Breaker Station Mining Rights (Shared)",
     "sourceFile": "shubininterstellar.xml",
     "rewards": [
       {
@@ -6219,7 +6220,6 @@
         ],
         "name": "Grupo de Planos: 1e31d7e8-3033-4c98-A477-C474810d48c1"
       }
-    ],
-    "realName": "QV Breaker Station Mining Rights (Shared)"
+    ]
   }
 ]
