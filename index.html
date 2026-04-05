@@ -3,52 +3,300 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TFUND0 // Star Citizen Hub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="theme.css">
+  <title>Star Citizen Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .hero{padding:2rem 0 1rem 0}.hero h1{font-family:Orbitron,sans-serif;margin:0 0 .5rem 0}.hero p{color:var(--text-soft);max-width:760px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}
-    .card{padding:1.2rem;text-decoration:none;color:var(--text)}
-    .card:hover{border-color:var(--blue)}
-    .card h3{margin:.2rem 0 .5rem 0;font-family:Orbitron,sans-serif}.card p{color:var(--text-soft);margin:0}
-    .badge{display:inline-block;padding:.25rem .55rem;border-radius:999px;font-size:.75rem;font-weight:700;background:rgba(77,163,255,.14);color:var(--blue-2);margin-bottom:.8rem}
-    .links{display:flex;gap:.8rem;flex-wrap:wrap}
+    :root {
+      --bg: #0c0b0f;
+      --bg-soft: #14131a;
+      --panel: #18171f;
+      --panel-2: #1f1d27;
+      --border: #3b2d1d;
+      --text: #f5f1e8;
+      --text-soft: #b9b0a2;
+      --blue: #3f88ff;
+      --green: #39ff14;
+      --red: #c7392f;
+      --gold: #b9893b;
+      --gold-soft: #d0a45c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: radial-gradient(circle at top, #1a1620 0%, var(--bg) 45%, #08070b 100%);
+      color: var(--text);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(12, 11, 15, 0.94);
+      border-bottom: 1px solid rgba(185, 137, 59, 0.25);
+      backdrop-filter: blur(10px);
+    }
+    .topbar {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .brand img.logo-main {
+      width: 52px; height: 52px; border-radius: 50%; object-fit: cover;
+      border: 1px solid rgba(57,255,20,0.25);
+      box-shadow: 0 0 0 1px rgba(199,57,47,0.12);
+      background: #0f1117;
+    }
+    .brand img.logo-org {
+      width: 52px; height: 52px; border-radius: 50%; object-fit: cover;
+      border: 1px solid rgba(185,137,59,0.35);
+      background: #0f1117;
+    }
+    .title-wrap h1 {
+      margin: 0;
+      font-family: Orbitron, sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: var(--text);
+    }
+    .title-wrap .sub {
+      color: var(--text-soft);
+      font-size: 0.85rem;
+    }
+    .menu {
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+    details.menu-group {
+      position: relative;
+    }
+    details.menu-group > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(185,137,59,0.18);
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+      color: var(--text);
+      font-weight: 600;
+      user-select: none;
+    }
+    details.menu-group > summary::-webkit-details-marker { display: none; }
+    details.menu-group[open] > summary {
+      border-color: rgba(63,136,255,0.35);
+      box-shadow: 0 0 0 1px rgba(63,136,255,0.08);
+    }
+    .dropdown {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 0.5rem);
+      min-width: 240px;
+      background: #121119;
+      border: 1px solid rgba(185,137,59,0.18);
+      border-radius: 14px;
+      padding: 0.45rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .dropdown a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      padding: 0.8rem 0.9rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .dropdown a:hover {
+      background: rgba(63,136,255,0.08);
+      color: white;
+    }
+    main {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 2rem 1.2rem 3rem 1.2rem;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+    .hero-card, .status-card {
+      border-radius: 22px;
+      padding: 1.4rem;
+      background: linear-gradient(180deg, rgba(24,23,31,0.95) 0%, rgba(17,16,23,0.98) 100%);
+      border: 1px solid rgba(185,137,59,0.18);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.28);
+    }
+    .hero h2 {
+      margin: 0 0 0.8rem 0;
+      font-family: Orbitron, sans-serif;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+    .hero p {
+      color: var(--text-soft);
+      line-height: 1.65;
+      margin: 0;
+      max-width: 760px;
+    }
+    .accent-row {
+      display: flex;
+      gap: 0.55rem;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .accent-chip {
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .chip-green { color: var(--green); }
+    .chip-red { color: var(--red); }
+    .chip-blue { color: var(--blue); }
+    .chip-gold { color: var(--gold-soft); }
+    .status-card h3 {
+      margin-top: 0;
+      font-family: Orbitron, sans-serif;
+      font-size: 1rem;
+    }
+    .status-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: var(--text-soft);
+    }
+    .status-line strong { color: var(--text); }
+    .sections {
+      margin-top: 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .section-card {
+      text-decoration: none;
+      color: var(--text);
+      border-radius: 18px;
+      padding: 1.2rem;
+      background: linear-gradient(180deg, rgba(24,23,31,0.95) 0%, rgba(17,16,23,0.98) 100%);
+      border: 1px solid rgba(185,137,59,0.16);
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .section-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(63,136,255,0.32);
+    }
+    .section-card h3 {
+      margin: 0 0 0.6rem 0;
+      font-family: Orbitron, sans-serif;
+      font-size: 1rem;
+    }
+    .section-card p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.55;
+    }
+    .section-card .tag {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      padding: 0.3rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(63,136,255,0.1);
+      color: var(--blue);
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .dropdown { position: static; margin-top: 0.5rem; }
+    }
   </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="brand-wrap">
-    <img src="logo.jpg" class="brand-logo" alt="TFUNDO logo">
-    <div class="brand-title">TFUND<span>0</span> // Datacenter</div>
-  </div>
-  <div class="links">
-    <a class="top-link" href="#">Discord</a>
-    <a class="top-link" href="#">YouTube</a>
-  </div>
-</header>
-<main class="page">
-  <section class="hero">
-    <h1>Centro de datos de Star Citizen</h1>
-    <p>Selecciona el módulo que quieres consultar. Estamos construyendo una base de datos real extraída del juego para blueprints, misiones, naves, armas, armaduras y minería.</p>
-  </section>
-  <section class="grid">
-    <a class="panel-card card" href="BaseDatos_Interactiva.html">
-      <span class="badge">Operativo</span>
-      <h3>Naves y vehículos</h3>
-      <p>Datos de flota, fabricantes, tripulación y parámetros básicos.</p>
-    </a>
-    <a class="panel-card card" href="BaseDatos_Blueprints.html">
-      <span class="badge">Operativo</span>
-      <h3>Blueprints</h3>
-      <p>Objetos, misiones, costes de crafteo y catálogo en construcción.</p>
-    </a>
-    <a class="panel-card card" href="Mining_Calculator.html">
-      <span class="badge">Operativo</span>
-      <h3>Minería</h3>
-      <p>Calculadora interactiva de cabezales, módulos y rocas.</p>
-    </a>
-  </section>
-</main>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <img src="logo.jpg" alt="Logo personal" class="logo-main">
+        <img src="org_logo.jpg" alt="Logo org" class="logo-org">
+        <div class="title-wrap">
+          <h1>Star Citizen Companion</h1>
+          <div class="sub">Base de datos, crafting, flota y herramientas del verso</div>
+        </div>
+      </div>
+      <nav class="menu">
+        <details class="menu-group">
+          <summary>Explorar datos</summary>
+          <div class="dropdown">
+            <a href="BaseDatos_Blueprints.html">Blueprints y crafting</a>
+            <a href="BaseDatos_Interactiva.html">Naves y vehículos</a>
+            <a href="Mining_Calculator.html">Herramienta de minería</a>
+          </div>
+        </details>
+        <details class="menu-group">
+          <summary>Comunidad</summary>
+          <div class="dropdown">
+            <a href="#">Discord</a>
+            <a href="#">YouTube</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Tu centro de apoyo para Star Citizen</h2>
+        <p>
+          Esta web se está reconstruyendo desde cero para quedar limpia, rápida y útil. La idea es tener un companion real con blueprints, misiones, materiales de crafteo, naves, componentes y herramientas prácticas sin la basura técnica que solo entiende quien mira los archivos internos del juego.
+        </p>
+        <div class="accent-row">
+          <span class="accent-chip chip-green">Identidad personal</span>
+          <span class="accent-chip chip-red">Org Ghost Syndicate</span>
+          <span class="accent-chip chip-blue">Companion UI</span>
+          <span class="accent-chip chip-gold">Estilo táctico</span>
+        </div>
+      </div>
+      <div class="status-card">
+        <h3>Estado del proyecto</h3>
+        <div class="status-line"><span>Blueprints</span><strong>En revisión</strong></div>
+        <div class="status-line"><span>Naves</span><strong>Base disponible</strong></div>
+        <div class="status-line"><span>Minería</span><strong>Calculadora activa</strong></div>
+        <div class="status-line"><span>Misiones / loot</span><strong>En construcción</strong></div>
+      </div>
+    </section>
+
+    <section class="sections">
+      <a class="section-card" href="BaseDatos_Blueprints.html">
+        <span class="tag">Crafting</span>
+        <h3>Blueprints</h3>
+        <p>Consulta objetos, misiones donde pueden salir y costes de crafteo en una interfaz más limpia y orientada al usuario final.</p>
+      </a>
+      <a class="section-card" href="BaseDatos_Interactiva.html">
+        <span class="tag">Flota</span>
+        <h3>Naves y vehículos</h3>
+        <p>Listado base de fabricantes, tripulación, rol y parámetros principales para tu consulta rápida.</p>
+      </a>
+      <a class="section-card" href="Mining_Calculator.html">
+        <span class="tag">Herramienta</span>
+        <h3>Minería</h3>
+        <p>Simula cabezales, módulos y masa de rocas para hacerte una idea rápida de la viabilidad de extracción.</p>
+      </a>
+    </section>
+  </main>
 </body>
 </html>
