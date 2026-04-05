@@ -1,269 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFUND0 // Star Citizen DB</title>
-    <!-- Fuente Matrix/Consola -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #000000;
-            --panel-bg: rgba(0, 20, 0, 0.7);
-            --matrix-green: #39ff14; /* Sable verde / Matrix */
-            --sith-red: #ff0000;     /* Sable rojo */
-            --jedi-blue: #0088ff;    /* Sable azul */
-            --text-dim: #008800;
-            --border: #004400;
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            font-family: 'Share Tech Mono', monospace;
-            background-color: var(--bg-dark);
-            color: var(--matrix-green);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
-            /* Efecto scanlines (CRT) */
-            background-image: linear-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px);
-            background-size: 100% 3px;
-        }
-
-        header {
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(180deg, rgba(0,20,0,0.9) 0%, rgba(0,0,0,0) 100%);
-            border-bottom: 2px solid var(--matrix-green);
-            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .logo-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 2px solid var(--matrix-green);
-            box-shadow: 0 0 15px var(--matrix-green);
-        }
-
-        .logo-text {
-            font-family: 'VT323', monospace;
-            font-size: 3.5rem;
-            margin: 0;
-            color: var(--matrix-green);
-            text-shadow: 0 0 10px var(--matrix-green);
-            letter-spacing: 2px;
-        }
-        
-        .logo-text span { color: var(--sith-red); text-shadow: 0 0 10px var(--sith-red); }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--jedi-blue);
-            background: rgba(0, 0, 20, 0.5);
-            color: var(--jedi-blue);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-family: 'VT323', monospace;
-            transition: all 0.3s;
-            box-shadow: 0 0 10px rgba(0, 136, 255, 0.2);
-        }
-
-        .social-btn:hover {
-            background: var(--jedi-blue);
-            color: #000;
-            box-shadow: 0 0 20px var(--jedi-blue);
-        }
-
-        .social-btn.yt {
-            border-color: var(--sith-red);
-            color: var(--sith-red);
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-        }
-
-        .social-btn.yt:hover {
-            background: var(--sith-red);
-            color: #000;
-            box-shadow: 0 0 20px var(--sith-red);
-        }
-
-        main {
-            flex: 1;
-            padding: 3rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .terminal-header {
-            margin-bottom: 3rem;
-            border-left: 4px solid var(--jedi-blue);
-            padding-left: 1rem;
-        }
-
-        .terminal-header p {
-            font-size: 1.1rem;
-            color: var(--text-dim);
-            margin: 0.5rem 0;
-        }
-
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .module-card {
-            background: var(--panel-bg);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            text-decoration: none;
-            color: var(--matrix-green);
-            position: relative;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .module-card::before {
-            content: '>';
-            position: absolute;
-            top: 2rem;
-            left: 1rem;
-            color: var(--sith-red);
-            font-family: 'VT323', monospace;
-            font-size: 2rem;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-            transform: translateX(-10px);
-        }
-
-        .module-card:hover {
-            border-color: var(--matrix-green);
-            box-shadow: inset 0 0 20px rgba(57, 255, 20, 0.1), 0 0 15px rgba(57, 255, 20, 0.3);
-            background: rgba(0, 40, 0, 0.8);
-            transform: scale(1.02);
-            padding-left: 3rem;
-        }
-
-        .module-card:hover::before {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Colores sables láser en módulos */
-        .module-card.ships:hover { border-color: var(--jedi-blue); box-shadow: inset 0 0 20px rgba(0, 136, 255, 0.2), 0 0 15px rgba(0, 136, 255, 0.4); color: var(--jedi-blue); }
-        .module-card.crafting:hover { border-color: var(--matrix-green); box-shadow: inset 0 0 20px rgba(57, 255, 20, 0.2), 0 0 15px rgba(57, 255, 20, 0.4); color: var(--matrix-green); }
-        .module-card.mining:hover { border-color: var(--sith-red); box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.2), 0 0 15px rgba(255, 0, 0, 0.4); color: var(--sith-red); }
-
-        .module-title {
-            font-family: 'VT323', monospace;
-            font-size: 2.2rem;
-            margin: 0 0 0.5rem 0;
-            text-transform: uppercase;
-        }
-
-        .module-desc {
-            color: var(--text-dim);
-            font-size: 1rem;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .status-badge {
-            position: absolute;
-            top: 1rem; right: 1rem;
-            font-size: 0.8rem;
-            padding: 0.2rem 0.5rem;
-            border: 1px solid currentColor;
-            text-transform: uppercase;
-        }
-
-        .blink { animation: blinker 1.5s linear infinite; }
-        @keyframes blinker { 50% { opacity: 0; } }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            color: var(--text-dim);
-            border-top: 1px solid var(--border);
-            font-size: 0.9rem;
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFUND0 // Star Citizen Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .hero{padding:2rem 0 1rem 0}.hero h1{font-family:Orbitron,sans-serif;margin:0 0 .5rem 0}.hero p{color:var(--text-soft);max-width:760px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}
+    .card{padding:1.2rem;text-decoration:none;color:var(--text)}
+    .card:hover{border-color:var(--blue)}
+    .card h3{margin:.2rem 0 .5rem 0;font-family:Orbitron,sans-serif}.card p{color:var(--text-soft);margin:0}
+    .badge{display:inline-block;padding:.25rem .55rem;border-radius:999px;font-size:.75rem;font-weight:700;background:rgba(77,163,255,.14);color:var(--blue-2);margin-bottom:.8rem}
+    .links{display:flex;gap:.8rem;flex-wrap:wrap}
+  </style>
 </head>
 <body>
-
-    <header>
-        <div class="brand">
-            <img src="logo.jpg" alt="TFUND0 Logo" class="logo-img">
-            <h1 class="logo-text">TFUND<span>0</span>_SYSTEM</h1>
-        </div>
-        <div class="social-links">
-            <a href="#" class="social-btn">>> DISCORD</a>
-            <a href="#" class="social-btn yt">>> YOUTUBE</a>
-        </div>
-    </header>
-
-    <main>
-        <div class="terminal-header">
-            <p>USER: ADMIN // ACCESS GRANTED</p>
-            <p>SYSTEM STATUS: <span class="blink" style="color: var(--matrix-green);">ONLINE</span></p>
-            <p style="color: var(--jedi-blue);">Selecciona un directorio de la base de datos para acceder a los archivos extraídos del parche.</p>
-        </div>
-
-        <div class="dashboard-grid">
-            <!-- Módulo 1 -->
-            <a href="BaseDatos_Interactiva.html" class="module-card ships">
-                <span class="status-badge" style="color: var(--jedi-blue);">[ACTIVO]</span>
-                <h3 class="module-title">Flota Estelar</h3>
-                <p class="module-desc">Specs. técnicas, componentes y mercado de naves.</p>
-            </a>
-
-            <!-- Módulo 2 -->
-            <a href="BaseDatos_Blueprints.html" class="module-card crafting">
-                <span class="status-badge" style="color: var(--matrix-green);">[ACTIVO]</span>
-                <h3 class="module-title">Blueprints & Loot</h3>
-                <p class="module-desc">Planos de fabricación, drops y ubicaciones de armas/armaduras.</p>
-            </a>
-
-            <!-- Módulo 3 -->
-            <a href="Mining_Calculator.html" class="module-card mining">
-                <span class="status-badge" style="color: var(--sith-red);">[ACTIVO]</span>
-                <h3 class="module-title">Calculadora Minería</h3>
-                <p class="module-desc">Optimización de láseres y resistencias de rocas (Quantanium).</p>
-            </a>
-
-            <!-- Módulo 4 -->
-            <a href="#" class="module-card">
-                <span class="status-badge" style="color: var(--text-dim);">[LOCK]</span>
-                <h3 class="module-title">Misiones & Facciones</h3>
-                <p class="module-desc">Base de datos de contratos y recompensas.</p>
-            </a>
-        </div>
-    </main>
-
-    <footer>
-        > TFUND0 DATABASE // v1.0.0 // NO_AFFILIATION_CIG
-    </footer>
-
+<header class="site-header">
+  <div class="brand-wrap">
+    <img src="logo.jpg" class="brand-logo" alt="TFUNDO logo">
+    <div class="brand-title">TFUND<span>0</span> // Datacenter</div>
+  </div>
+  <div class="links">
+    <a class="top-link" href="#">Discord</a>
+    <a class="top-link" href="#">YouTube</a>
+  </div>
+</header>
+<main class="page">
+  <section class="hero">
+    <h1>Centro de datos de Star Citizen</h1>
+    <p>Selecciona el módulo que quieres consultar. Estamos construyendo una base de datos real extraída del juego para blueprints, misiones, naves, armas, armaduras y minería.</p>
+  </section>
+  <section class="grid">
+    <a class="panel-card card" href="BaseDatos_Interactiva.html">
+      <span class="badge">Operativo</span>
+      <h3>Naves y vehículos</h3>
+      <p>Datos de flota, fabricantes, tripulación y parámetros básicos.</p>
+    </a>
+    <a class="panel-card card" href="BaseDatos_Blueprints.html">
+      <span class="badge">Operativo</span>
+      <h3>Blueprints</h3>
+      <p>Objetos, misiones, costes de crafteo y catálogo en construcción.</p>
+    </a>
+    <a class="panel-card card" href="Mining_Calculator.html">
+      <span class="badge">Operativo</span>
+      <h3>Minería</h3>
+      <p>Calculadora interactiva de cabezales, módulos y rocas.</p>
+    </a>
+  </section>
+</main>
 </body>
 </html>
