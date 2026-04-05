@@ -1,1 +1,55 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TFUND0 // Minería</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="theme.css"><style>.layout{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.box{padding:1rem}.box h2{font-family:Orbitron,sans-serif;font-size:1rem;margin:.2rem 0 1rem 0}.row{margin-bottom:1rem}.stat{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06)}.btn{width:100%;padding:1rem;border-radius:12px;border:1px solid var(--border);background:var(--blue);color:#08101a;font-weight:700}.verdict{margin-top:1rem;padding:1rem;border-radius:14px;background:rgba(255,255,255,.03)}@media(max-width:900px){.layout{grid-template-columns:1fr}}</style></head><body><header class="site-header"><div class="brand-wrap"><img src="logo.jpg" class="brand-logo" alt="TFUNDO logo"><div class="brand-title">TFUND<span>0</span> // Minería</div></div><a class="back-link" href="index.html">← Volver</a></header><main class="page"><div class="layout"><div class="panel-card box"><h2>Configuración</h2><div class="row"><label>Cabezal</label><select id="laser-head" onchange="calculate()"><option value="hofstede">Hofstede-S1</option><option value="lancet">Lancet MH1</option><option value="helix">Helix I</option><option value="impact">Impact I</option></select></div><div class="row"><label>Módulo 1</label><select id="module-1" onchange="calculate()"><option value="none">Vacío</option><option value="rieger">Rieger-C3</option><option value="brandt">Brandt</option><option value="focus">Focus III</option><option value="stampede">Stampede</option></select></div><div class="row"><label>Módulo 2</label><select id="module-2" onchange="calculate()"><option value="none">Vacío</option><option value="rieger">Rieger-C3</option><option value="brandt">Brandt</option><option value="focus">Focus III</option></select></div><div class="row"><label>Mineral</label><select id="rock-type" onchange="calculate()"><option value="quantanium">Quantanium</option><option value="bexalite">Bexalite</option><option value="taranite">Taranite</option><option value="gold">Gold</option></select></div><div class="row"><label>Masa</label><input type="number" id="rock-mass" value="4500" oninput="calculate()"></div></div><div class="panel-card box"><h2>Resultado</h2><div class="stat"><span>Potencia</span><strong id="res-power"></strong></div><div class="stat"><span>Resistencia</span><strong id="res-resistance"></strong></div><div class="stat"><span>Inestabilidad</span><strong id="res-instability"></strong></div><div class="stat"><span>Ventana</span><strong id="res-window"></strong></div><div class="verdict"><strong id="verdict-text">Analizando...</strong></div></div></div></main><script>const lasers={hofstede:{power:1800,window:1.1,instab:.9,resis:1},lancet:{power:1200,window:1.2,instab:.25,resis:.25},helix:{power:3200,window:.9,instab:1.2,resis:.8},impact:{power:2200,window:.8,instab:1.1,resis:1}};const modules={none:{power:1,window:1,instab:1},rieger:{power:1.3,window:1,instab:1},brandt:{power:1,window:1,instab:.7},focus:{power:1,window:1.2,instab:1},stampede:{power:1,window:1.1,instab:1.2}};const rocks={quantanium:{baseRes:.8,baseInstab:8.5},bexalite:{baseRes:.6,baseInstab:5},taranite:{baseRes:.45,baseInstab:4},gold:{baseRes:.2,baseInstab:2}};function calculate(){const h=lasers[document.getElementById('laser-head').value],m1=modules[document.getElementById('module-1').value],m2=modules[document.getElementById('module-2').value],r=rocks[document.getElementById('rock-type').value],mass=parseFloat(document.getElementById('rock-mass').value)||1000;const power=h.power*m1.power*m2.power,res=r.baseRes*h.resis,inst=r.baseInstab*h.instab*m1.instab*m2.instab,win=h.window*m1.window*m2.window;document.getElementById('res-power').textContent=Math.round(power)+' kW';document.getElementById('res-resistance').textContent=Math.round(res*100)+'%';document.getElementById('res-instability').textContent=inst.toFixed(2);document.getElementById('res-window').textContent=(win*100).toFixed(0)+'%';const need=mass*(1+res)*.4;let txt='Óptimo';if(power<need) txt='Falta potencia'; else if(inst>7) txt='Muy inestable'; else if(win<.8 && power>need*2) txt='Exceso de potencia';document.getElementById('verdict-text').textContent=txt;}calculate();</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Citizen Companion // Minería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .layout{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .box{padding:1rem}.box h2{font-family:Orbitron,sans-serif;font-size:1rem;margin:.2rem 0 1rem 0}.row{margin-bottom:1rem}.stat{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06);color:var(--text-soft)}.stat strong{color:#fff}.verdict{margin-top:1rem;padding:1rem;border-radius:14px;background:rgba(255,255,255,.03);color:#fff}.help{color:var(--text-soft);margin-bottom:1rem}@media(max-width:900px){.layout{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand-wrap">
+    <img src="logo.jpg" class="brand-logo" alt="Logo personal">
+    <img src="org_logo.jpg" class="brand-logo" alt="Logo org">
+    <div class="brand-title">Star Citizen <span>Companion</span></div>
+  </div>
+  <nav style="display:flex;gap:.8rem;flex-wrap:wrap">
+    <a class="top-link" href="index.html">Inicio</a>
+    <a class="top-link" href="BaseDatos_Blueprints.html">Blueprints</a>
+    <a class="top-link" href="BaseDatos_Interactiva.html">Naves</a>
+  </nav>
+</header>
+<main class="page">
+  <p class="help">Configura el cabezal, los módulos y el tipo de roca para calcular una estimación rápida de viabilidad.</p>
+  <div class="layout">
+    <div class="panel-card box">
+      <h2>Configuración</h2>
+      <div class="row"><label>Cabezal</label><select id="laser-head" onchange="calculate()"><option value="hofstede">Hofstede-S1</option><option value="lancet">Lancet MH1</option><option value="helix">Helix I</option><option value="impact">Impact I</option></select></div>
+      <div class="row"><label>Módulo 1</label><select id="module-1" onchange="calculate()"><option value="none">Vacío</option><option value="rieger">Rieger-C3</option><option value="brandt">Brandt</option><option value="focus">Focus III</option><option value="stampede">Stampede</option></select></div>
+      <div class="row"><label>Módulo 2</label><select id="module-2" onchange="calculate()"><option value="none">Vacío</option><option value="rieger">Rieger-C3</option><option value="brandt">Brandt</option><option value="focus">Focus III</option></select></div>
+      <div class="row"><label>Mineral</label><select id="rock-type" onchange="calculate()"><option value="quantanium">Quantanium</option><option value="bexalite">Bexalite</option><option value="taranite">Taranite</option><option value="gold">Gold</option></select></div>
+      <div class="row"><label>Masa</label><input type="number" id="rock-mass" value="4500" oninput="calculate()"></div>
+    </div>
+    <div class="panel-card box">
+      <h2>Resultado</h2>
+      <div class="stat"><span>Potencia</span><strong id="res-power"></strong></div>
+      <div class="stat"><span>Resistencia</span><strong id="res-resistance"></strong></div>
+      <div class="stat"><span>Inestabilidad</span><strong id="res-instability"></strong></div>
+      <div class="stat"><span>Ventana</span><strong id="res-window"></strong></div>
+      <div class="verdict"><strong id="verdict-text">Analizando...</strong></div>
+    </div>
+  </div>
+</main>
+<script>
+const lasers={hofstede:{power:1800,window:1.1,instab:.9,resis:1},lancet:{power:1200,window:1.2,instab:.25,resis:.25},helix:{power:3200,window:.9,instab:1.2,resis:.8},impact:{power:2200,window:.8,instab:1.1,resis:1}};
+const modules={none:{power:1,window:1,instab:1},rieger:{power:1.3,window:1,instab:1},brandt:{power:1,window:1,instab:.7},focus:{power:1,window:1.2,instab:1},stampede:{power:1,window:1.1,instab:1.2}};
+const rocks={quantanium:{baseRes:.8,baseInstab:8.5},bexalite:{baseRes:.6,baseInstab:5},taranite:{baseRes:.45,baseInstab:4},gold:{baseRes:.2,baseInstab:2}};
+function calculate(){const h=lasers[document.getElementById('laser-head').value],m1=modules[document.getElementById('module-1').value],m2=modules[document.getElementById('module-2').value],r=rocks[document.getElementById('rock-type').value],mass=parseFloat(document.getElementById('rock-mass').value)||1000;const power=h.power*m1.power*m2.power,res=r.baseRes*h.resis,inst=r.baseInstab*h.instab*m1.instab*m2.instab,win=h.window*m1.window*m2.window;document.getElementById('res-power').textContent=Math.round(power)+' kW';document.getElementById('res-resistance').textContent=Math.round(res*100)+'%';document.getElementById('res-instability').textContent=inst.toFixed(2);document.getElementById('res-window').textContent=(win*100).toFixed(0)+'%';const need=mass*(1+res)*.4;let txt='Óptimo';if(power<need) txt='Falta potencia'; else if(inst>7) txt='Muy inestable'; else if(win<.8&&power>need*2) txt='Exceso de potencia';document.getElementById('verdict-text').textContent=txt;} calculate();
+</script>
+</body>
+</html>
