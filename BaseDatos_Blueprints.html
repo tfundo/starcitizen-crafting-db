@@ -48,7 +48,6 @@ function setLang(lang){currentLang=lang; const t=i18n[lang]; document.getElement
 function uniq(arr){return[...new Set(arr.filter(Boolean))]} function norm(s){return(s||'').toLowerCase();}
 function groupData(blueprints, missions){
   const map=new Map();
-  // 1. Initialize blueprints
   for(const bp of blueprints){
     const key = bp.id;
     if(!map.has(key)){
@@ -56,32 +55,32 @@ function groupData(blueprints, missions){
         id: bp.id,
         displayName: bp.realName || bp.name,
         category: bp.category || 'unknown',
-        craftTime: 'N/D', // Si estuviera en JSON lo pintaríamos
+        craftTime: 'N/D', 
         image: '',
         missions: [],
         costs: bp.materials.map(m => `${m.name || m.resource}: ${m.amount} SCU`)
       });
     }
   }
-  
-  // 2. Map missions to blueprints
   for(const m of missions){
     for(const r of m.rewards){
       if(r.type === 'blueprint_pool' && r.blueprints){
         for(const poolBp of r.blueprints){
           const target = map.get(poolBp.id);
           if(target){
-            target.missions.push(m.realName || m.name);
+            let mName = m.realName || m.name;
+            mName = mName.replace(/~mission\([^)]+\)/g, '...');
+            target.missions.push(mName);
           }
         }
       }
     }
   }
-
   return [...map.values()].map(x => ({...x, missions: uniq(x.missions)}));
+}));
 }
 function safeImage(url,alt){if(!url)return i18n[currentLang].pending; return `<img src="${url}" alt="${alt}" onerror="this.remove(); this.parentNode.textContent='${i18n[currentLang].pending}';">`;}
-function render(data){const grid=document.getElementById('grid'); document.getElementById('stats').textContent=i18n[currentLang].stats(data.length); grid.innerHTML=data.slice(0,500).map((item,idx)=>`<div class="tile" data-idx="${idx}"><div class="imgbox">${safeImage(item.image,item.displayName)}</div><h3 class="name">${item.displayName}</h3><div class="mini">${item.missions[0]||i18n[currentLang].unknownMission}</div></div>`).join(''); [...document.querySelectorAll('.tile')].forEach(tile=>tile.addEventListener('click',()=>openModal(data[Number(tile.dataset.idx)])));}
+function render(data){const grid=document.getElementById('grid'); document.getElementById('stats').textContent=i18n[currentLang].stats(data.length); grid.innerHTML=data.slice(0,500).map((item,idx)=>`<div class="tile" data-idx="${idx}"><div class="imgbox">${safeImage(item.image,item.displayName)}</div><h3 class="name">${item.displayName}</h3><div class="mini">${item.missions.length>0 ? item.missions[0] : '<span style="color:var(--red);font-weight:600;font-size:0.75rem;">SIN RECETA DISPONIBLE</span>'}</div></div>`).join(''); [...document.querySelectorAll('.tile')].forEach(tile=>tile.addEventListener('click',()=>openModal(data[Number(tile.dataset.idx)])));}
 function openModal(item){document.getElementById('mTitle').textContent=item.displayName; document.getElementById('mCategory').textContent=item.category||'unknown'; document.getElementById('mTime').textContent=item.craftTime||'N/D'; document.getElementById('mMissions').innerHTML=item.missions.length?item.missions.map(m=>`<div class="missionLine">• ${m}</div>`).join(''):`<div class="small">${i18n[currentLang].unknownMission}</div>`; document.getElementById('mCosts').innerHTML=item.costs.length?item.costs.map(c=>`<div class="costLine">• ${c}</div>`).join(''):'<div class="small">N/D</div>'; document.getElementById('mImage').innerHTML=safeImage(item.image,item.displayName); document.getElementById('modal').classList.add('open');}
 function applyFilters(){const q=norm(document.getElementById('search').value); const sortBy=document.getElementById('sortBy').value; let data=GROUPED.filter(item=>[item.displayName,...item.missions].join(' ').toLowerCase().includes(q)); data.sort((a,b)=>{const av=sortBy==='mission'?(a.missions[0]||''):(a.displayName||''); const bv=sortBy==='mission'?(b.missions[0]||''):(b.displayName||''); return av.localeCompare(bv);}); render(data);} 
 
