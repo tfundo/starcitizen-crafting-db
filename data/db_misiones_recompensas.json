@@ -2359,25 +2359,25 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "a76b255e-e7d3-4171-bfd7-aa5ac6a21da7",
-        "name": "Armadura / Objeto (ID: a76b255e)"
+        "name": "Ana"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "b73ab0ef-5a5e-44f7-b74c-d686297d5bb5",
-        "name": "Armadura / Objeto (ID: b73ab0ef)"
+        "name": "Ana"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "b461e2c0-5f5a-4f1f-b119-4e92bbb3df1c",
-        "name": "Armadura / Objeto (ID: b461e2c0)"
+        "name": "Ana"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "53741591-226f-4a5f-ab96-f091f1d60d37",
-        "name": "Armadura / Objeto (ID: 53741591)"
+        "name": "Ana"
       }
     ],
     "realName": "OrbArm"
@@ -2391,13 +2391,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "0dd2bd1b-09b3-4a95-b0f3-7aeef645ee53",
-        "name": "Armadura / Objeto (ID: 0dd2bd1b)"
+        "name": "Parallax FKT Rifle"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "3efb1be1-8935-4124-8bf0-aec410297785",
-        "name": "Armadura / Objeto (ID: 3efb1be1)"
+        "name": "Gallant Rifle Battery (45 cap)"
       }
     ],
     "realName": "OrbVolt KopTooth(DO NOT USE NOW LOOT)"
@@ -2411,13 +2411,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "c384575f-a3f8-4a1d-84a4-1fe467093004",
-        "name": "Armadura / Objeto (ID: c384575f)"
+        "name": "Parallax FMT Rifle"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "3efb1be1-8935-4124-8bf0-aec410297785",
-        "name": "Armadura / Objeto (ID: 3efb1be1)"
+        "name": "Gallant Rifle Battery (45 cap)"
       }
     ],
     "realName": "OrbVolt MiltSkull"
@@ -2431,13 +2431,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "289d12fc-29a6-4399-8f2f-68bd53d4a76d",
-        "name": "Armadura / Objeto (ID: 289d12fc)"
+        "name": "Parallax FMT Rifle"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "3efb1be1-8935-4124-8bf0-aec410297785",
-        "name": "Armadura / Objeto (ID: 3efb1be1)"
+        "name": "Gallant Rifle Battery (45 cap)"
       }
     ],
     "realName": "OrbVolt MiltTooth(DO NOT USE NOW LOOT)"
@@ -2451,25 +2451,25 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "dfa621c1-849e-4370-bf1d-f359f3cac40b",
-        "name": "Armadura / Objeto (ID: dfa621c1)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "7fad90cd-39c2-420b-82d4-106353582bec",
-        "name": "Armadura / Objeto (ID: 7fad90cd)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "d7faaf51-b1b6-4635-b62e-203687973144",
-        "name": "Armadura / Objeto (ID: d7faaf51)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "551e9712-2692-403f-a4fe-0a441d8f7be1",
-        "name": "Armadura / Objeto (ID: 551e9712)"
+        "name": "DCP"
       }
     ],
     "realName": "SB JungleArm(DO NOT USE NOW LOOT)"
@@ -2483,25 +2483,25 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "b348a315-1f87-49e0-bb9d-8e039f26928e",
-        "name": "Armadura / Objeto (ID: b348a315)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "f66babbd-4b85-451b-80ad-1688b895f04c",
-        "name": "Armadura / Objeto (ID: f66babbd)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "e742fa9a-dc65-43b0-912a-f6a772a6d309",
-        "name": "Armadura / Objeto (ID: e742fa9a)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "4ffb6e07-e7c6-4db5-8735-c35179a723d0",
-        "name": "Armadura / Objeto (ID: 4ffb6e07)"
+        "name": "DCP"
       }
     ],
     "realName": "SB DesertArm(DO NOT USE NOW LOOT)"
@@ -2515,25 +2515,25 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "41d598bf-77fe-4b39-9e46-af9ee37f8498",
-        "name": "Armadura / Objeto (ID: 41d598bf)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "cb499a8b-3f84-4684-a638-f6a159ec1488",
-        "name": "Armadura / Objeto (ID: cb499a8b)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "2ca63637-dad8-41f3-b3bd-2443b76b81fa",
-        "name": "Armadura / Objeto (ID: 2ca63637)"
+        "name": "DCP"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "a86d001d-64e0-4d48-9db3-ed779bd7bfe7",
-        "name": "Armadura / Objeto (ID: a86d001d)"
+        "name": "DCP"
       }
     ],
     "realName": "SB NavyArm(DO NOT USE NOW LOOT)"
@@ -2547,13 +2547,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "1b833280-efb7-4a2e-a34d-d4431c097289",
-        "name": "Armadura / Objeto (ID: 1b833280)"
+        "name": "Quartz Cobalt SMG"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "83ac5196-05d0-45a1-8982-aa549650f9d9",
-        "name": "Armadura / Objeto (ID: 83ac5196)"
+        "name": "Quartz Energy SMG Battery (45 cap)"
       }
     ],
     "realName": "SB Volt Navy(DO NOT USE NOW LOOT)"
@@ -2567,13 +2567,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "698e8cec-2e45-406d-86b1-b9855440d48d",
-        "name": "Armadura / Objeto (ID: 698e8cec)"
+        "name": "Quartz Jungle SMG"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "83ac5196-05d0-45a1-8982-aa549650f9d9",
-        "name": "Armadura / Objeto (ID: 83ac5196)"
+        "name": "Quartz Energy SMG Battery (45 cap)"
       }
     ],
     "realName": "SB Volt Jungle(DO NOT USE NOW LOOT)"
@@ -2587,13 +2587,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "ab93ef85-493c-4fb7-a9ff-bfc790f46ae3",
-        "name": "Armadura / Objeto (ID: ab93ef85)"
+        "name": "Quartz Hunter SMG"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "83ac5196-05d0-45a1-8982-aa549650f9d9",
-        "name": "Armadura / Objeto (ID: 83ac5196)"
+        "name": "Quartz Energy SMG Battery (45 cap)"
       }
     ],
     "realName": "SB Volt Desert(DO NOT USE NOW LOOT)"
@@ -2607,25 +2607,25 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "e5145460-e74b-4997-995c-bc322e6cf95d",
-        "name": "Armadura / Objeto (ID: e5145460)"
+        "name": "Bokto"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "8bbb69d3-9233-4a6d-b23c-53694de7e08b",
-        "name": "Armadura / Objeto (ID: 8bbb69d3)"
+        "name": "Bokto"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "a3d71588-8963-48a2-841e-26271ebe23dc",
-        "name": "Armadura / Objeto (ID: a3d71588)"
+        "name": "Bokto"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "ce095413-724c-492b-8e25-7ec2cb532988",
-        "name": "Armadura / Objeto (ID: ce095413)"
+        "name": "Bokto"
       }
     ],
     "realName": "AO IrrArm"
@@ -2639,13 +2639,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "979be032-a7e7-472c-9322-dbde7537ac25",
-        "name": "Armadura / Objeto (ID: 979be032)"
+        "name": "Prism IR Shotgun"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "14e12fed-37fd-4c75-b61e-1b21d1bbade7",
-        "name": "Armadura / Objeto (ID: 14e12fed)"
+        "name": "Prism Laser Shotgun Battery (20 cap)"
       }
     ],
     "realName": "AO VoltThwack"
@@ -2659,19 +2659,19 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "3598bc92-1257-4779-a6f7-1b90c5c99e6c",
-        "name": "Armadura / Objeto (ID: 3598bc92)"
+        "name": "Novikov"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "cdd246df-3680-438a-af7b-6133fba4ee37",
-        "name": "Armadura / Objeto (ID: cdd246df)"
+        "name": "Novikov"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "5c007fa0-4354-47c6-b1e3-03c9fd9d2be3",
-        "name": "Armadura / Objeto (ID: 5c007fa0)"
+        "name": "Novikov"
       }
     ],
     "realName": "GG ExplorationSuit(DO NOT USE STORE EXCLUSIVE)"
@@ -2685,13 +2685,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "58f4e1c7-5a75-4fca-ae08-f80e115ede1d",
-        "name": "Armadura / Objeto (ID: 58f4e1c7)"
+        "name": "<= UNINITIALIZED =>"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "9e992877-60a5-4bc3-983c-50e185c5ffa2",
-        "name": "Armadura / Objeto (ID: 9e992877)"
+        "name": "<= UNINITIALIZED =>"
       }
     ],
     "realName": "GG XanthuleSuit(DO NOT USE STORE EXCLUSIVE)"
@@ -2705,25 +2705,25 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "5fcdda13-b65b-4d0f-bfac-a0418747608d",
-        "name": "Armadura / Objeto (ID: 5fcdda13)"
+        "name": "Venture"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "85bcc8bd-0929-40fc-b7d5-7f80164c5a78",
-        "name": "Armadura / Objeto (ID: 85bcc8bd)"
+        "name": "Venture"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "3e7ea8a4-9e62-454a-a528-fcae943d38ae",
-        "name": "Armadura / Objeto (ID: 3e7ea8a4)"
+        "name": "Venture"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "d59c2342-2612-4365-9ef3-e4caf4e5cda6",
-        "name": "Armadura / Objeto (ID: d59c2342)"
+        "name": "Venture"
       }
     ],
     "realName": "GG VentureSuit(DO NOT USE STORE EXCLUSIVE)"
@@ -2737,13 +2737,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "ddda1704-45d6-4db8-8e66-4cbb588dfdbe",
-        "name": "Armadura / Objeto (ID: ddda1704)"
+        "name": "Karna AC Rifle"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "91cfb7dc-660b-4505-b86a-6028c9a3f54d",
-        "name": "Armadura / Objeto (ID: 91cfb7dc)"
+        "name": "Karna Rifle Battery (35 cap)"
       }
     ],
     "realName": "GG Karna(DO NOT USE STORE EXCLUSIVE)"
@@ -2757,13 +2757,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "dddca60b-e7af-4a5f-bbe4-55c2b298fb63",
-        "name": "Armadura / Objeto (ID: dddca60b)"
+        "name": "S71 AC Rifle"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "1fc5d1dc-1fbd-480b-9b1a-a5121963de78",
-        "name": "Armadura / Objeto (ID: 1fc5d1dc)"
+        "name": "S71 Rifle Magazine (30 cap)"
       }
     ],
     "realName": "GG S71(DO NOT USE STORE EXCLUSIVE)"
@@ -2777,13 +2777,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "1c3b19d9-6e60-4ec6-8fe2-968079e6edbc",
-        "name": "Armadura / Objeto (ID: 1c3b19d9)"
+        "name": "Coda AC Pistol"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "90b873da-1d15-48ba-86f5-f5633e958c33",
-        "name": "Armadura / Objeto (ID: 90b873da)"
+        "name": "Coda Pistol Magazine (6 cap)"
       }
     ],
     "realName": "GG Coda(DO NOT USE STORE EXCLUSIVE)"
@@ -2797,13 +2797,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "601a0c77-6e96-4bbd-ae76-15c0fa1e5928",
-        "name": "Armadura / Objeto (ID: 601a0c77)"
+        "name": "Zenith SC Sniper"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "fa12a7a5-6fdd-4e7b-9237-1f2e131a43c4",
-        "name": "Armadura / Objeto (ID: fa12a7a5)"
+        "name": "Objeto ID: fa12a7a5"
       }
     ],
     "realName": "AD ZapZip"
@@ -2817,31 +2817,31 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "bfc2d914-873d-45a3-866d-c5757fb20c7b",
-        "name": "Armadura / Objeto (ID: bfc2d914)"
+        "name": "Geist"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "a15e9077-c94b-4123-9179-1eeb20c1b10a",
-        "name": "Armadura / Objeto (ID: a15e9077)"
+        "name": "Geist"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "c2bc9db2-8317-4ace-9480-a822c15b39e5",
-        "name": "Armadura / Objeto (ID: c2bc9db2)"
+        "name": "Geist"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "a0518e3b-8d71-44d6-a153-05f4e0a4184b",
-        "name": "Armadura / Objeto (ID: a0518e3b)"
+        "name": "Geist"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "5d4fc095-7a9f-44a6-b9e6-adbd124fcc9c",
-        "name": "Armadura / Objeto (ID: 5d4fc095)"
+        "name": "<= UNINITIALIZED =>"
       }
     ],
     "realName": "AD Hush"
@@ -2855,13 +2855,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "123f7dff-f340-48f9-af35-86f986ec86d2",
-        "name": "Armadura / Objeto (ID: 123f7dff)"
+        "name": "Fresnel D LMG"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "923fcb3c-ad02-4a9a-96c2-1fb61fb6c794",
-        "name": "Armadura / Objeto (ID: 923fcb3c)"
+        "name": "Fresnel Energy LMG Battery (165 Cap)"
       }
     ],
     "realName": "Nov LotsOfZipZap(DO NOT USE NOW LOOT)"
@@ -2875,31 +2875,31 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "4d2ecda6-83dc-4236-9e54-bdd0afd2056a",
-        "name": "Armadura / Objeto (ID: 4d2ecda6)"
+        "name": "Strata"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "9159d31d-b3ad-418d-9503-0093c440ac1f",
-        "name": "Armadura / Objeto (ID: 9159d31d)"
+        "name": "Strata"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "feb84493-af0e-49e3-b638-462bfef25856",
-        "name": "Armadura / Objeto (ID: feb84493)"
+        "name": "Strata"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "e78b6f08-3f9c-4a0c-89ad-a7f2e1fa73bd",
-        "name": "Armadura / Objeto (ID: e78b6f08)"
+        "name": "<= UNINITIALIZED =>"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "7524df82-4578-464b-a917-d3b6c31462f6",
-        "name": "Armadura / Objeto (ID: 7524df82)"
+        "name": "Strata"
       }
     ],
     "realName": "Nov Molten"
@@ -2913,31 +2913,31 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "a94304be-1967-428a-94d9-48f9f16bb808",
-        "name": "Armadura / Objeto (ID: a94304be)"
+        "name": "<= UNINITIALIZED =>"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "f6de17fd-cacf-4841-b1b3-412151558e88",
-        "name": "Armadura / Objeto (ID: f6de17fd)"
+        "name": "Corbel Core Crush"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "ad41bd3f-b1a6-4b01-84e5-6cf2f7bab8a4",
-        "name": "Armadura / Objeto (ID: ad41bd3f)"
+        "name": "Corbel Arms Crush"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "922b899e-9464-4411-9a6b-09785f744605",
-        "name": "Armadura / Objeto (ID: 922b899e)"
+        "name": "Corbel Legs Crush"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "eeaec661-8544-4554-947a-e685fbe6c418",
-        "name": "Armadura / Objeto (ID: eeaec661)"
+        "name": "Novikov"
       }
     ],
     "realName": "Nov HeavyUtil"
@@ -2951,31 +2951,31 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "bd63d750-e7ba-4670-8948-1d89fbe633bb",
-        "name": "Armadura / Objeto (ID: bd63d750)"
+        "name": "Palatino"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "e0d886f5-a721-4f1d-ae5a-ac8d14d2415c",
-        "name": "Armadura / Objeto (ID: e0d886f5)"
+        "name": "Palatino"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "fe1f3199-6680-4929-b511-7a85dc73437f",
-        "name": "Armadura / Objeto (ID: fe1f3199)"
+        "name": "Palatino"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "1458af3d-cdbd-4ad0-862c-e2bc0de06958",
-        "name": "Armadura / Objeto (ID: 1458af3d)"
+        "name": "Palatino"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "877290d3-a275-414f-9eb1-7d2fce3c4fdb",
-        "name": "Armadura / Objeto (ID: 877290d3)"
+        "name": "Palatino"
       }
     ],
     "realName": "Battle"
@@ -2989,31 +2989,31 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "e5e93d7e-28e6-487b-8920-38734a27d071",
-        "name": "Armadura / Objeto (ID: e5e93d7e)"
+        "name": "Testudo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "6300f7b8-e8af-487c-8df3-4f73929aa9a0",
-        "name": "Armadura / Objeto (ID: 6300f7b8)"
+        "name": "Testudo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "6384133d-4fc0-49e5-9481-0e5160c0e383",
-        "name": "Armadura / Objeto (ID: 6384133d)"
+        "name": "Testudo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "d9602c31-f133-44bc-a749-3e6bf77c5815",
-        "name": "Armadura / Objeto (ID: d9602c31)"
+        "name": "Testudo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "a5327582-23fb-43db-a5ec-f3961e1761a3",
-        "name": "Armadura / Objeto (ID: a5327582)"
+        "name": "Testudo"
       }
     ],
     "realName": "SpikeyArmor"
@@ -3027,13 +3027,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "90dc57a7-7377-4956-9d25-152a6c59d873",
-        "name": "Armadura / Objeto (ID: 90dc57a7)"
+        "name": "Boomtube CG Launcher"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "2f4ed822-21bb-4b47-8d9b-ef75114222f6",
-        "name": "Armadura / Objeto (ID: 2f4ed822)"
+        "name": "Boomtube Rocket"
       }
     ],
     "realName": "BigBooma"
@@ -3047,13 +3047,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "eb2d2091-6f53-4f7c-b8d7-ebfae4e78c15",
-        "name": "Armadura / Objeto (ID: eb2d2091)"
+        "name": "Tripledown HW Pistol"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "02f5904f-62ef-48e7-b63c-4ea3d4a7385f",
-        "name": "Armadura / Objeto (ID: 02f5904f)"
+        "name": "Tripledown Pistol Magazine (12 Cap)"
       }
     ],
     "realName": "NonePistol"
@@ -3067,13 +3067,13 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "cf0864b2-687c-4f1a-b722-974dcb5d29df",
-        "name": "Armadura / Objeto (ID: cf0864b2)"
+        "name": "R97 CRC Shotgun"
       },
       {
         "type": "item_directo",
         "amount": "20",
         "ref": "b4ef17b2-60b9-4617-a6a4-60dd053a9e73",
-        "name": "Armadura / Objeto (ID: b4ef17b2)"
+        "name": "R97 Shotgun Magazine (18 cap)"
       }
     ],
     "realName": "GeminiShotgun"
@@ -3087,31 +3087,31 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "532de455-b2c5-460e-b1a2-216641b9bc32",
-        "name": "Armadura / Objeto (ID: 532de455)"
+        "name": "Monde Helmet Crimson Camo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "ae2616c4-766f-4cf0-ac88-fc392c7a85cc",
-        "name": "Armadura / Objeto (ID: ae2616c4)"
+        "name": "Monde Core Crimson Camo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "6c826b04-85b7-4972-8380-d73aa8e3a560",
-        "name": "Armadura / Objeto (ID: 6c826b04)"
+        "name": "Monde Arms Crimson Camo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "20c72bc9-00df-4a8d-b433-45c2217523da",
-        "name": "Armadura / Objeto (ID: 20c72bc9)"
+        "name": "Monde Legs Crimson Camo"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "66b4cbc7-3e47-4902-a30d-ad502259bf80",
-        "name": "Armadura / Objeto (ID: 66b4cbc7)"
+        "name": "Warden Backpack Crimson Camo"
       }
     ],
     "realName": "RedHunterArmour"
@@ -3125,37 +3125,37 @@
         "type": "item_directo",
         "amount": "1",
         "ref": "86d0db63-70b6-41eb-be32-a14190ebd57d",
-        "name": "Armadura / Objeto (ID: 86d0db63)"
+        "name": "Wolf WAR"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "6e0b78ef-3bab-49d1-abb0-aa8f092918de",
-        "name": "Armadura / Objeto (ID: 6e0b78ef)"
+        "name": "Antium"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "f78d7ac5-5e6d-43e1-9256-d30c0bb4a316",
-        "name": "Armadura / Objeto (ID: f78d7ac5)"
+        "name": "Antium"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "46400a70-d299-4fd9-8d7a-285538740bb4",
-        "name": "Armadura / Objeto (ID: 46400a70)"
+        "name": "Antium"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "8e4c40b3-f9eb-40f3-811d-01a5099fdcd6",
-        "name": "Armadura / Objeto (ID: 8e4c40b3)"
+        "name": "Antium"
       },
       {
         "type": "item_directo",
         "amount": "1",
         "ref": "123f7dff-f340-48f9-af35-86f986ec86d2",
-        "name": "Armadura / Objeto (ID: 123f7dff)"
+        "name": "Fresnel D LMG"
       }
     ],
     "realName": "Vehicle Small Kruger Wolf Unique"
