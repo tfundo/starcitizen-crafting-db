@@ -6,44 +6,15 @@
   <title>Star Citizen Companion</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0c0b0f;
-      --bg-soft: #14131a;
-      --panel: #18171f;
-      --panel-2: #1f1d27;
-      --border: #3b2d1d;
-      --text: #f5f1e8;
-      --text-soft: #b9b0a2;
-      --blue: #3f88ff;
-      --green: #39ff14;
-      --red: #c7392f;
-      --gold: #b9893b;
-      --gold-soft: #d0a45c;
-    }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: Inter, sans-serif; background: radial-gradient(circle at top, #1a1620 0%, var(--bg) 45%, #08070b 100%); color: var(--text); }
-    header { position: sticky; top:0; z-index:10; background: rgba(12,11,15,.94); border-bottom:1px solid rgba(185,137,59,.25); backdrop-filter: blur(10px); }
-    .topbar { max-width: 1400px; margin:0 auto; padding:.9rem 1.2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
-    .brand { display:flex; align-items:center; gap:.85rem; }
-    .brand img { width:54px; height:54px; border-radius:50%; object-fit:cover; background:#0f1117; }
-    .brand img.logo-main { border:1px solid rgba(57,255,20,.25); }
-    .brand img.logo-org { border:1px solid rgba(185,137,59,.35); }
-    .title-wrap h1 { margin:0; font-family: Orbitron, sans-serif; font-size:1.35rem; letter-spacing:1px; color:var(--text); }
-    .title-wrap .sub { color: var(--text-soft); font-size:.85rem; }
-    .lang-switch { display:flex; gap:.5rem; align-items:center; }
-    .lang-switch button { background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%); border:1px solid rgba(185,137,59,.18); color:var(--text); padding:.7rem .9rem; border-radius:12px; cursor:pointer; font-weight:600; }
-    .lang-switch button.active { border-color: rgba(63,136,255,.35); color: var(--blue); }
-    main { max-width: 1400px; margin:0 auto; padding:2rem 1.2rem 3rem 1.2rem; }
-    .hero { border-radius:22px; padding:1.4rem; background: linear-gradient(180deg, rgba(24,23,31,.95) 0%, rgba(17,16,23,.98) 100%); border:1px solid rgba(185,137,59,.18); box-shadow:0 10px 32px rgba(0,0,0,.28); }
-    .hero h2 { margin:0 0 .8rem 0; font-family: Orbitron, sans-serif; font-size:2rem; line-height:1.15; }
-    .hero p { color: var(--text-soft); line-height:1.65; margin:0; max-width: 840px; }
-    .accent-row { display:flex; gap:.55rem; margin-top:1.2rem; flex-wrap:wrap; }
-    .accent-chip { padding:.45rem .75rem; border-radius:999px; font-size:.82rem; font-weight:700; background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.05); }
-    .chip-green { color: var(--green); } .chip-red { color: var(--red); } .chip-blue { color: var(--blue); } .chip-gold { color: var(--gold-soft); }
-    .cta { margin-top:1.4rem; display:flex; gap:1rem; flex-wrap:wrap; }
-    .btn { text-decoration:none; padding:.9rem 1.1rem; border-radius:12px; font-weight:700; }
-    .btn-primary { background: linear-gradient(180deg, rgba(63,136,255,.18) 0%, rgba(63,136,255,.08) 100%); border:1px solid rgba(63,136,255,.35); color: var(--text); }
-    .btn-secondary { background: linear-gradient(180deg, rgba(185,137,59,.18) 0%, rgba(185,137,59,.08) 100%); border:1px solid rgba(185,137,59,.28); color: var(--text); }
+    :root { --bg:#0c0b0f; --panel:#18171f; --panel-2:#1f1d27; --border:#3b2d1d; --text:#f5f1e8; --text-soft:#b9b0a2; --blue:#3f88ff; --green:#39ff14; --red:#c7392f; --gold:#b9893b; --gold-soft:#d0a45c; }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,sans-serif;background:radial-gradient(circle at top,#1a1620 0%,var(--bg) 45%,#08070b 100%);color:var(--text)}
+    header{position:sticky;top:0;z-index:10;background:rgba(12,11,15,.94);border-bottom:1px solid rgba(185,137,59,.25);backdrop-filter:blur(10px)}
+    .topbar{max-width:1400px;margin:0 auto;padding:.9rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:.85rem}.brand img{width:54px;height:54px;border-radius:50%;object-fit:cover;background:#0f1117}.logo-main{border:1px solid rgba(57,255,20,.25)}.logo-org{border:1px solid rgba(185,137,59,.35)}.title-wrap h1{margin:0;font-family:Orbitron,sans-serif;font-size:1.35rem;letter-spacing:1px;color:var(--text)}.title-wrap .sub{color:var(--text-soft);font-size:.85rem}.right-zone{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}.lang-switch{display:flex;gap:.5rem;align-items:center}.lang-switch button{background:linear-gradient(180deg,var(--panel) 0%,var(--panel-2) 100%);border:1px solid rgba(185,137,59,.18);color:var(--text);padding:.7rem .9rem;border-radius:12px;cursor:pointer;font-weight:600}.lang-switch button.active{border-color:rgba(63,136,255,.35);color:var(--blue)}
+    .social-link{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;text-decoration:none;border:1px solid rgba(185,137,59,.18);background:linear-gradient(180deg,var(--panel) 0%,var(--panel-2) 100%)}
+    .social-link svg{width:22px;height:22px}.social-link.discord svg{fill:#5865F2}.social-link.youtube svg{fill:#FF0033}
+    main{max-width:1400px;margin:0 auto;padding:2rem 1.2rem 3rem 1.2rem}.hero{border-radius:22px;padding:1.4rem;background:linear-gradient(180deg,rgba(24,23,31,.95) 0%,rgba(17,16,23,.98) 100%);border:1px solid rgba(185,137,59,.18);box-shadow:0 10px 32px rgba(0,0,0,.28)}.hero h2{margin:0 0 .8rem 0;font-family:Orbitron,sans-serif;font-size:2rem;line-height:1.15}.hero p{color:var(--text-soft);line-height:1.65;margin:0;max-width:840px}.accent-row{display:flex;gap:.55rem;margin-top:1.2rem;flex-wrap:wrap}.accent-chip{padding:.45rem .75rem;border-radius:999px;font-size:.82rem;font-weight:700;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.05)}.chip-green{color:var(--green)} .chip-red{color:var(--red)} .chip-blue{color:var(--blue)} .chip-gold{color:var(--gold-soft)}
+    .cta{margin-top:1.4rem;display:flex;gap:1rem;flex-wrap:wrap}.btn{text-decoration:none;padding:.9rem 1.1rem;border-radius:12px;font-weight:700}.btn-primary{background:linear-gradient(180deg,rgba(63,136,255,.18) 0%,rgba(63,136,255,.08) 100%);border:1px solid rgba(63,136,255,.35);color:var(--text)}.btn-secondary{background:linear-gradient(180deg,rgba(185,137,59,.18) 0%,rgba(185,137,59,.08) 100%);border:1px solid rgba(185,137,59,.28);color:var(--text)}
+    footer{max-width:1400px;margin:0 auto;padding:1.2rem;color:var(--text-soft);font-size:.92rem;border-top:1px solid rgba(185,137,59,.18)} footer a{color:var(--gold-soft)}
   </style>
 </head>
 <body>
@@ -57,9 +28,14 @@
           <div class="sub" id="subtitle">Blueprints & recipes companion</div>
         </div>
       </div>
-      <div class="lang-switch">
-        <button id="lang-en" class="active" onclick="setLang('en')">EN</button>
-        <button id="lang-es" onclick="setLang('es')">ES</button>
+      <div class="right-zone">
+        <a class="social-link youtube" href="https://www.youtube.com/@tfundo" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.11-2.12C19.51 3.56 12 3.56 12 3.56s-7.51 0-9.388.506a2.997 2.997 0 0 0-2.11 2.12A31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .502 5.814 2.997 2.997 0 0 0 2.11 2.12c1.878.506 9.388.506 9.388.506s7.51 0 9.388-.506a2.997 2.997 0 0 0 2.11-2.12A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"/></svg>
+        </a>
+        <a class="social-link discord" href="https://discord.com/invite/Ktfnbmj5s7" target="_blank" rel="noopener" aria-label="Discord">
+          <svg viewBox="0 0 24 24"><path d="M20.317 4.369A19.791 19.791 0 0 0 15.47 3c-.21.375-.444.88-.608 1.28a18.27 18.27 0 0 0-5.724 0A12.64 12.64 0 0 0 8.53 3a19.736 19.736 0 0 0-4.847 1.369C.533 9.01-.32 13.536.099 18.002A19.9 19.9 0 0 0 6.05 21c.483-.657.913-1.35 1.286-2.076-.708-.27-1.38-.602-2.01-.988.168-.123.333-.252.492-.385a13.86 13.86 0 0 0 12.364 0c.16.133.324.262.492.385-.63.386-1.303.718-2.012.988.373.726.804 1.419 1.287 2.076A19.867 19.867 0 0 0 23.9 18c.492-5.177-.84-9.663-3.583-13.631zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.334.955-2.419 2.157-2.419 1.212 0 2.175 1.095 2.157 2.419 0 1.334-.955 2.419-2.157 2.419zm7.96 0c-1.184 0-2.157-1.085-2.157-2.419 0-1.334.955-2.419 2.157-2.419 1.212 0 2.175 1.095 2.157 2.419 0 1.334-.945 2.419-2.157 2.419z"/></svg>
+        </a>
+        <div class="lang-switch"><button id="lang-en" class="active" onclick="setLang('en')">EN</button><button id="lang-es" onclick="setLang('es')">ES</button></div>
       </div>
     </div>
   </header>
@@ -67,41 +43,19 @@
     <section class="hero">
       <h2 id="hero-title">Blueprints and crafting recipes, focused and clean.</h2>
       <p id="hero-text">This site is being rebuilt from scratch with one goal: show Star Citizen blueprint recipes clearly. No bloated sections, no noisy data dump, just a focused companion for blueprints, missions, crafting costs and item lookup.</p>
-      <div class="accent-row">
-        <span class="accent-chip chip-green">Personal identity</span>
-        <span class="accent-chip chip-red">ORG identity</span>
-        <span class="accent-chip chip-blue">Companion UI</span>
-        <span class="accent-chip chip-gold">Tactical style</span>
-      </div>
-      <div class="cta">
-        <a class="btn btn-primary" href="BaseDatos_Blueprints.html" id="cta-main">Open Blueprints</a>
-      </div>
+      <div class="accent-row"><span class="accent-chip chip-green">Personal identity</span><span class="accent-chip chip-red">ORG identity</span><span class="accent-chip chip-blue">Companion UI</span><span class="accent-chip chip-gold">Tactical style</span></div>
+      <div class="cta"><a class="btn btn-primary" href="BaseDatos_Blueprints.html" id="cta-main">Open Blueprints</a><a class="btn btn-secondary" href="Mining_Calculator.html" id="cta-mining">Open Mining Tool</a></div>
     </section>
   </main>
+  <footer>
+    <span id="footer-text">This website is under construction, created by Tfundo in 2026.</span>
+    <br>
+    <span id="footer-ref">Use my referral if you want to join Star Citizen:</span>
+    <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-YPSJ-PDT6" target="_blank" rel="noopener">STAR-YPSJ-PDT6</a>
+  </footer>
   <script>
-    const i18n = {
-      en: {
-        subtitle: 'Blueprints & recipes companion',
-        heroTitle: 'Blueprints and crafting recipes, focused and clean.',
-        heroText: 'This site is being rebuilt from scratch with one goal: show Star Citizen blueprint recipes clearly. No bloated sections, no noisy data dump, just a focused companion for blueprints, missions, crafting costs and item lookup.',
-        cta: 'Open Blueprints'
-      },
-      es: {
-        subtitle: 'Compañero de blueprints y recetas',
-        heroTitle: 'Blueprints y recetas de crafteo, claras y sin ruido.',
-        heroText: 'Esta web se está rehaciendo desde cero con un único objetivo: mostrar claramente las recipes de blueprints de Star Citizen. Sin secciones infladas, sin basura técnica, solo un companion centrado en blueprints, misiones, costes de crafteo y búsqueda de objetos.',
-        cta: 'Abrir Blueprints'
-      }
-    };
-    function setLang(lang){
-      document.getElementById('subtitle').textContent = i18n[lang].subtitle;
-      document.getElementById('hero-title').textContent = i18n[lang].heroTitle;
-      document.getElementById('hero-text').textContent = i18n[lang].heroText;
-      document.getElementById('cta-main').textContent = i18n[lang].cta;
-      document.getElementById('lang-en').classList.toggle('active', lang==='en');
-      document.getElementById('lang-es').classList.toggle('active', lang==='es');
-      document.documentElement.lang = lang === 'es' ? 'es' : 'en';
-    }
+    const i18n={en:{subtitle:'Blueprints & recipes companion',heroTitle:'Blueprints and crafting recipes, focused and clean.',heroText:'This site is being rebuilt from scratch with one goal: show Star Citizen blueprint recipes clearly. No bloated sections, no noisy data dump, just a focused companion for blueprints, missions, crafting costs and item lookup.',cta:'Open Blueprints',ctaMining:'Open Mining Tool',footer:'This website is under construction, created by Tfundo in 2026.',footerRef:'Use my referral if you want to join Star Citizen:'},es:{subtitle:'Compañero de blueprints y recetas',heroTitle:'Blueprints y recetas de crafteo, claras y sin ruido.',heroText:'Esta web se está rehaciendo desde cero con un único objetivo: mostrar claramente las recipes de blueprints de Star Citizen. Sin secciones infladas, sin basura técnica, solo un companion centrado en blueprints, misiones, costes de crafteo y búsqueda de objetos.',cta:'Abrir Blueprints',ctaMining:'Abrir herramienta de minería',footer:'Esta web está en construcción, creada por Tfundo en 2026.',footerRef:'Usa mi referral si quieres unirte a Star Citizen:'}};
+    function setLang(lang){document.getElementById('subtitle').textContent=i18n[lang].subtitle;document.getElementById('hero-title').textContent=i18n[lang].heroTitle;document.getElementById('hero-text').textContent=i18n[lang].heroText;document.getElementById('cta-main').textContent=i18n[lang].cta;document.getElementById('cta-mining').textContent=i18n[lang].ctaMining;document.getElementById('footer-text').textContent=i18n[lang].footer;document.getElementById('footer-ref').textContent=i18n[lang].footerRef;document.getElementById('lang-en').classList.toggle('active',lang==='en');document.getElementById('lang-es').classList.toggle('active',lang==='es');document.documentElement.lang=lang==='es'?'es':'en';}
   </script>
 </body>
 </html>
