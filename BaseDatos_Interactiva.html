@@ -1,1 +1,53 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TFUND0 // Naves</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="theme.css"><style>.toolbar{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1rem}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}.card{padding:1rem}.card h3{font-family:Orbitron,sans-serif;font-size:1rem;margin:0 0 .4rem 0}.line{display:flex;justify-content:space-between;color:var(--text-soft);padding:.22rem 0}</style></head><body><header class="site-header"><div class="brand-wrap"><img src="logo.jpg" class="brand-logo" alt="TFUNDO logo"><div class="brand-title">TFUND<span>0</span> // Naves</div></div><a class="back-link" href="index.html">← Volver</a></header><main class="page"><div class="toolbar"><input id="ship-search" placeholder="Buscar nave o fabricante..."></div><div class="grid" id="grid"></div></main><script>fetch('data/ships.json').then(r=>r.json()).then(data=>{const grid=document.getElementById('grid'); const search=document.getElementById('ship-search'); function render(list){grid.innerHTML=list.map(s=>`<div class="panel-card card"><h3>${s.name}</h3><div class="line"><span>Fabricante</span><span>${s.manufacturer||'N/D'}</span></div><div class="line"><span>Rol</span><span>${s.role||'N/D'}</span></div><div class="line"><span>Tripulación</span><span>${s.crew||'N/D'}</span></div><div class="line"><span>Vel. SCM</span><span>${s.speed||'N/D'}</span></div><div class="line"><span>Precio</span><span>${typeof s.price==='number'?new Intl.NumberFormat('es-ES').format(s.price)+' aUEC':(s.price||'N/D')}</span></div></div>`).join('');} render(data); search.addEventListener('input',()=>{const q=search.value.toLowerCase();render(data.filter(x=>(x.name||'').toLowerCase().includes(q)||(x.manufacturer||'').toLowerCase().includes(q)));});});</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Citizen Companion // Naves</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .toolbar{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+    .card{padding:1rem}
+    .card h3{font-family:Orbitron,sans-serif;font-size:1rem;margin:0 0 .5rem 0;color:#fff}
+    .line{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;color:var(--text-soft);border-bottom:1px solid rgba(255,255,255,.05)}
+    .line:last-child{border-bottom:none}.label{color:var(--blue-2)}.stats{color:var(--text-soft);margin-bottom:1rem}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand-wrap">
+    <img src="logo.jpg" class="brand-logo" alt="Logo personal">
+    <img src="org_logo.jpg" class="brand-logo" alt="Logo org">
+    <div class="brand-title">Star Citizen <span>Companion</span></div>
+  </div>
+  <nav style="display:flex;gap:.8rem;flex-wrap:wrap">
+    <a class="top-link" href="index.html">Inicio</a>
+    <a class="top-link" href="BaseDatos_Blueprints.html">Blueprints</a>
+    <a class="top-link" href="Mining_Calculator.html">Minería</a>
+  </nav>
+</header>
+<main class="page">
+  <div class="toolbar"><input id="ship-search" placeholder="Buscar nave o fabricante..."></div>
+  <div class="stats" id="stats">Cargando naves...</div>
+  <div class="grid" id="grid"></div>
+</main>
+<script>
+fetch('data/ships.json').then(r=>r.json()).then(data=>{
+  const grid=document.getElementById('grid');
+  const search=document.getElementById('ship-search');
+  const stats=document.getElementById('stats');
+  function render(list){
+    stats.textContent=`Mostrando ${list.length} naves/vehículos`;
+    grid.innerHTML=list.map(s=>`<div class="panel-card card"><h3>${s.name}</h3><div class="line"><span class="label">Fabricante</span><span>${s.manufacturer||'N/D'}</span></div><div class="line"><span class="label">Rol</span><span>${s.role||'N/D'}</span></div><div class="line"><span class="label">Tripulación</span><span>${s.crew||'N/D'}</span></div><div class="line"><span class="label">Vel. SCM</span><span>${s.speed||'N/D'}</span></div><div class="line"><span class="label">Precio</span><span>${typeof s.price==='number'?new Intl.NumberFormat('es-ES').format(s.price)+' aUEC':(s.price||'N/D')}</span></div></div>`).join('');
+  }
+  render(data);
+  search.addEventListener('input',()=>{
+    const q=search.value.toLowerCase();
+    render(data.filter(x=>(x.name||'').toLowerCase().includes(q)||(x.manufacturer||'').toLowerCase().includes(q)));
+  });
+});
+</script>
+</body>
+</html>
