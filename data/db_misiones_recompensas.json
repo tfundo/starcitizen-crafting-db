@@ -1,14 +1,13 @@
 [
   {
     "id": "9d31564a-6d9e-45cf-a512-4f58266be4d3",
-    "name": "HighpointWildernessSpecialists_IrradiatedKopions_RegionA_KillAnimals",
+    "name": "@Highpoint_KillAnimals_storm_H_title_001",
     "sourceFile": "highpointwildernessspecialists_killanimals.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e52bf354-8918-474d-987e-55c01bfecdd3",
-        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3",
         "blueprints": [
           {
             "id": "b08ee11e-5e2c-4fe5-9a10-b99c2a105d9b"
@@ -40,21 +39,21 @@
           {
             "id": "34b5ab94-a752-427a-8cc4-757c5797783c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3"
       }
     ],
-    "realName": "HighpointWildernessSpecialists IrradiatedKopions RegionA KillAnimals"
+    "realName": "Cull Irradiated Kopions"
   },
   {
     "id": "b0d4d762-5186-40e1-9869-130ce90109d2",
-    "name": "BountyHuntersGuild_PAF_EliminateSpecific",
+    "name": "@bhg_bounty_title_gen_001",
     "sourceFile": "bountyhuntersguild_fps.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "0f03e098-cc68-4a14-abe8-7b17a8bec97e",
-        "name": "Grupo de Planos: 0f03e098-Cc68-4a14-Abe8-7b17a8bec97e",
         "blueprints": [
           {
             "id": "510d2cc3-9836-435b-bbd7-47f8e81a47ae"
@@ -86,21 +85,21 @@
           {
             "id": "edcf3145-e9a9-471a-baa2-12f54da9ed26"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 0f03e098-Cc68-4a14-Abe8-7b17a8bec97e"
       }
     ],
-    "realName": "BountyHuntersGuild PAF EliminateSpecific"
+    "realName": "Verified Bounty: ~mission(TargetName) | ~mission(Danger)"
   },
   {
     "id": "811dbf1b-f021-4809-96ff-77fe8002b8e5",
-    "name": "BHG_ASDFacilityDelving_ResearchWing_EliminateSpecific",
+    "name": "@bhg_bounty_title_ASD_Research_001",
     "sourceFile": "bountyhuntersguild_fps.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "6d549de3-21d6-4c46-ba89-2970a4cf7286",
-        "name": "Grupo de Planos: 6d549de3-21d6-4c46-Ba89-2970a4cf7286",
         "blueprints": [
           {
             "id": "cbdb6663-b54a-482f-a194-c6c2edccbbec"
@@ -126,21 +125,21 @@
           {
             "id": "b4c5011f-e993-4654-9fb2-c2f1b40d5e1a"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 6d549de3-21d6-4c46-Ba89-2970a4cf7286"
       }
     ],
-    "realName": "BHG ASDFacilityDelving ResearchWing EliminateSpecific"
+    "realName": "Verified Bounty: ~mission(TargetName) at ~mission(Location)"
   },
   {
     "id": "ccdb8a76-4772-4292-ab9f-ac5696d3d483",
-    "name": "BHG_ASDFacilityDelving_EngineeringWing_EliminateSpecific",
+    "name": "@bhg_bounty_title_ASD_Engineering_001",
     "sourceFile": "bountyhuntersguild_fps.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f14e629c-3346-4ca8-9204-df523ae54822",
-        "name": "Grupo de Planos: F14e629c-3346-4ca8-9204-Df523ae54822",
         "blueprints": [
           {
             "id": "5cb4fa28-dfc9-44b7-8d3d-5a99b6ad3143"
@@ -154,13 +153,13 @@
           {
             "id": "9a620b0a-9d96-4705-a20d-d09bd0fbe0f5"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F14e629c-3346-4ca8-9204-Df523ae54822"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e52bf354-8918-474d-987e-55c01bfecdd3",
-        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3",
         "blueprints": [
           {
             "id": "b08ee11e-5e2c-4fe5-9a10-b99c2a105d9b"
@@ -192,13 +191,13 @@
           {
             "id": "34b5ab94-a752-427a-8cc4-757c5797783c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e52bf354-8918-474d-987e-55c01bfecdd3",
-        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3",
         "blueprints": [
           {
             "id": "b08ee11e-5e2c-4fe5-9a10-b99c2a105d9b"
@@ -230,13 +229,13 @@
           {
             "id": "34b5ab94-a752-427a-8cc4-757c5797783c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e52bf354-8918-474d-987e-55c01bfecdd3",
-        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3",
         "blueprints": [
           {
             "id": "b08ee11e-5e2c-4fe5-9a10-b99c2a105d9b"
@@ -268,13 +267,13 @@
           {
             "id": "34b5ab94-a752-427a-8cc4-757c5797783c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E52bf354-8918-474d-987e-55c01bfecdd3"
       },
       {
         "type": "blueprint_pool",
         "chance": "0.75",
         "ref": "61b089a0-880c-41da-a2c2-482a1bffe96f",
-        "name": "Grupo de Planos: 61b089a0-880c-41da-A2c2-482a1bffe96f",
         "blueprints": [
           {
             "id": "b08ee11e-5e2c-4fe5-9a10-b99c2a105d9b"
@@ -309,21 +308,21 @@
           {
             "id": "34b5ab94-a752-427a-8cc4-757c5797783c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 61b089a0-880c-41da-A2c2-482a1bffe96f"
       }
     ],
-    "realName": "BHG ASDFacilityDelving EngineeringWing EliminateSpecific"
+    "realName": "Verified Bounty: ~mission(TargetName) at ~mission(Location)"
   },
   {
     "id": "8c7b651d-c125-4d7c-bfb6-82b61171f692",
-    "name": "CFP_Pyro_Intro_EliminateAll",
+    "name": "@cfp_eliminateall_intro_title_001",
     "sourceFile": "citizensforprosperity_mercenary_fps.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -343,13 +342,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -369,13 +368,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -395,13 +394,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -421,13 +420,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "a2da9707-9859-4da0-9f4b-90e5afe45833",
-        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833",
         "blueprints": [
           {
             "id": "c3b0d88f-ba3b-4ed2-b2de-a6f212fe1a65"
@@ -447,13 +446,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -473,13 +472,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "a2da9707-9859-4da0-9f4b-90e5afe45833",
-        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833",
         "blueprints": [
           {
             "id": "c3b0d88f-ba3b-4ed2-b2de-a6f212fe1a65"
@@ -499,13 +498,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e6bdf007-4469-46fd-88d7-8e139c59829a",
-        "name": "Grupo de Planos: E6bdf007-4469-46fd-88d7-8e139c59829a",
         "blueprints": [
           {
             "id": "44503356-67a9-4063-8b51-7f76f23cacce"
@@ -525,13 +524,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E6bdf007-4469-46fd-88d7-8e139c59829a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "a2da9707-9859-4da0-9f4b-90e5afe45833",
-        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833",
         "blueprints": [
           {
             "id": "c3b0d88f-ba3b-4ed2-b2de-a6f212fe1a65"
@@ -551,13 +550,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "a2da9707-9859-4da0-9f4b-90e5afe45833",
-        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833",
         "blueprints": [
           {
             "id": "c3b0d88f-ba3b-4ed2-b2de-a6f212fe1a65"
@@ -577,13 +576,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "a2da9707-9859-4da0-9f4b-90e5afe45833",
-        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833",
         "blueprints": [
           {
             "id": "c3b0d88f-ba3b-4ed2-b2de-a6f212fe1a65"
@@ -603,13 +602,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e6bdf007-4469-46fd-88d7-8e139c59829a",
-        "name": "Grupo de Planos: E6bdf007-4469-46fd-88d7-8e139c59829a",
         "blueprints": [
           {
             "id": "44503356-67a9-4063-8b51-7f76f23cacce"
@@ -629,13 +628,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E6bdf007-4469-46fd-88d7-8e139c59829a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -655,13 +654,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -681,13 +680,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -707,13 +706,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "633d4069-c160-43d2-892d-2d8222261c20",
-        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20",
         "blueprints": [
           {
             "id": "5ae7f14f-5853-4277-800e-cadbba88f960"
@@ -733,13 +732,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 633d4069-C160-43d2-892d-2d8222261c20"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "6a166ec8-afd6-4e50-82aa-8b7533f82b41",
-        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41",
         "blueprints": [
           {
             "id": "a7e71660-5b3b-452a-aafe-eb22151551dd"
@@ -753,13 +752,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "6a166ec8-afd6-4e50-82aa-8b7533f82b41",
-        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41",
         "blueprints": [
           {
             "id": "a7e71660-5b3b-452a-aafe-eb22151551dd"
@@ -773,13 +772,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "6a166ec8-afd6-4e50-82aa-8b7533f82b41",
-        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41",
         "blueprints": [
           {
             "id": "a7e71660-5b3b-452a-aafe-eb22151551dd"
@@ -793,13 +792,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "bd54c374-923e-4095-96c1-3a76e857c35a",
-        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a",
         "blueprints": [
           {
             "id": "daa57ef9-0e2d-46f0-84e7-ca8dcc06b963"
@@ -819,13 +818,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "bd54c374-923e-4095-96c1-3a76e857c35a",
-        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a",
         "blueprints": [
           {
             "id": "daa57ef9-0e2d-46f0-84e7-ca8dcc06b963"
@@ -845,13 +844,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "6a166ec8-afd6-4e50-82aa-8b7533f82b41",
-        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41",
         "blueprints": [
           {
             "id": "a7e71660-5b3b-452a-aafe-eb22151551dd"
@@ -865,13 +864,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "bd54c374-923e-4095-96c1-3a76e857c35a",
-        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a",
         "blueprints": [
           {
             "id": "daa57ef9-0e2d-46f0-84e7-ca8dcc06b963"
@@ -891,13 +890,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "bd54c374-923e-4095-96c1-3a76e857c35a",
-        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a",
         "blueprints": [
           {
             "id": "daa57ef9-0e2d-46f0-84e7-ca8dcc06b963"
@@ -917,13 +916,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "6a166ec8-afd6-4e50-82aa-8b7533f82b41",
-        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41",
         "blueprints": [
           {
             "id": "a7e71660-5b3b-452a-aafe-eb22151551dd"
@@ -937,13 +936,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "bd54c374-923e-4095-96c1-3a76e857c35a",
-        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a",
         "blueprints": [
           {
             "id": "daa57ef9-0e2d-46f0-84e7-ca8dcc06b963"
@@ -963,13 +962,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "6a166ec8-afd6-4e50-82aa-8b7533f82b41",
-        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41",
         "blueprints": [
           {
             "id": "a7e71660-5b3b-452a-aafe-eb22151551dd"
@@ -983,13 +982,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 6a166ec8-Afd6-4e50-82aa-8b7533f82b41"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "bd54c374-923e-4095-96c1-3a76e857c35a",
-        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a",
         "blueprints": [
           {
             "id": "daa57ef9-0e2d-46f0-84e7-ca8dcc06b963"
@@ -1009,13 +1008,13 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: Bd54c374-923e-4095-96c1-3a76e857c35a"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "a2da9707-9859-4da0-9f4b-90e5afe45833",
-        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833",
         "blueprints": [
           {
             "id": "c3b0d88f-ba3b-4ed2-b2de-a6f212fe1a65"
@@ -1035,21 +1034,21 @@
           {
             "id": "e3596782-22aa-4d83-a50b-b70e7c4f418e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: A2da9707-9859-4da0-9f4b-90e5afe45833"
       }
     ],
-    "realName": "CFP Pyro Intro EliminateAll"
+    "realName": "Establishing Security"
   },
   {
     "id": "03aa1c79-aef0-4b03-863a-d56baf1b4bae",
-    "name": "FoxwellEnforcement_Stanton_DefendShipNamed_E",
+    "name": "@foxwell_DefendShip_E_title_001",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1075,21 +1074,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "FoxwellEnforcement Stanton DefendShipNamed E"
+    "realName": "Yellow Level Contract: Ship Under Attack"
   },
   {
     "id": "dba10330-cde8-4e2b-8d2e-7614bbdc5bc6",
-    "name": "FoxwellEnforcement_Stanton_DefendShipNamed_M",
+    "name": "@foxwell_DefendShip_M_title_001",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1115,21 +1114,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "FoxwellEnforcement Stanton DefendShipNamed M"
+    "realName": "Orange Level Contract: ~mission(Ship) Needs Assistance"
   },
   {
     "id": "8d62d6b9-22ee-4b1f-86d1-c65089faa5c5",
-    "name": "FoxwellEnforcement_Stanton_DefendShipNamed_H",
+    "name": "@foxwell_DefendShip_H_title_001",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1155,21 +1154,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "FoxwellEnforcement Stanton DefendShipNamed H"
+    "realName": "Red Level Contract: Ship Under Attack"
   },
   {
     "id": "48cacfd7-920a-44bc-977d-8ea52ed6d324",
-    "name": "FoxwellEnforcement_Stanton_DefendShipNamed_E_NearLocation",
+    "name": "@foxwell_DefendShip_E_title_001",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1195,21 +1194,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "FoxwellEnforcement Stanton DefendShipNamed E NearLocation"
+    "realName": "Yellow Level Contract: Ship Under Attack"
   },
   {
     "id": "3306bc07-9ead-4323-b590-376a980ef81a",
-    "name": "FoxwellEnforcement_Stanton_DefendShipNamed_M_NearLocation",
+    "name": "@foxwell_DefendShip_M_title_001",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1235,21 +1234,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "FoxwellEnforcement Stanton DefendShipNamed M NearLocation"
+    "realName": "Orange Level Contract: ~mission(Ship) Needs Assistance"
   },
   {
     "id": "d7a03794-21f6-4851-983e-877506189ace",
-    "name": "FoxwellEnforcement_Stanton_DefendShipNamed_H_NearLocation",
+    "name": "@foxwell_DefendShip_H_title_001",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1275,21 +1274,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "FoxwellEnforcement Stanton DefendShipNamed H NearLocation"
+    "realName": "Red Level Contract: Ship Under Attack"
   },
   {
     "id": "7c93c444-7bdf-42af-b4f5-ab8e8c926326",
-    "name": "FoxwellEnforcement_Mercenary_Intro",
+    "name": "@Foxwell_Mercenary_Intro_title_001",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1315,13 +1314,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1347,13 +1346,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1379,13 +1378,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1411,13 +1410,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1443,13 +1442,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1475,13 +1474,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1507,13 +1506,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1539,13 +1538,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1571,13 +1570,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1603,13 +1602,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1635,13 +1634,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1667,13 +1666,13 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1699,21 +1698,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "FoxwellEnforcement Mercenary Intro"
+    "realName": "Exciting New Opportunities with Foxwell Enforcement"
   },
   {
     "id": "50b65c1a-14ad-4e69-bba6-efac087a3735",
-    "name": "Foxwell_PAF_HaulCargo_Multi2ToSingle_Small_Aluminum",
+    "name": "@Foxwell_HaulCargo_MultiToSingle_title_01",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1739,21 +1738,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "Foxwell PAF HaulCargo Multi2ToSingle Small Aluminum"
+    "realName": "Red Level Contract: Clear PAFs, Recover Cargo, and Deliver to OLP"
   },
   {
     "id": "b0d47978-50bb-404a-b529-4084f6e6ac38",
-    "name": "Foxwell_PAF_HaulCargo_AtoB_Small_AgriculturalSupplies",
+    "name": "@Foxwell_HaulCargo_AToB_PAF_title_01",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1779,21 +1778,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "Foxwell PAF HaulCargo AtoB Small AgriculturalSupplies"
+    "realName": "Red Level Contract: Recoup Stolen Cargo Haul"
   },
   {
     "id": "f0a6adc6-ef64-4d4f-bf35-5368c870d7ad",
-    "name": "Foxwell_OLP_HaulCargo_AtoB_Small_Carbon",
+    "name": "@Foxwell_HaulCargo_AToB_OLP_title_01",
     "sourceFile": "foxwellenforcement_generator.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5b74b911-ef2e-4bcd-8767-84abdc6bf6f9",
-        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9",
         "blueprints": [
           {
             "id": "cdd236fa-56b9-4913-90cf-be7f4e6ca5a7"
@@ -1819,21 +1818,21 @@
           {
             "id": "828aaaf9-03fb-4baf-bee5-26cefced3ddd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5b74b911-Ef2e-4bcd-8767-84abdc6bf6f9"
       }
     ],
-    "realName": "Foxwell OLP HaulCargo AtoB Small Carbon"
+    "realName": "Red Level Contract: Retrieve Cargo Haul"
   },
   {
     "id": "8744d536-ee31-493b-a2b1-c819ba2f8955",
-    "name": "Foxwell_DefendDestructibleEntities_Stanton_VeryEasy",
+    "name": "@Foxwell_DefendDestructibleEntites_VE_Title_001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e489ca64-3152-4ef3-8e86-10e05120d84d",
-        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d",
         "blueprints": [
           {
             "id": "2ce77a10-6253-4585-8360-e9ca400ed9ea"
@@ -1853,21 +1852,21 @@
           {
             "id": "c633e1c4-7d50-41ad-8411-fe924029eaa9"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
     ],
-    "realName": "Foxwell DefendDestructibleEntities Stanton VeryEasy"
+    "realName": "@Foxwell DefendDestructibleEntites VE Title 001"
   },
   {
     "id": "f4d690b6-f20e-4ab9-a098-906e308909a4",
-    "name": "Foxwell_DefendDestructibleEntities_Stanton_Easy",
+    "name": "@Foxwell_DefendDestructibleEntites_E_Title_001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e489ca64-3152-4ef3-8e86-10e05120d84d",
-        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d",
         "blueprints": [
           {
             "id": "2ce77a10-6253-4585-8360-e9ca400ed9ea"
@@ -1887,21 +1886,21 @@
           {
             "id": "c633e1c4-7d50-41ad-8411-fe924029eaa9"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
     ],
-    "realName": "Foxwell DefendDestructibleEntities Stanton Easy"
+    "realName": "@Foxwell DefendDestructibleEntites E Title 001"
   },
   {
     "id": "eda80f06-4a44-471c-8b4f-a195a6a988c9",
-    "name": "Foxwell_DefendDestructibleEntities_Stanton_Medium",
+    "name": "@Foxwell_DefendDestructibleEntites_M_Title_001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e489ca64-3152-4ef3-8e86-10e05120d84d",
-        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d",
         "blueprints": [
           {
             "id": "2ce77a10-6253-4585-8360-e9ca400ed9ea"
@@ -1921,21 +1920,21 @@
           {
             "id": "c633e1c4-7d50-41ad-8411-fe924029eaa9"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
     ],
-    "realName": "Foxwell DefendDestructibleEntities Stanton Medium"
+    "realName": "@Foxwell DefendDestructibleEntites M Title 001"
   },
   {
     "id": "31d2d60e-aa5f-4c43-b39b-caf3195b67a7",
-    "name": "Foxwell_DefendDestructibleEntities_Stanton_Hard",
+    "name": "@Foxwell_DefendDestructibleEntites_H_Title_001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e489ca64-3152-4ef3-8e86-10e05120d84d",
-        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d",
         "blueprints": [
           {
             "id": "2ce77a10-6253-4585-8360-e9ca400ed9ea"
@@ -1955,21 +1954,21 @@
           {
             "id": "c633e1c4-7d50-41ad-8411-fe924029eaa9"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
     ],
-    "realName": "Foxwell DefendDestructibleEntities Stanton Hard"
+    "realName": "@Foxwell DefendDestructibleEntites H Title 001"
   },
   {
     "id": "802b6f6f-8b6c-47b7-80e5-06663b7a06c4",
-    "name": "Foxwell_DefendDestructibleEntities_Stanton_VeryHard",
+    "name": "@Foxwell_DefendDestructibleEntites_VH_Title_001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e489ca64-3152-4ef3-8e86-10e05120d84d",
-        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d",
         "blueprints": [
           {
             "id": "2ce77a10-6253-4585-8360-e9ca400ed9ea"
@@ -1989,21 +1988,21 @@
           {
             "id": "c633e1c4-7d50-41ad-8411-fe924029eaa9"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
     ],
-    "realName": "Foxwell DefendDestructibleEntities Stanton VeryHard"
+    "realName": "@Foxwell DefendDestructibleEntites VH Title 001"
   },
   {
     "id": "c1c16bc6-a55a-4af0-adbb-7fc63f1dfdb5",
-    "name": "Foxwell_DefendDestructibleEntities_Stanton_Super",
+    "name": "@Foxwell_DefendDestructibleEntites_S_Title_001",
     "sourceFile": "foxwellenforcement_defenddestructibleentities.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e489ca64-3152-4ef3-8e86-10e05120d84d",
-        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d",
         "blueprints": [
           {
             "id": "2ce77a10-6253-4585-8360-e9ca400ed9ea"
@@ -2023,10 +2022,11 @@
           {
             "id": "c633e1c4-7d50-41ad-8411-fe924029eaa9"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E489ca64-3152-4ef3-8e86-10e05120d84d"
       }
     ],
-    "realName": "Foxwell DefendDestructibleEntities Stanton Super"
+    "realName": "@Foxwell DefendDestructibleEntites S Title 001"
   },
   {
     "id": "bbb52b26-4a27-4afa-aac5-9299fde95dbf",
@@ -2037,7 +2037,6 @@
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "903fb48b-ea72-48c0-b6d1-ece7c7f1e2f3",
-        "name": "Grupo de Planos: 903fb48b-Ea72-48c0-B6d1-Ece7c7f1e2f3",
         "blueprints": [
           {
             "id": "d7b36a9b-cf60-49a4-b822-a6271e8a7323"
@@ -2060,21 +2059,21 @@
           {
             "id": "7ba122fe-2879-47f5-a424-c5f9a21c516a"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 903fb48b-Ea72-48c0-B6d1-Ece7c7f1e2f3"
       }
     ],
     "realName": "Hockrow FacilityDelve P3MM Repeat"
   },
   {
     "id": "3d0693fd-b4e4-4dc8-a42d-7e9acff7fd42",
-    "name": "Hockrow_FacilityDelve_P2M1-Stanton4_Repeat",
+    "name": "@Hockrow_FacilityDelve_P2M1_Repeat_title",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "5d78a8d6-6911-4eda-97b6-9e315025147d",
-        "name": "Grupo de Planos: 5d78a8d6-6911-4eda-97b6-9e315025147d",
         "blueprints": [
           {
             "id": "408fbaaf-41b0-4059-9ca8-08cfbe9f84e3"
@@ -2109,21 +2108,21 @@
           {
             "id": "94a6c979-60c2-4598-9005-db9fe2caa71e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 5d78a8d6-6911-4eda-97b6-9e315025147d"
       }
     ],
-    "realName": "Hockrow FacilityDelve P2M1-Stanton4 Repeat"
+    "realName": "Jorrit Dossier: Updated Energy Anomaly Data"
   },
   {
     "id": "fe6ba414-1375-4442-816e-30c4fe36e6f1",
-    "name": "Hockrow_FacilityDelve_P2M2-Stanton4_Repeat",
+    "name": "@Hockrow_FacilityDelve_P2M2_Repeat_title",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "3ebf3bfa-dde3-4782-90f6-b003b5af1877",
-        "name": "Grupo de Planos: 3ebf3bfa-Dde3-4782-90f6-B003b5af1877",
         "blueprints": [
           {
             "id": "f4257ce3-9afa-4694-a707-aade876dc75c"
@@ -2158,21 +2157,21 @@
           {
             "id": "94a6c979-60c2-4598-9005-db9fe2caa71e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 3ebf3bfa-Dde3-4782-90f6-B003b5af1877"
       }
     ],
-    "realName": "Hockrow FacilityDelve P2M2-Stanton4 Repeat"
+    "realName": "Jorrit Dossier: Updated Security Data"
   },
   {
     "id": "89376110-728c-40f1-b489-8ef4ff95e4f9",
-    "name": "Hockrow_FacilityDelve_P2M3-Stanton4_Repeat",
+    "name": "@Hockrow_FacilityDelve_P2M3_Repeat_title",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "a79a915d-5186-4f87-8140-69bca9fc335e",
-        "name": "Grupo de Planos: A79a915d-5186-4f87-8140-69bca9fc335e",
         "blueprints": [
           {
             "id": "55f51eb4-b71e-4048-8dcf-039bc5034be5"
@@ -2219,21 +2218,21 @@
           {
             "id": "7ba122fe-2879-47f5-a424-c5f9a21c516a"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: A79a915d-5186-4f87-8140-69bca9fc335e"
       }
     ],
-    "realName": "Hockrow FacilityDelve P2M3-Stanton4 Repeat"
+    "realName": "Jorrit Dossier: Updated Seismic Data"
   },
   {
     "id": "80dd4f7d-b3f4-46dd-ae44-ce679e0705df",
-    "name": "Hockrow_FacilityDelve_P2M4-Stanton4_Repeat",
+    "name": "@Hockrow_FacilityDelve_P2M4_Repeat_title",
     "sourceFile": "hockrowagency_facilitydelve.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e0c72a9a-38be-4850-bc0d-dc4f3ee687c2",
-        "name": "Grupo de Planos: E0c72a9a-38be-4850-Bc0d-Dc4f3ee687c2",
         "blueprints": [
           {
             "id": "4e5cfca9-312e-4ef0-93fd-0cd01dcad86b"
@@ -2277,21 +2276,21 @@
           {
             "id": "94a6c979-60c2-4598-9005-db9fe2caa71e"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E0c72a9a-38be-4850-Bc0d-Dc4f3ee687c2"
       }
     ],
-    "realName": "Hockrow FacilityDelve P2M4-Stanton4 Repeat"
+    "realName": "Jorrit Dossier: Updated Power Usage Data"
   },
   {
     "id": "706aedbf-efdb-44f6-b075-f5d0d775ce37",
-    "name": "IDS_ResourceGathering_CryoP",
+    "name": "@InterSec_ResourceGathering_Cryopods_Title",
     "sourceFile": "intersec_resourcegathering.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "36e8ac4d-8962-4b03-89e7-cd7a06fc4adc",
-        "name": "Grupo de Planos: 36e8ac4d-8962-4b03-89e7-Cd7a06fc4adc",
         "blueprints": [
           {
             "id": "f9de8917-a3a2-4471-974e-123b49910271"
@@ -2311,21 +2310,21 @@
           {
             "id": "58f2fe15-955e-4725-8b5f-7a5249186966"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 36e8ac4d-8962-4b03-89e7-Cd7a06fc4adc"
       }
     ],
-    "realName": "IDS ResourceGathering CryoP"
+    "realName": "Recover Vanduul Corpses"
   },
   {
     "id": "0a3c40b0-f0e7-473f-bf75-fc7f4f0b5ffc",
-    "name": "IDS_ResourceGathering_Tech",
+    "name": "@InterSec_ResourceGathering_Tech_Title",
     "sourceFile": "intersec_resourcegathering.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "36e8ac4d-8962-4b03-89e7-cd7a06fc4adc",
-        "name": "Grupo de Planos: 36e8ac4d-8962-4b03-89e7-Cd7a06fc4adc",
         "blueprints": [
           {
             "id": "f9de8917-a3a2-4471-974e-123b49910271"
@@ -2345,14 +2344,15 @@
           {
             "id": "58f2fe15-955e-4725-8b5f-7a5249186966"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 36e8ac4d-8962-4b03-89e7-Cd7a06fc4adc"
       }
     ],
-    "realName": "IDS ResourceGathering Tech"
+    "realName": "Recover Vanduul Tech"
   },
   {
     "id": "eda899b9-c58b-48df-88d9-6b34368af2f2",
-    "name": "TheCollector_OrbArm",
+    "name": "@TheCollector_Recipes_Title_SandArmour",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2380,11 +2380,11 @@
         "name": "Ana Helmet Endro"
       }
     ],
-    "realName": "OrbArm"
+    "realName": "Armor with horn and string"
   },
   {
     "id": "557fcd28-3ab3-4a5d-84b7-e893b73bd8a4",
-    "name": "TheCollector_OrbVolt_KopTooth(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Recipes_Title_KopTooth",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2400,11 +2400,11 @@
         "name": "Parallax Rifle Battery (80 Cap)"
       }
     ],
-    "realName": "OrbVolt KopTooth(DO NOT USE NOW LOOT)"
+    "realName": "Fun Kopion Tooth Gun"
   },
   {
     "id": "4341c2d8-85b4-4623-8271-eff4480ec674",
-    "name": "TheCollector_OrbVolt_MiltSkull",
+    "name": "@TheCollector_Recipes_Title_MiltSkull",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2420,11 +2420,11 @@
         "name": "Parallax Rifle Battery (80 Cap)"
       }
     ],
-    "realName": "OrbVolt MiltSkull"
+    "realName": "Fun Military Skull Gun"
   },
   {
     "id": "ba114637-1d33-46e5-b9ba-3834566add0f",
-    "name": "TheCollector_OrbVolt_MiltTooth(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Recipes_Title_MiltTooth",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2440,11 +2440,11 @@
         "name": "Parallax Rifle Battery (80 Cap)"
       }
     ],
-    "realName": "OrbVolt MiltTooth(DO NOT USE NOW LOOT)"
+    "realName": "Fun Military Tooth Gun"
   },
   {
     "id": "c4c7fa2d-91f5-4171-988b-9003841f4fcd",
-    "name": "TheCollector_SB_JungleArm(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Menu_Title_JungleArm",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2472,11 +2472,11 @@
         "name": "DCP Armor Legs Jungle Camo"
       }
     ],
-    "realName": "SB JungleArm(DO NOT USE NOW LOOT)"
+    "realName": "Want armor look like tree?"
   },
   {
     "id": "dbe950bb-885f-4c12-ad7d-878723bb251c",
-    "name": "TheCollector_SB_DesertArm(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Menu_Title_DesertArm",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2504,11 +2504,11 @@
         "name": "DCP Armor Legs Hunter Camo"
       }
     ],
-    "realName": "SB DesertArm(DO NOT USE NOW LOOT)"
+    "realName": "Look at desert but don't see you"
   },
   {
     "id": "82d178e8-e7c1-4436-981c-c51dbaa87f3b",
-    "name": "TheCollector_SB_NavyArm(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Menu_Title_NavyArm",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2536,11 +2536,11 @@
         "name": "DCP Armor Legs Cobalt Camo"
       }
     ],
-    "realName": "SB NavyArm(DO NOT USE NOW LOOT)"
+    "realName": "Make space navy armor"
   },
   {
     "id": "e44de29c-a2c3-49ef-864b-03eb7ae466db",
-    "name": "TheCollector_SB_Volt_Navy(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Menu_Title_NavyVolt",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2556,11 +2556,11 @@
         "name": "Quartz Energy SMG Battery (45 cap)"
       }
     ],
-    "realName": "SB Volt Navy(DO NOT USE NOW LOOT)"
+    "realName": "Volt gun more Navy-like"
   },
   {
     "id": "f986a67a-76bb-4f19-9c84-d2d6db0bd755",
-    "name": "TheCollector_SB_Volt_Jungle(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Menu_Title_JungleVolt",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2576,11 +2576,11 @@
         "name": "Quartz Energy SMG Battery (45 cap)"
       }
     ],
-    "realName": "SB Volt Jungle(DO NOT USE NOW LOOT)"
+    "realName": "Zappy gun more woodlike"
   },
   {
     "id": "6472920a-5588-4378-89a1-b2c5bcbfc75c",
-    "name": "TheCollector_SB_Volt_Desert(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Menu_Title_DesertVolt",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2596,11 +2596,11 @@
         "name": "Quartz Energy SMG Battery (45 cap)"
       }
     ],
-    "realName": "SB Volt Desert(DO NOT USE NOW LOOT)"
+    "realName": "Make gun sandy"
   },
   {
     "id": "b4a0ba2d-a5f6-496b-bc04-5f0bce49067a",
-    "name": "TheCollector_AO_IrrArm",
+    "name": "@TheCollector_Recipes_Title_IrrArm",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2628,11 +2628,11 @@
         "name": "Bokto Helmet"
       }
     ],
-    "realName": "AO IrrArm"
+    "realName": "Make glowy armor"
   },
   {
     "id": "e404f6c6-997d-4195-8e48-1a8f859398c9",
-    "name": "TheCollector_AO_VoltThwack",
+    "name": "@TheCollector_Recipes_Title_VoltThwack",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2648,11 +2648,11 @@
         "name": "Prism Laser Shotgun Battery (20 cap)"
       }
     ],
-    "realName": "AO VoltThwack"
+    "realName": "Make VOLT shotgun angrier"
   },
   {
     "id": "3d432269-ee32-4127-abda-60b30a5c3660",
-    "name": "TheCollector_GG_ExplorationSuit(DO_NOT_USE_STORE_EXCLUSIVE)",
+    "name": "@TheCollector_Trade_GG_ExpolrationSuit_Name",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2674,11 +2674,11 @@
         "name": "Novikov \"Ascension\" Backpack"
       }
     ],
-    "realName": "GG ExplorationSuit(DO NOT USE STORE EXCLUSIVE)"
+    "realName": "Walk in danger. Look good."
   },
   {
     "id": "2453dcac-761d-4f95-8783-d31106fcfe1e",
-    "name": "TheCollector_GG_XanthuleSuit(DO_NOT_USE_STORE_EXCLUSIVE)",
+    "name": "@TheCollector_Trade_GG_XanthuleSuit_Name",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2694,11 +2694,11 @@
         "name": "Xanthule Ascension Helmet"
       }
     ],
-    "realName": "GG XanthuleSuit(DO NOT USE STORE EXCLUSIVE)"
+    "realName": "Xi'an Xanthule Suit made better"
   },
   {
     "id": "956685c4-0324-4cf8-8a67-fed823254e61",
-    "name": "TheCollector_GG_VentureSuit(DO_NOT_USE_STORE_EXCLUSIVE)",
+    "name": "@TheCollector_Trade_GG_VentureSuilt_Name",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2726,11 +2726,11 @@
         "name": "Venture Helmet Ascension"
       }
     ],
-    "realName": "GG VentureSuit(DO NOT USE STORE EXCLUSIVE)"
+    "realName": "Adventure a A-Venture"
   },
   {
     "id": "698c51c9-2a49-46c4-baf6-2d1abad7661e",
-    "name": "TheCollector_GG_Karna(DO_NOT_USE_STORE_EXCLUSIVE)",
+    "name": "@TheCollector_Trade_GG_Karna_Name",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2746,11 +2746,11 @@
         "name": "Karna Rifle Battery (35 cap)"
       }
     ],
-    "realName": "GG Karna(DO NOT USE STORE EXCLUSIVE)"
+    "realName": "Prettify Karna Gun"
   },
   {
     "id": "4df999a1-93ba-47a4-b498-cfaad7553da3",
-    "name": "TheCollector_GG_S71(DO_NOT_USE_STORE_EXCLUSIVE)",
+    "name": "@TheCollector_Trade_GG_S71_Name",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2766,11 +2766,11 @@
         "name": "S71 Rifle Magazine (30 cap)"
       }
     ],
-    "realName": "GG S71(DO NOT USE STORE EXCLUSIVE)"
+    "realName": "Built on S71 rifle"
   },
   {
     "id": "e186dc92-bac2-4298-b011-a68b4d058dc5",
-    "name": "TheCollector_GG_Coda(DO_NOT_USE_STORE_EXCLUSIVE)",
+    "name": "@TheCollector_Trade_GG_Coda_Name",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2786,11 +2786,11 @@
         "name": "Coda Pistol Magazine (6 cap)"
       }
     ],
-    "realName": "GG Coda(DO NOT USE STORE EXCLUSIVE)"
+    "realName": "Fix up Coda gun"
   },
   {
     "id": "ab52c274-a29e-4730-a311-917a271917a8",
-    "name": "TheCollector_AD_ZapZip",
+    "name": "@TheCollector_Recipes_Title_ZipZap",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2806,11 +2806,11 @@
         "name": "Zenith Laser Sniper Rifle Battery (22 Cap)"
       }
     ],
-    "realName": "AD ZapZip"
+    "realName": "Snow Snipe"
   },
   {
     "id": "9d32ff6d-6b62-43d4-8b71-85d50e413743",
-    "name": "TheCollector_AD_Hush",
+    "name": "@TheCollector_Recipes_Title_Hush",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2844,11 +2844,11 @@
         "name": "Geist Backpack Snow Camo"
       }
     ],
-    "realName": "AD Hush"
+    "realName": "Hide Snow Suit"
   },
   {
     "id": "ab52c274-a29e-4730-a311-917a27191416",
-    "name": "TheCollector_Nov_LotsOfZipZap(DO_NOT_USE_NOW_LOOT)",
+    "name": "@TheCollector_Recipes_Title_LotsOfZipZap",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2864,11 +2864,11 @@
         "name": "Fresnel Energy LMG Battery (165 Cap)"
       }
     ],
-    "realName": "Nov LotsOfZipZap(DO NOT USE NOW LOOT)"
+    "realName": "Heavy VOLT Zapper"
   },
   {
     "id": "9d32ff6d-6b62-43d4-8b71-85d50e4154f5",
-    "name": "TheCollector_Nov_Molten",
+    "name": "@TheCollector_Recipes_Title_Molten",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2902,11 +2902,11 @@
         "name": "Strata Backpack Heatwave"
       }
     ],
-    "realName": "Nov Molten"
+    "realName": "Do Lava Suit"
   },
   {
     "id": "9d32ff6d-6b62-43d4-8b71-85d50e413745",
-    "name": "TheCollector_Nov_HeavyUtil",
+    "name": "@TheCollector_Recipes_Title_HeavyUtil",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2940,11 +2940,11 @@
         "name": "Novikov Backpack Crush"
       }
     ],
-    "realName": "Nov HeavyUtil"
+    "realName": "Shiny Builder Suit"
   },
   {
     "id": "318bc17e-1b97-4ba5-a527-0c81076ef811",
-    "name": "TheCollector_Battle",
+    "name": "@TheCollector_Recipes_Title_Battle",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -2978,11 +2978,11 @@
         "name": "Palatino Backpack Mark I"
       }
     ],
-    "realName": "Battle"
+    "realName": "Test Armor"
   },
   {
     "id": "372b0eff-0e55-4654-a3ca-542058cb84cf",
-    "name": "TheCollector_SpikeyArmor",
+    "name": "@TheCollector_Recipes_Title_SpikeyArmor",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3016,11 +3016,11 @@
         "name": "Testudo Backpack Clanguard"
       }
     ],
-    "realName": "SpikeyArmor"
+    "realName": "Armor with Vanduul"
   },
   {
     "id": "9c4459ac-2527-4024-b8f1-a08081df252a",
-    "name": "TheCollector_BigBooma",
+    "name": "@TheCollector_Recipes_Title_BigBooma",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3036,11 +3036,11 @@
         "name": "Boomtube Rocket"
       }
     ],
-    "realName": "BigBooma"
+    "realName": "Curious Weapon"
   },
   {
     "id": "ba4e3db4-0f7d-4692-8b9d-8efe3085e84d",
-    "name": "TheCollector_NonePistol",
+    "name": "@TheCollector_Recipes_Title_NonePistol",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3056,11 +3056,11 @@
         "name": "Tripledown Pistol Magazine (12 Cap)"
       }
     ],
-    "realName": "NonePistol"
+    "realName": "Hot Shot"
   },
   {
     "id": "cc80cd24-2ed0-4e9c-aa10-766e6bbdf3d1",
-    "name": "TheCollector_GeminiShotgun",
+    "name": "@TheCollector_Recipes_Title_GMNI_Shotgun",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3076,11 +3076,11 @@
         "name": "R97 Shotgun Magazine (18 cap)"
       }
     ],
-    "realName": "GeminiShotgun"
+    "realName": "Red Fight Shotgun"
   },
   {
     "id": "05bb00fc-bb90-40a5-bcff-214ff876662b",
-    "name": "TheCollector_RedHunterArmour",
+    "name": "@TheCollector_Recipes_Title_RedHunterArmor",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3114,11 +3114,11 @@
         "name": "Warden Backpack Crimson Camo"
       }
     ],
-    "realName": "RedHunterArmour"
+    "realName": "Red Fight Armor"
   },
   {
     "id": "3c839c32-d313-4c13-ade0-eb45b5bdea4b",
-    "name": "TheCollector_Vehicle_Small_Kruger_Wolf_Unique",
+    "name": "@TheCollector_Ships_Wolf_Unique_Title",
     "sourceFile": "thecollector.xml",
     "rewards": [
       {
@@ -3158,18 +3158,17 @@
         "name": "Fresnel \"Deepwater\" Energy LMG"
       }
     ],
-    "realName": "Vehicle Small Kruger Wolf Unique"
+    "realName": "Most Special Wolf"
   },
   {
     "id": "db858e87-56ce-48bf-8eea-b172b253c2ff",
-    "name": "Headhunters_OLP_EliminateBoss",
+    "name": "@Headhunters_EliminateBoss_OLP_VH_title_001",
     "sourceFile": "headhunters_mercenary_fps.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3195,13 +3194,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3227,13 +3226,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3259,13 +3258,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3291,13 +3290,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3323,13 +3322,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3355,13 +3354,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3387,13 +3386,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3419,13 +3418,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3451,13 +3450,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3483,13 +3482,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3515,13 +3514,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3547,13 +3546,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3579,13 +3578,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3611,13 +3610,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3643,13 +3642,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3675,13 +3674,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3707,13 +3706,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3739,13 +3738,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3771,13 +3770,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3803,13 +3802,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -3835,13 +3834,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -3867,13 +3866,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3899,13 +3898,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -3931,13 +3930,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -3963,13 +3962,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -3995,13 +3994,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4027,13 +4026,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4059,13 +4058,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4091,13 +4090,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4123,13 +4122,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4155,13 +4154,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4187,13 +4186,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4219,13 +4218,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4251,13 +4250,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4283,13 +4282,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4315,13 +4314,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4347,13 +4346,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4379,13 +4378,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4411,13 +4410,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4443,13 +4442,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4475,13 +4474,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4507,13 +4506,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4539,13 +4538,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4571,13 +4570,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4603,13 +4602,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4635,13 +4634,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4667,13 +4666,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4699,13 +4698,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4731,13 +4730,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4763,13 +4762,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4795,13 +4794,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4827,13 +4826,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "d10c81ec-fc38-4f3e-bb2d-ccea0d10c889",
-        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889",
         "blueprints": [
           {
             "id": "97847c70-ec56-4b59-b946-4416d8f38d1d"
@@ -4859,13 +4858,13 @@
           {
             "id": "9c6ca949-c28c-40db-9e32-e4abd23ef3de"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: D10c81ec-Fc38-4f3e-Bb2d-Ccea0d10c889"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "e9947de1-6160-4d62-a319-2f4693140c88",
-        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88",
         "blueprints": [
           {
             "id": "9eba6e0e-4ed7-457d-9fd7-4c450ada4be4"
@@ -4891,13 +4890,13 @@
           {
             "id": "d1da140e-b7ee-46ba-b76a-f5dd33c0348c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: E9947de1-6160-4d62-A319-2f4693140c88"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "b81b328f-28a5-4d76-b06a-604cc7d5f2b0",
-        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0",
         "blueprints": [
           {
             "id": "a98a8834-d924-468d-8d1b-8e4aba3e8291"
@@ -4923,13 +4922,13 @@
           {
             "id": "a10bfaff-76a7-47c9-8535-44e982442cbd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "b81b328f-28a5-4d76-b06a-604cc7d5f2b0",
-        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0",
         "blueprints": [
           {
             "id": "a98a8834-d924-468d-8d1b-8e4aba3e8291"
@@ -4955,13 +4954,13 @@
           {
             "id": "a10bfaff-76a7-47c9-8535-44e982442cbd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "b81b328f-28a5-4d76-b06a-604cc7d5f2b0",
-        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0",
         "blueprints": [
           {
             "id": "a98a8834-d924-468d-8d1b-8e4aba3e8291"
@@ -4987,13 +4986,13 @@
           {
             "id": "a10bfaff-76a7-47c9-8535-44e982442cbd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "b81b328f-28a5-4d76-b06a-604cc7d5f2b0",
-        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0",
         "blueprints": [
           {
             "id": "a98a8834-d924-468d-8d1b-8e4aba3e8291"
@@ -5019,13 +5018,13 @@
           {
             "id": "a10bfaff-76a7-47c9-8535-44e982442cbd"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: B81b328f-28a5-4d76-B06a-604cc7d5f2b0"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5057,13 +5056,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5095,13 +5094,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5133,13 +5132,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5171,13 +5170,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5209,13 +5208,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5241,13 +5240,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5273,13 +5272,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5305,13 +5304,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5337,13 +5336,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5369,13 +5368,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5401,13 +5400,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5433,13 +5432,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5471,13 +5470,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5509,13 +5508,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5547,13 +5546,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5585,13 +5584,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5623,13 +5622,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5661,13 +5660,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5699,13 +5698,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5737,13 +5736,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5775,13 +5774,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5813,13 +5812,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5851,13 +5850,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5889,13 +5888,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "f05fa898-1580-4ce3-95e2-8f5c4a1d1891",
-        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891",
         "blueprints": [
           {
             "id": "180baf29-ed81-42e2-a5a7-82b1f3dbc07f"
@@ -5927,13 +5926,13 @@
           {
             "id": "34d6d2d6-6937-44ae-85f9-a690c43668ce"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: F05fa898-1580-4ce3-95e2-8f5c4a1d1891"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5959,13 +5958,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -5991,13 +5990,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -6023,13 +6022,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -6055,13 +6054,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -6087,13 +6086,13 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       },
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "9cf3799c-2347-46a6-bd65-203f8a426f79",
-        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79",
         "blueprints": [
           {
             "id": "f2947ab8-56b3-43e6-9ef6-6301070a1846"
@@ -6119,21 +6118,21 @@
           {
             "id": "da837190-0a00-4a9c-b627-d2e41adc0029"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 9cf3799c-2347-46a6-Bd65-203f8a426f79"
       }
     ],
-    "realName": "Headhunters OLP EliminateBoss"
+    "realName": "Settle a Grudge"
   },
   {
     "id": "b420cb29-8e79-4965-ba20-78047e8fd265",
-    "name": "RCD_Exclusive",
+    "name": "@shubin_rockcracker_solo_title_01",
     "sourceFile": "shubininterstellar.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "1e31d7e8-3033-4c98-a477-c474810d48c1",
-        "name": "Grupo de Planos: 1e31d7e8-3033-4c98-A477-C474810d48c1",
         "blueprints": [
           {
             "id": "878240ee-e1ee-47a9-ac1f-fe1b5171619c"
@@ -6168,21 +6167,21 @@
           {
             "id": "34b5ab94-a752-427a-8cc4-757c5797783c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 1e31d7e8-3033-4c98-A477-C474810d48c1"
       }
     ],
-    "realName": "RCD Exclusive"
+    "realName": "QV Breaker Station Mining Rights (Exclusive)"
   },
   {
     "id": "8f89a2d4-8994-462a-a711-7eca01a3edeb",
-    "name": "RCD_Contested",
+    "name": "@shubin_rockcracker_pvp_title_01",
     "sourceFile": "shubininterstellar.xml",
     "rewards": [
       {
         "type": "blueprint_pool",
         "chance": "1",
         "ref": "1e31d7e8-3033-4c98-a477-c474810d48c1",
-        "name": "Grupo de Planos: 1e31d7e8-3033-4c98-A477-C474810d48c1",
         "blueprints": [
           {
             "id": "878240ee-e1ee-47a9-ac1f-fe1b5171619c"
@@ -6217,9 +6216,10 @@
           {
             "id": "34b5ab94-a752-427a-8cc4-757c5797783c"
           }
-        ]
+        ],
+        "name": "Grupo de Planos: 1e31d7e8-3033-4c98-A477-C474810d48c1"
       }
     ],
-    "realName": "RCD Contested"
+    "realName": "QV Breaker Station Mining Rights (Shared)"
   }
 ]
