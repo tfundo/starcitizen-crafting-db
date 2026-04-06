@@ -53,6 +53,17 @@ let GROUPED=[];
 const i18n={en:{subtitle:'Blueprint recipes database',home:'Home',search:'Search object or mission...',sortName:'Sort by name',sortMission:'Sort by mission',stats:(n)=>`Showing ${n} unique objects`,unknownMission:'Unknown mission',pending:'Image pending',cat:'Category',missions:'Missions where it may appear',costs:'Crafting materials',time:'Craft time',close:'Close'},es:{subtitle:'Base de datos de recipes de blueprints',home:'Inicio',search:'Buscar objeto o misión...',sortName:'Ordenar por nombre',sortMission:'Ordenar por misión',stats:(n)=>`Mostrando ${n} objetos únicos`,unknownMission:'Misión desconocida',pending:'Imagen pendiente',cat:'Categoría',missions:'Misiones donde puede salir',costs:'Materiales de crafteo',time:'Tiempo de crafteo',close:'Cerrar'}}; let currentLang='en';
 function setLang(lang){currentLang=lang; const t=i18n[lang]; document.getElementById('subtitle').textContent=t.subtitle; document.getElementById('nav-home').textContent=t.home; document.getElementById('search').placeholder=t.search; document.querySelector('#sortBy option[value="name"]').textContent=t.sortName; document.querySelector('#sortBy option[value="mission"]').textContent=t.sortMission; document.getElementById('label-cat').textContent=t.cat; document.getElementById('label-missions').textContent=t.missions; document.getElementById('label-costs').textContent=t.costs; document.getElementById('label-time').textContent=t.time; document.getElementById('lang-en').classList.toggle('active',lang==='en'); document.getElementById('lang-es').classList.toggle('active',lang==='es'); applyFilters();}
 function uniq(arr){return[...new Set(arr.filter(Boolean))]} function norm(s){return(s||'').toLowerCase();}
+function cleanMissionName(mName) {
+  let cleaned = mName;
+  // Elimina prefijos comunes de misión o códigos extraños
+  cleaned = cleaned.replace(/Highpoint_/g, '')
+                   .replace(/_title_\d+/g, '')
+                   .replace(/_/g, ' ')
+                   .replace(/~mission\([^)]+\)/g, '');
+  // Capitaliza palabras
+  return cleaned.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ').trim();
+}
+
 function groupData(blueprints, missions){
   const map=new Map();
   for(const bp of blueprints){
@@ -76,8 +87,7 @@ function groupData(blueprints, missions){
           for(const poolBp of r.blueprints){
             const target = map.get(poolBp.id);
             if(target){
-              let mName = m.realName || m.name || 'Unknown';
-              mName = mName.replace(/~mission\([^)]+\)/g, '...');
+              let mName = m.realName || (m.name ? cleanMissionName(m.name) : 'Unknown Mission');
               target.missions.push(mName);
             }
           }
