@@ -64,6 +64,16 @@ function cleanMissionName(mName) {
   return cleaned.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ').trim();
 }
 
+// Cargar imágenes desde el archivo armors_weapons.json y actualizar al agrupar
+let IMAGE_MAP = new Map();
+fetch('data/armors_weapons.json').then(r => r.json()).then(items => {
+  items.forEach(item => {
+    if (item.image) IMAGE_MAP.set(item.name, item.image);
+  });
+  // Re-renderizar una vez que las imágenes están cargadas
+  applyFilters();
+});
+
 function groupData(blueprints, missions){
   const map=new Map();
   for(const bp of blueprints){
@@ -74,7 +84,7 @@ function groupData(blueprints, missions){
         displayName: bp.realName || bp.name || 'Unknown',
         category: bp.category || 'unknown',
         craftTime: 'N/D', 
-        image: '',
+        image: IMAGE_MAP.get(bp.realName || bp.name) || '',
         missions: [],
         costs: (bp.materials || []).map(m => `${m.name || m.resource || 'Unknown'}: ${m.amount || 0} SCU`)
       });
