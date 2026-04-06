@@ -53,30 +53,32 @@ function groupData(blueprints, missions){
     if(!map.has(key)){
       map.set(key, {
         id: bp.id,
-        displayName: bp.realName || bp.name,
+        displayName: bp.realName || bp.name || 'Unknown',
         category: bp.category || 'unknown',
         craftTime: 'N/D', 
         image: '',
         missions: [],
-        costs: bp.materials.map(m => `${m.name || m.resource}: ${m.amount} SCU`)
+        costs: (bp.materials || []).map(m => `${m.name || m.resource || 'Unknown'}: ${m.amount || 0} SCU`)
       });
     }
   }
   for(const m of missions){
-    for(const r of m.rewards){
-      if(r.type === 'blueprint_pool' && r.blueprints){
-        for(const poolBp of r.blueprints){
-          const target = map.get(poolBp.id);
-          if(target){
-            let mName = m.realName || m.name;
-            mName = mName.replace(/~mission\([^)]+\)/g, '...');
-            target.missions.push(mName);
+    if(m.rewards) {
+      for(const r of m.rewards){
+        if(r.type === 'blueprint_pool' && r.blueprints){
+          for(const poolBp of r.blueprints){
+            const target = map.get(poolBp.id);
+            if(target){
+              let mName = m.realName || m.name || 'Unknown';
+              mName = mName.replace(/~mission\([^)]+\)/g, '...');
+              target.missions.push(mName);
+            }
           }
         }
       }
     }
   }
-  return [...map.values()].map(x => ({...x, missions: uniq(x.missions)}));
+  return [...map.values()];
 }
 function safeImage(url,alt){if(!url)return i18n[currentLang].pending; return `<img src="${url}" alt="${alt}" onerror="this.remove(); this.parentNode.textContent='${i18n[currentLang].pending}';">`;}
 function render(data){const grid=document.getElementById('grid'); document.getElementById('stats').textContent=i18n[currentLang].stats(data.length); grid.innerHTML=data.slice(0,500).map((item,idx)=>`<div class="tile" data-idx="${idx}"><div class="imgbox">${safeImage(item.image,item.displayName)}</div><h3 class="name">${item.displayName}</h3><div class="mini">${item.missions.length>0 ? item.missions[0] : '<span style="color:var(--red);font-weight:600;font-size:0.75rem;">SIN RECETA DISPONIBLE</span>'}</div></div>`).join(''); [...document.querySelectorAll('.tile')].forEach(tile=>tile.addEventListener('click',()=>openModal(data[Number(tile.dataset.idx)])));}
@@ -90,6 +92,7 @@ Promise.all([
   BLUEPRINTS=bps; 
   MISSIONS=mss;
   GROUPED=groupData(BLUEPRINTS, MISSIONS); 
+  applyFilters();
   setLang('en');
 }).catch(err=>{document.getElementById('stats').textContent='Error loading database'; console.error(err);}); 
 
