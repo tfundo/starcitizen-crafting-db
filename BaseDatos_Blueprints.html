@@ -69,6 +69,8 @@ fetch('data/materials_map.json').then(r => r.json()).then(data => {
     let name = data[id].replace('items_commodities_', '').replace(/_/g, ' ');
     MATERIAL_MAP.set(id, name.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '));
   });
+  // Asegurar que los datos se rendericen con los materiales traducidos
+  applyFilters();
 });
 
 let IMAGE_MAP = new Map();
